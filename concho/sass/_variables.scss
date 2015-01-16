@@ -1,0 +1,377 @@
+//== Colors
+//
+//## Brand colors for use across Bootstrap.
+$white:					#ffffff !default;
+$black:					#000000 !default;
+
+$red:					#D40043 !default;
+$red-light:				#E44B75 !default;
+
+// Concho Colors
+$green-dark:			#163D34 !default;
+$green-bright:			#68BC49 !default;
+$green-mint:			#3D7762 !default;
+$gray:					#7F7F73 !default;
+$gray-medium:			#ABA99E !default;
+$gray-light:			#D9D8D3 !default;
+$gray-lightest:			#E7E6E4 !default;
+
+//Bootstrap color default naming
+$brand-primary:         $green-dark !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          $red !default;
+
+//== Scaffolding
+//
+// ## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               $white !default;
+//** Global text color on `<body>`.
+$text-color:            $black;
+
+//** Global textual link color.
+$link-color: $green-bright;
+//** Link hover color
+$link-hover-color:      $brand-primary !default;
+
+//== Typography
+//
+// Font-Awesome
+$fa-font-path:        "../fonts/font-awesome" !default;
+
+$font-family-raleway:				"ralewayregular";
+$font-family-raleway-bold:			"ralewaybold";
+$font-family-raleway-light:			"ralewaylight";
+$font-family-raleway-medium:		"ralewaymedium";
+$font-family-egyptienne-light:		"URWEgyptienneW01-Light";
+
+//## Font, line-height, and color for body text, headings, and more.
+
+// Defaults
+$font-family-sans-serif:  $font-family-raleway !default;
+$font-family-serif:       $font-family-egyptienne-light !default;
+
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-xlarge:         ceil(($font-size-base * 1.65)) !default; // ~24px
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 3.428)) !default; // ~48px
+$font-size-h2:            floor(($font-size-base * 2.428)) !default; // ~34px
+$font-size-h3:            ceil(($font-size-base * 1.071)) !default; // ~15px
+$font-size-h4:            ceil(($font-size-base * 0.928)) !default; // ~13px
+$font-size-h5:            ceil(($font-size-base * 0.785)) !default; // ~11px
+$font-size-h6:            ceil(($font-size-base * 0.785)) !default; // ~11px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    $font-family-serif !default;
+$headings-font-weight:    normal !default;
+$headings-line-height:    ($line-height-base * 1.1) !default;
+$headings-color:          $black !default;
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.33 !default;
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        8px !default;
+$border-radius-large:       10px !default;
+$border-radius-small:       4px !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary !default;
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default;
+
+$dot-navigation-width:		30px !default;
+
+//== Padding classes
+$padding-large: 40px;
+$padding-medium: 30px;
+$padding-small: 20px;
+$padding-xsmall: 10px;
+$padding-xxsmall: 7px;
+
+//== Margin classes
+$margin-large: 40px;
+$margin-small: 20px;
+$margin-xsmall: 10px;
+$margin-xxsmall: 7px;
+
+//== Carousel
+$carousel-min-height: 600px;
+$carousel-min-height-xs: 400px;
+$arrow-top-offset: floor($carousel-min-height / 2.2);
+$arrow-top-offset-xs: floor($carousel-min-height-xs / 2.2);
+
+//== Bootstrap overrides
+$font-size-base: 14px;
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+$navbar-height:					80px !default;
+$navbar-height-collapse:		80px;
+$navbar-padding-vertical:		20px;
+$navbar-padding-horizontal:		0;
+$navbar-default-bg: $white;
+$navbar-default-color: $white;
+$navbar-default-link-hover-color: $brand-primary;
+$navbar-default-link-hover-bg: $white;
+$navbar-default-link-active-color: $brand-primary;
+$navbar-default-link-active-bg: $white;
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+//== Icon Font Path
+$icon-font-path: "../fonts/bootstrap/" !default;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              $white !default;
+$btn-default-bg:                 $brand-primary !default;
+$btn-default-border:             $brand-primary !default;
+
+$btn-primary-color:              $white !default;
+$btn-primary-bg:                 $white !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$btn-success-color:              $white !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
+
+$btn-info-color:                 $white !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
+
+$btn-warning-color:              $white !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+
+$btn-danger-color:               $white !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-link-disabled-color:        $gray !default;
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+$input-bg:                       $white !default;
+//** `<input disabled>` background color
+$input-bg-disabled:              $gray !default;
+
+//** Text color for `<input>`s
+$input-color:                    $white !default;
+//** `<input>` border color
+$input-border:                   transparent !default;
+//** `<input>` border radius
+$input-border-radius:            6px !default;
+//** Border color for inputs on focus
+$input-border-focus:             $green-bright !default;
+
+//** Placeholder text color
+$input-color-placeholder:        $white !default;
+
+//** Default `.form-control` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 8) !default;
+//** Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 8) !default;
+//** Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 8) !default;
+
+$legend-color:                   $gray !default;
+$legend-border-color:            $gray !default;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $gray !default;
+//** Border color for textual input addons
+$input-group-addon-border-color: $input-border !default;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         28px !default;
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-md-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             ((720px + $grid-gutter-width)) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            ((940px + $grid-gutter-width)) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+//== Panels
+//
+//##
+
+$panel-bg:                    #fff !default;
+$panel-body-padding:          15px !default;
+$panel-heading-padding:       10px 15px !default;
+$panel-footer-padding:        $panel-heading-padding !default;
+$panel-border-radius:         $border-radius-small !default;
+
+//** Border color for elements within panels
+$panel-inner-border:          #ddd !default;
+$panel-footer-bg:             #f5f5f5 !default;
+
+$panel-default-text:          $black !default;
+$panel-default-border:        #ddd !default;
+$panel-default-heading-bg:    #f5f5f5 !default;
+
+$panel-primary-text:          #fff !default;
+$panel-primary-border:        $brand-primary !default;
+$panel-primary-heading-bg:    $brand-primary !default;
+
+$panel-faq-text:			  $text-color !default;
+$panel-faq-border:			  $brand-primary !default;
+$panel-faq-heading-bg:		  $brand-primary !default; //unused
+
+$panel-success-text:          $state-success-text !default;
+$panel-success-border:        $state-success-border !default;
+$panel-success-heading-bg:    $state-success-bg !default;
+
+$panel-info-text:             $state-info-text !default;
+$panel-info-border:           $state-info-border !default;
+$panel-info-heading-bg:       $state-info-bg !default;
+
+$panel-warning-text:          $state-warning-text !default;
+$panel-warning-border:        $state-warning-border !default;
+$panel-warning-heading-bg:    $state-warning-bg !default;
+
+$panel-danger-text:           $state-danger-text !default;
+$panel-danger-border:         $state-danger-border !default;
+$panel-danger-heading-bg:     $state-danger-bg !default;
+
+//== Thumbnails
+//
+//##
+
+//** Padding around the thumbnail image
+$thumbnail-padding:           0px !default;
+//** Thumbnail background color
+$thumbnail-bg:                transparent;
+//** Thumbnail border color
+$thumbnail-border:            transparent !default;
+$thumbnail-border-width:	  2px;
+//** Thumbnail border radius
+$thumbnail-border-radius:     0;
+
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:     $text-color !default;
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:   9px !default;
+
+$thumbnail-margin-bottom:	  0;
