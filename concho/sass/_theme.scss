@@ -513,7 +513,48 @@ $larger-text-mag: 1.3;
 }
 
 //Colors
-
+.green-dark{
+	color: $green-dark;
+}
+.background-green-dark{
+	background-color: $green-dark;
+}
+.green-bright{
+	color: $green-bright;
+}
+.background-green-bright{
+	background-color: $green-bright;
+}
+.green-mint{
+	color: $green-mint;
+}
+.background-green-mint{
+	background-color: $green-mint;
+}
+.gray{
+	color: $gray;
+}
+.background-gray{
+	background-color: $gray;
+}
+.gray-medium{
+	color: $gray-medium;
+}
+.background-gray-medium{
+	background-color: $gray-medium;
+}
+.gray-light{
+	color: $gray-light;
+}
+.background-gray-light{
+	background-color: $gray-light;
+}
+.gray-lightest{
+	color: $gray-lightest;
+}
+.background-gray-lightest{
+	background-color: $gray-lightest;
+}
 
 // Default heading styles
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
@@ -565,7 +606,7 @@ h6,.h6{
 		@include rem(height, $navbar-height-collapse);
 		border: 0;
 		@include rem(padding, 9px);
-		color: $green-bright;		
+		color: $green-mint;		
 		&:hover {
 			background-color: transparent;
 			color: $brand-primary;
@@ -638,10 +679,49 @@ h6,.h6{
 					text-decoration: none;
 				}
 			}
-			&:last-child{
+			&:first-child{
 				a{
-					border-right: none;
+					@include rem(border-left, 1px solid $gray-light);
 				}
+			}
+			.sub-menu {
+				display: none;
+				position: absolute;
+				@include rem(top, $navbar-height-collapse);
+				left: 0;
+				padding: 0;
+				list-style-type: none;
+				text-align: left;
+				a {
+					display: block;
+					color: $white;
+					white-space: nowrap;
+					padding: 0 20px;
+					background: $green-dark;
+					@include fontMetrics(13px, 46px);
+					
+					&:hover {
+						background: $green-bright;
+						color: $green-dark;
+						text-decoration: none;
+					}
+				}
+				li{
+					border-top: 1px solid $green-dark;
+				}
+				li:first-child {
+					border-top: none;
+				}
+				.on {
+					a {
+						background: $green-bright;
+						color: $green-dark;
+						text-decoration: none;
+					}
+				}
+			}
+			&:hover .sub-menu {
+				display: block;
 			}
 		}
 		&> li > a{
@@ -671,21 +751,17 @@ h6,.h6{
 }
 .sidebar-offcanvas {
 	@include rem( padding-top, 20px );
-	@include gradient-vertical(lighten($brand-primary, 40%), lighten($green-bright, 73%), 0, 10%);
+	background-color: $green-dark;
 	font-family: $font-family-sans-serif;
 	font-weight: 300;
 	@include rem(font-size, 36px);
-	
-	@include box-shadow(inset 10px 0px 25px 0px rgba(50, 167, 202, 0.5));
-	
+	@include box-shadow(inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5));
 	.nav{
-		
 		&>li{
-			@include box-shadow(inset 10px 0px 25px 0px rgba(0, 106, 161, 0.5));
-			text-align: right;
-			@include gradient-vertical($brand-primary, $green-bright);
+			text-align: center;
+			@include rem(border-bottom, 1px solid $white);
 			&:hover{
-				@include gradient-vertical($green-bright, $green-bright);	
+				
 			}
 			a{
 				color: $white;
@@ -704,7 +780,7 @@ h6,.h6{
 		@include rem(width, 32px);
 		@include rem(height, 32px);
 		margin: 0 auto;
-		background: transparent url('../images/logo_mobile.png') no-repeat center center;
+		background: transparent inline-image('../images/logo_mobile.png') no-repeat center center;
 		background-size: contain;
 		text-indent: -10000em;
 		
@@ -850,12 +926,6 @@ h6,.h6{
 // Templates
 // --------------------------------------------------
 body{
-	.page-title{
-		@include h4();
-		@include font-family($font-family-sans-serif);
-		line-height: inherit;
-		font-weight: bold;
-	}
 	.feature{
 		@include font-family($font-family-serif);
 		p,ul,ol,li,blockquote{
@@ -900,26 +970,99 @@ body{
 	.container-fluid{
 		&#content{
 			
-			$normal-text: 1;
-			$medium-text: 1.1;
-			$large-text: 1.2;
-			$larger-text: 1.3;
-			
 			position: relative;
 			@include rem(padding-top, $navbar-height);
+			h1{
+				&.page-title{
+					@include h3();
+					@extend .text-uppercase;
+					color: $green-dark;
+				}
+			}
 			p,ul,ol,li,blockquote{
 				@extend %body-copy;
 			}
 			
 			//Feature
 			.featured{
-				
+				@include rem(height, 290px);
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
 			}
-			
-			//
-			// Background color sets
-			// --------------------------------------------------
-
+			.tools{
+				text-align: right;
+				ul{
+					&.list-inline{
+						@include rem(margin-top, 15px);
+						@include rem(margin-bottom, 20px);
+						li{
+							padding-left: 0;
+							padding-right: 0;
+							a{
+								@include rem(border-right, 1px solid $gray);
+								@include rem(padding-left, 15px);
+								@include rem(padding-right, 15px);
+								@include rem(font-size, 11px);
+								color: $gray;
+								&:hover,
+								&:focus{
+									color: $green-dark;
+									text-decoration: none;
+								}
+							}
+							&:last-child{
+								a{
+									border-right: none;
+								}
+							}
+						}
+					}
+				}
+			}
+			.quick-links{
+				@include rem(font-size, 13px);
+				color: $gray;
+				@include font-family($font-family-raleway-bold);
+				h2{
+					@include font-family($font-family-raleway-light);
+					color: $white;
+					margin-top: 0;
+					margin-bottom: 0;
+					@include rem(line-height, 100px);
+				}
+				a{
+					color: $gray;
+				}
+				.row{
+					div{
+						@include rem(border-right, 1px solid $white);
+						text-align: center;
+						@include rem(min-height, 100px);
+						ul{
+							&.nav-justified{
+								li{
+									@include rem(border-right, 1px solid $white);
+									a{
+										padding: 0;
+										span{
+											display: block;
+											@include padding-top-small();
+											@include padding-bottom-xsmall();
+										}
+									}
+								}
+								li:last-child{
+									border-right: none;
+								}
+							}
+						}
+					}
+					div:first-child{
+						@include rem(border-left, 1px solid $white);
+					}
+				}
+			}
 			//Main article styles
 			article[role="article"]{
 				@include font-family($font-family-raleway);
@@ -1053,6 +1196,10 @@ footer{
 					@include rem(padding-right, 15px);
 					color: $green-mint;
 					text-transform: uppercase;
+					&:hover,
+					&:focus{
+						color: $white;
+					}
 				}
 				li{
 					padding-left: 0;
@@ -1076,7 +1223,12 @@ footer{
 			}
 		}
 		a{
+			&:hover,
+			&:focus{
+				color: $white;
+			}
 			&.brand{
+				@include transition(all .4s ease);
 				display:block;
 				@include rem(height, 49px);
 				@include rem(width, 56px);
@@ -1094,10 +1246,64 @@ footer{
 		p{
 			margin-left: 0;
 		}
-		form{
+		.search-tool{
 			.form-control{
-				border-color: $white;
+				border-color: darken($green-dark, 5%);
+				background-color: darken($green-dark, 5%);
+			}
+			.form-control-feedback{
+				@include transition(all .4s ease);
+				@include rem(right, ($grid-gutter-width / 2) );
+				background-color: darken($green-dark, 5%);
+				color: $white;
+				@include rem(border-left, 1px solid $green-dark);
+			}
+			input[type="submit"]{
+				position: absolute;
+				top: 0;
+				@include rem(right, ($grid-gutter-width / 2) );
+				width: $input-height-base;
+				height: $input-height-base;
 				background-color: transparent;
+				text-indent: -1000em;
+				z-index: 1;
+			}
+		}
+		ul{
+			&.social{
+				li{
+					@include transition(all .4s ease);
+					i{
+						@include transition(all .4s ease);
+						color: $green-mint;
+					}
+					a{
+						@include transition(all .4s ease);
+						color: $green-dark;
+						padding-left: 0;
+						padding-right: 0;
+						border-right: none;
+					}
+					&:hover,
+					&:focus{
+						i{
+							color: $white;
+						}
+						a{
+							color: $green-dark;
+						}
+					}
+				}
+			}
+		}
+		.copyright{
+			background-color: darken($green-dark, 5%);
+			@include rem(font-size, 10px);
+			@include rem(line-height, 40px);
+			ul{
+				&.list-inline{
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

@@ -6,7 +6,7 @@
 <!--[if (gte IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
 <html>
 	<head>
-		<title>CTC: Home</title>
+		<title>Concho: Home</title>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@
 		<div id="main-container" class="main-container-outer">
 			<div class="row row-offcanvas row-offcanvas-right main-row">
 				<div class="sidebar-offcanvas visible-sm visible-xs col-sm-8 col-xs-8 nopadding-left nopadding-right">
-					<div class="menu-container">
+					<div class="menu-container padding-bottom-small">
 						<ul class="menu nav">
 							<li class="menu-item">
 								<a href="#">About</a>
@@ -66,6 +66,8 @@
 							</li>
 						</ul>
 					</div>
+					
+					<a class="navbar-brand" href="/">Concho</a>
 				</div><!-- /.sidebar-offcanvas -->
 				
 				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -78,7 +80,7 @@
 						</div>
 						<div class="navbar-collapse collapse">
 							<div class="row">
-								<div class="col-lg-9 col-md-9">
+								<div class="col-lg-9 col-md-9 pull-right text-right">
 									<ul class="menu list-inline">
 										<li class="menu-item">
 											<a href="#">About</a>
@@ -91,6 +93,31 @@
 										</li>
 										<li class="menu-item">
 											<a href="#">Investors</a>
+											<ul class="sub-menu off">
+												<li class="menu-item">
+													<a href="#">Investor News</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Events & Presentations</a>
+													<ul class="sub-menu off" style="display: none;">
+														<li class="menu-item">
+															<a href="#">Events Calendar</a>
+														</li>
+													</ul>
+												</li>
+												<li class="menu-item">
+													<a href="#">Financial Reports</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Corporate Governance</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Stock Information</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Resources</a>
+												</li>
+											</ul>
 										</li>
 										<li class="menu-item">
 											<a href="#">Community</a>
@@ -108,12 +135,67 @@
 					</div><!-- /.container -->
 				</nav><!-- /.navbar -->
 				<div id="content" class="container-fluid nopadding-left nopadding-right">
-					<div class="featured carousel nomargin-bottom">
-
-					</div><!-- /.featured -->
+					<!-- //TODO: per breakpoint height setting for featured image -->
+					<div class="featured lazy" data-original="/concho/images/featured_home.jpg"></div>
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-5 col-md-5">
+								<h1 class="page-title">Investor Relations</h1>
+							</div>
+							<div class="col-lg-7 col-md-7 tools">
+								<ul class="list-inline">
+									<li><a href="#">PRINT PAGE</a></li>
+									<li><a href="#">E-MAIL PAGE</a></li>
+									<li><a href="#">RSS FEEDS</a></li>
+									<li><a href="#">IR CONTACTS</a></li>
+									<li><a href="#">FINANCIAL TEAR SHEET</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //.container -->
+					
+					<div class="container-fluid background-gray-light quick-links">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-2 col-md-2 background-green-bright">
+									<h2 class="h1">Q3</h2>
+								</div>
+								<div class="col-lg-10 col-md-10 nopadding-left nopadding-right">
+									<ul class="nav nav-justified">
+										<li>
+											<a href="#">
+												<span>
+													<img data-original="/concho/images/ui/icon-news.png" class="lazy" />
+												</span>
+												VIEW PRESS RELEASE
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>
+													<img data-original="/concho/images/ui/icon-presentation.png" class="lazy" />
+												</span>
+												VIEW PRESENTATION
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>
+													<img data-original="/concho/images/ui/icon-mic.png" class="lazy" />
+												</span>
+												LISTEN TO WEBCAST
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div><!-- //.container -->
+					</div><!-- //.container-fluid -->
+					
 				</div><!-- /#content -->
 
-				<footer id="footer" class="padding-top padding-bottom" role="contentinfo">
+				<footer id="footer" class="padding-top" role="contentinfo">
 					<div class="container">
 						<div class="row">
 							<div class="logo col-lg-1 col-md-1 hidden-sm hidden-xs">
@@ -146,18 +228,44 @@
 									</li>
 								</ul>
 							</div>
-							<div class="col-lg-3 col-md-3 col-sm-12">
-
+							<div class="col-lg-3 col-md-3 col-sm-12 search-tool">
+								<div id="p_lt_ctl00_SideBarSearchBox_pnlSearch" class="searchBox" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;p_lt_ctl00_SideBarSearchBox_btnSearch&#39;)">
+									<label for="p_lt_ctl00_SideBarSearchBox_txtWord" id="p_lt_ctl00_SideBarSearchBox_lblSearch" style="display:none;">Search for:</label>
+									<input name="p$lt$ctl00$SideBarSearchBox$txtWord" type="text" maxlength="1000" id="p_lt_ctl00_SideBarSearchBox_txtWord" class="form-control" placeholder="Search" />
+									<input type="submit" name="p$lt$ctl00$SideBarSearchBox$btnSearch" value="Go" id="p_lt_ctl00_SideBarSearchBox_btnSearch" class="btn" />
+									<div id="p_lt_ctl00_SideBarSearchBox_pnlPredictiveResultsHolder" class="predictiveSearchHolder"></div>
+								</div>
+								<span class="glyphicon glyphicon-search form-control-feedback"></span>
+								<ul class="list-inline social text-right padding-top-small padding-bottom">
+									<li class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<a href="#" class="fa fa-facebook fa-stack-1x fa-inverse" target="_blank"></a>
+									</li>
+									<li class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<a href="#" class="fa fa-twitter fa-stack-1x fa-inverse" target="_blank"></a>
+									</li>
+									<li class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<a href="#" class="fa fa-linkedin fa-stack-1x fa-inverse" target="_blank"></a>
+									</li>
+								</ul>
 							</div>
 						</div><!-- /.row -->
+					</div><!-- /.container -->
+					
+					<div class="container-fluid copyright">
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-								<p>
-									&copy; 2014 CONCHO RESOURCES, ALL RIGHTS RESERVED   TERMS OF USE   |   PRIVACY POLICY   |   SITE MAP
-								</p>
+								<ul class="list-inline">
+									<li>&copy; 2014 CONCHO RESOURCES, ALL RIGHTS RESERVED</li>
+									<li><a href="#">TERMS OF USE</a></li>
+									<li><a href="#">PRIVACY POLICY</a></li>
+									<li><a href="#">SITE MAP</a></li>
+								</ul>
 							</div>
 						</div>
-					</div><!-- /.container -->
+					</div>
 				</footer>
 			</div><!-- /.row-offcanvas -->
 		</div><!-- /#main-container -->
