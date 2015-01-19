@@ -1044,6 +1044,7 @@ body{
 								li{
 									@include rem(border-right, 1px solid $white);
 									a{
+										@include rem(min-height, 100px);
 										padding: 0;
 										span{
 											display: block;

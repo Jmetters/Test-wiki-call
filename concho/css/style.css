@@ -508,7 +508,7 @@ td, th { padding: 0; }
 
 html { font-size: 10px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-body { font-family: "ralewayregular"; font-size: 14px; line-height: 1.42857; color: black; background-color: white; }
+body { font-family: "ralewayregular"; font-size: 14px; line-height: 1.42857; color: #7f7f73; background-color: white; }
 
 input, button, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
 
@@ -1105,7 +1105,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 .has-feedback label ~ .form-control-feedback { top: 25px; }
 .has-feedback label.sr-only ~ .form-control-feedback { top: 0; }
 
-.help-block { display: block; margin-top: 5px; margin-bottom: 10px; color: #404040; }
+.help-block { display: block; margin-top: 5px; margin-bottom: 10px; color: #bcbcb5; }
 
 @media (min-width: 768px) { .form-inline .form-group { display: inline-block; margin-bottom: 0; vertical-align: middle; }
   .form-inline .form-control { display: inline-block; width: auto; vertical-align: middle; }
@@ -1587,7 +1587,7 @@ a.badge:hover, a.badge:focus { color: white; text-decoration: none; cursor: poin
 
 .thumbnail { display: block; padding: 0px; margin-bottom: 20px; line-height: 1.42857; background-color: transparent; border: 1px solid transparent; border-radius: 0; -webkit-transition: border 0.2s ease-in-out; -o-transition: border 0.2s ease-in-out; transition: border 0.2s ease-in-out; }
 .thumbnail > img, .thumbnail a > img { display: block; max-width: 100%; height: auto; margin-left: auto; margin-right: auto; }
-.thumbnail .caption { padding: 9px; color: black; }
+.thumbnail .caption { padding: 9px; color: #7f7f73; }
 
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #68bc49; }
 
@@ -2523,7 +2523,7 @@ body .container-fluid#content .quick-links h2 { font-family: "ralewaylight" !imp
 body .container-fluid#content .quick-links a { color: #7f7f73; }
 body .container-fluid#content .quick-links .row div { border-right: 1px solid white; border-right: 0.1rem solid white; text-align: center; min-height: 100px; min-height: 10rem; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li { border-right: 1px solid white; border-right: 0.1rem solid white; }
-body .container-fluid#content .quick-links .row div ul.nav-justified li a { padding: 0; }
+body .container-fluid#content .quick-links .row div ul.nav-justified li a { min-height: 100px; min-height: 10rem; padding: 0; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li a span { display: block; padding-top: 20px; padding-top: 2rem; padding-bottom: 10px; padding-bottom: 1rem; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li:last-child { border-right: none; }
 body .container-fluid#content .quick-links .row div:first-child { border-left: 1px solid white; border-left: 0.1rem solid white; }
