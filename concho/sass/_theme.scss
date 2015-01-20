@@ -1006,7 +1006,7 @@ body{
 		&#content{
 			
 			position: relative;
-			@include rem(padding-top, $navbar-height);
+			@include rem(padding-top, $navbar-height + 10px);
 			h1{
 				&.page-title{
 					@include h3();
@@ -1024,6 +1024,65 @@ body{
 				background-position: center center;
 				background-size: cover;
 				background-repeat: no-repeat;
+				.container{
+					position: relative;
+					.stock-ticker{
+						position: absolute;
+						top: 0;
+						right: 0;
+						.symbol{
+							background-color: $green-dark;
+							ul{
+								@include rem(padding-left, 20px);
+								@include rem(padding-right, 20px);
+								margin-bottom: 0;
+								li{
+									@include rem(line-height, 40px);
+									color: $white;
+									&.exchange{
+										display: table;
+										width: 100%;
+										&:after{
+											display: table-cell;
+											vertical-align: middle;
+											padding-left: 10px;
+											font-family: 'FontAwesome';
+											font-weight: normal;
+											@include rem(font-size, 19px);
+											content: $fa-var-angle-right;
+											text-align: right;
+										}
+										a{
+											display: block;
+											color: $white;
+											text-decoration: none;
+										}
+									}
+								}
+							}
+						}
+						.price{
+							background-color: $gray-light;
+							ul{
+								@include rem(padding-left, 20px);
+								@include rem(padding-right, 20px);
+								margin-bottom: 0;
+								li{
+									@include rem(line-height, 40px);
+									color: $gray;
+									&.current-price{
+										@include font-family($font-family-raleway-bold);
+									}
+									&.change{
+										.fa{
+											color: $green-bright;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			.tools{
 				text-align: right;
