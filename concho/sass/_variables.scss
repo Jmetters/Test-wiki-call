@@ -16,6 +16,8 @@ $gray-medium:			#ABA99E !default;
 $gray-light:			#D9D8D3 !default;
 $gray-lightest:			#E7E6E4 !default;
 
+$gray-divider:			#929085 !default;
+
 //Bootstrap color default naming
 $brand-primary:         $green-dark !default;
 $brand-success:         #5cb85c !default;
@@ -153,6 +155,11 @@ $navbar-default-link-hover-color: $brand-primary;
 $navbar-default-link-hover-bg: $white;
 $navbar-default-link-active-color: $brand-primary;
 $navbar-default-link-active-bg: $white;
+
+//== Pills
+$nav-pills-border-radius:                   0 !default;
+$nav-pills-active-link-hover-bg:            $component-active-bg !default;
+$nav-pills-active-link-hover-color:         $component-active-color !default;
 
 //== Form states and alerts
 //

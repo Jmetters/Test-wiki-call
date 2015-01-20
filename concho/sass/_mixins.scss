@@ -50,6 +50,22 @@
 	}
 }
 
+@mixin border-all(){
+	@include rem(border, 1px solid $gray-light)
+}
+@mixin border-top(){
+	@include rem(border-top, 1px solid $gray-light)
+}
+@mixin border-left(){
+	@include rem(border-left, 1px solid $gray-light);
+}
+@mixin border-right(){
+	@include rem(border-right, 1px solid $gray-light);
+}
+@mixin border-bottom(){
+	@include rem(border-bottom, 1px solid $gray-light);
+}
+
 @mixin border-gray-right(){
 	@include rem(border-right, 1px solid $gray);
 }
