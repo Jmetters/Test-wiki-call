@@ -304,35 +304,31 @@ table{
 }
 
 // Mixin for generating new styles
-@mixin btn-styles($btn-color: $brand-primary, $btn-color-bottom: $green-bright, $font-color: $white) {
-	@include gradient-vertical($btn-color, $btn-color-bottom, 0, 100%);
+@mixin btn-styles($btn-color: $brand-primary, $font-color: $white) {
 	border: 0;
 	color: $font-color !important;
-	@include rem(padding-left, 24px);
-	@include rem(padding-right, 24px);
+	@include rem(padding-left, 20px);
+	@include rem(padding-right, 20px);
 	@include transition(all 0.3s);
 	text-decoration: none !important;
 	&:hover,
 	&:active{
 		color: $white !important;
 		border-color: $btn-color;
-		@include gradient-vertical($btn-color, darken($btn-color-bottom,12%), 0, 100%);
 	}
 }
 
 // Common styles
 .btn {
+	@include button-size(14px, $padding-base-horizontal, $font-size-base, $line-height-base, 0);
 	position: relative;
 	font-family: $font-family-sans-serif;
-	@include rem(font-size, 22px !important);
+	@include rem(font-size, 13px !important);
 	@include transition(all 0.3s);
 	// Remove the gradient for the pressed/active state
 	&:active,
 	&.active {
 		background-image: none;
-	}
-	&.fullwidth{
-		width: 100%;
 	}
 }
 
@@ -1215,7 +1211,18 @@ body{
 					@include rem(font-size, 12px);
 				}
 			}
-			
+			//
+			// Forms
+			// --------------------------------------------------
+
+			.form{
+				p{
+					&.form-required{
+						color: $green-dark;
+						@include rem(font-size, 12px);
+					}
+				}
+			}
 		}
 		&.overlay{
 			padding-left: 0;
