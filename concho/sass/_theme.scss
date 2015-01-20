@@ -248,11 +248,21 @@ table{
 						&.pdf{
 							background: transparent inline-image('../images/ui/icon_pdf.png') no-repeat center center;
 						}
+						&.listen{
+							background: transparent inline-image('../images/ui/icon_listen.png') no-repeat center center;
+						}
 					}
 				}
 			}
 		}
 	}
+	&.upcoming-events{
+		td{
+			background-color: $gray-light;
+			@include rem(border-bottom, 1px solid $white !important);
+		}
+	}
+
 }
 .table-nav{
 		ul{
