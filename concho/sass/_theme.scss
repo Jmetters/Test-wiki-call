@@ -436,7 +436,7 @@ $larger-text-mag: 1.3;
 
 %body-copy{
 	@include fontMetrics( 16px, 24px );
-	p,ul,ol,li,blockquote{
+	p,ul,ol,li,blockquote,td{
 		@include fontMetrics( 16px, 24px );
 		-webkit-font-feature-settings: 'lnum';
 		-moz-font-feature-settings: 'lnum';
