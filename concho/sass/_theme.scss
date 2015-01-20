@@ -1189,6 +1189,25 @@ body{
 				}
 			}
 			
+			//specific UL styling
+			ul{
+				&.list-unstyled{
+					&.reports{
+						margin-bottom: 0;
+						li{
+							&.details{
+								@include padding-small();
+								background-color: $gray-light;
+								a{
+									font-weight: bold;
+									@include rem(font-size, 13px);
+									color: $green-dark;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		&.overlay{
 			padding-left: 0;

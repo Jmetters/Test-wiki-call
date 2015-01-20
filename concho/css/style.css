@@ -2537,6 +2537,9 @@ body .container-fluid#content article[role="article"].item { padding-bottom: 80p
 body .container-fluid#content article[role="article"] h2 { font-size: 18px; font-size: 1.8rem; margin-top: 10px; margin-top: 1rem; line-height: normal; color: #68bc49; }
 body .container-fluid#content article[role="article"] p, body .container-fluid#content article[role="article"] ul, body .container-fluid#content article[role="article"] ol, body .container-fluid#content article[role="article"] li, body .container-fluid#content article[role="article"] blockquote { font-size: 18px; font-size: 1.8rem; line-height: 28px; line-height: 2.8rem; }
 body .container-fluid#content article[role="article"] a { font-weight: 400; }
+body .container-fluid#content ul.list-unstyled.reports { margin-bottom: 0; }
+body .container-fluid#content ul.list-unstyled.reports li.details { padding: 20px; padding: 2rem; background-color: #d9d8d3; }
+body .container-fluid#content ul.list-unstyled.reports li.details a { font-weight: bold; font-size: 13px; font-size: 1.3rem; color: #163d34; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }
