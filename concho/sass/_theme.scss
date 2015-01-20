@@ -218,32 +218,38 @@
 	border: none;
 }
 table{
-	&.data{
-		th{
-			text-align: center;
-			@include padding-bottom-small();
-			@include padding-left-small();
-			@include padding-right-small();
-			@include rem(font-size, 12px);
-			&.text-left{
-				text-align: left !important;
-			}
-		}
-		tr{
-			&.even{
-				background-color: rgba($white, 0.25);
-				h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
-					color: $white;
+	th{
+		background-color: $gray-medium;
+		@extend %raleway-bold;
+		@include rem(font-size, 11px);
+		color: $white;
+		text-transform: uppercase;
+	}
+	tr{
+		
+	}
+	td{
+		@include rem(border-bottom, 1px solid $gray-light !important);
+		ul{
+			margin-bottom: 0;
+			&.file-types{
+				li{
+					a{
+						display: block;
+						text-indent: -1000em;
+						@include rem(width, 20px);
+						@include rem(height, 25px);
+						&.doc{
+							background: transparent inline-image('../images/ui/icon_doc.png') no-repeat center center;
+						}
+						&.xls{
+							background: transparent inline-image('../images/ui/icon_xls.png') no-repeat center center;
+						}
+						&.pdf{
+							background: transparent inline-image('../images/ui/icon_pdf.png') no-repeat center center;
+						}
+					}
 				}
-				color: $white;
-			}
-		}
-		td{
-			@include padding-small();
-			text-align: center;
-			&.name{
-				text-align: left;
-				width: 20%;
 			}
 		}
 	}
@@ -1246,6 +1252,13 @@ body{
 textarea{
 	&.form-control{
 		@include resizable(vertical);
+	}
+}
+
+.form-filters{
+	.glyphicon-search{
+		background-color: darken($gray-light, 5%);
+		color: $white;
 	}
 }
 
