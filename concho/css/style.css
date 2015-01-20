@@ -2540,7 +2540,9 @@ body .container-fluid#content ul.list-unstyled.reports { margin-bottom: 0; }
 body .container-fluid#content ul.list-unstyled.reports li.details { padding: 20px; padding: 2rem; background-color: #d9d8d3; }
 body .container-fluid#content ul.list-unstyled.reports li.details a { font-weight: bold; font-size: 13px; font-size: 1.3rem; color: #163d34; }
 body .container-fluid#content .disclaimer p { font-weight: 500; font-size: 12px; font-size: 1.2rem; }
+body .container-fluid#content .form label { font-size: 13px; font-size: 1.3rem; font-weight: bold; }
 body .container-fluid#content .form p.form-required { color: #163d34; font-size: 12px; font-size: 1.2rem; }
+body .container-fluid#content .form input[type="text"] { -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }
