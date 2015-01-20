@@ -1,25 +1,40 @@
 @mixin h1{
 	@extend .h1;
 	@include rem(line-height, 44px);
+	-webkit-font-feature-settings: 'lnum';
+	-moz-font-feature-settings: 'lnum';
+	-ms-font-feature-settings: 'lnum';
 }
 @mixin h2{
 	@extend .h2;
 	@include rem(line-height, 34px);
+	-webkit-font-feature-settings: 'lnum';
+	-moz-font-feature-settings: 'lnum';
+	-ms-font-feature-settings: 'lnum';
 }
 @mixin h3{
 	@extend .h3;
 	@include rem(line-height, 18px);
 	@extend %raleway-bold;
+	-webkit-font-feature-settings: 'lnum';
+	-moz-font-feature-settings: 'lnum';
+	-ms-font-feature-settings: 'lnum';
 }
 @mixin h4{
 	@extend .h4;
 	@include rem(line-height, 15px);
 	@extend %raleway-bold;
+	-webkit-font-feature-settings: 'lnum';
+	-moz-font-feature-settings: 'lnum';
+	-ms-font-feature-settings: 'lnum';
 }
 @mixin h5{
 	@extend .h5;
 	@include rem(line-height, 13px);
 	@extend %raleway-bold;
+	-webkit-font-feature-settings: 'lnum';
+	-moz-font-feature-settings: 'lnum';
+	-ms-font-feature-settings: 'lnum';
 }
 @mixin font-color($color){
 	color: $color !important;

@@ -2294,17 +2294,8 @@ input.btn-transparent:hover { background: white; }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { background-image: -webkit-linear-gradient(top, #163d34 0%, #0f2a24 100%); background-image: -o-linear-gradient(top, #163d34 0%, #0f2a24 100%); background-image: linear-gradient(to bottom, #163d34 0%, #0f2a24 100%); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF163D34', endColorstr='#FF0F2A24', GradientType=0); background-color: #0f2a24; }
 
-.body-copy, .normal-text, body .container-fluid#content p, body .container-fluid#content ul, body .container-fluid#content ol, body .container-fluid#content li, body .container-fluid#content blockquote { font-size: 16px; font-size: 1.6rem; line-height: 24px; line-height: 2.4rem; }
-.body-copy p, .normal-text p, body .container-fluid#content p p, body .container-fluid#content ul p, body .container-fluid#content ol p, body .container-fluid#content li p, body .container-fluid#content blockquote p, .body-copy ul, .normal-text ul, body .container-fluid#content p ul, body .container-fluid#content ul ul, body .container-fluid#content ol ul, body .container-fluid#content li ul, body .container-fluid#content blockquote ul, .body-copy ol, .normal-text ol, body .container-fluid#content p ol, body .container-fluid#content ul ol, body .container-fluid#content ol ol, body .container-fluid#content li ol, body .container-fluid#content blockquote ol, .body-copy li, .normal-text li, body .container-fluid#content p li, body .container-fluid#content ul li, body .container-fluid#content ol li, body .container-fluid#content li li, body .container-fluid#content blockquote li, .body-copy blockquote, .normal-text blockquote, body .container-fluid#content p blockquote, body .container-fluid#content ul blockquote, body .container-fluid#content ol blockquote, body .container-fluid#content li blockquote, body .container-fluid#content blockquote blockquote { font-size: 16px; font-size: 1.6rem; line-height: 24px; line-height: 2.4rem; }
-
-.medium-text { font-size: 17px; font-size: 1.65rem; line-height: 26px; line-height: 2.64rem; }
-.medium-text p, .medium-text ul, .medium-text ol, .medium-text li, .medium-text blockquote { font-size: 17px; font-size: 1.65rem; line-height: 26px; line-height: 2.64rem; }
-
-.large-text { font-size: 18px; font-size: 1.8rem; line-height: 29px; line-height: 2.88rem; }
-.large-text p, .large-text ul, .large-text ol, .large-text li, .large-text blockquote { font-size: 18px; font-size: 1.8rem; line-height: 29px; line-height: 2.88rem; }
-
-.larger-text { font-size: 20px; font-size: 1.95rem; line-height: 31px; line-height: 3.12rem; }
-.larger-text p, .larger-text ul, .larger-text ol, .larger-text li, .larger-text blockquote { font-size: 20px; font-size: 1.95rem; line-height: 31px; line-height: 3.12rem; }
+.body-copy, .normal-text, body .container-fluid#content { font-size: 16px; font-size: 1.6rem; line-height: 24px; line-height: 2.4rem; }
+.body-copy p, .normal-text p, body .container-fluid#content p, .body-copy ul, .normal-text ul, body .container-fluid#content ul, .body-copy ol, .normal-text ol, body .container-fluid#content ol, .body-copy li, .normal-text li, body .container-fluid#content li, .body-copy blockquote, .normal-text blockquote, body .container-fluid#content blockquote { font-size: 16px; font-size: 1.6rem; line-height: 24px; line-height: 2.4rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
 .hidden { display: none; }
 
@@ -2368,15 +2359,15 @@ body .container-fluid#content article[role="article"], body .container-fluid#con
 
 .background-gray-lightest { background-color: #e7e6e4; }
 
-h1, h1, .h1, body .feature h2 { line-height: 44px; line-height: 4.4rem; }
+h1, h1, .h1, body .feature h2 { line-height: 44px; line-height: 4.4rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
-h2, h2, .h2 { line-height: 34px; line-height: 3.4rem; }
+h2, h2, .h2 { line-height: 34px; line-height: 3.4rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
-h3, h3, .h3, body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; }
+h3, h3, .h3, body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
-h4, h4, .h4 { line-height: 15px; line-height: 1.5rem; }
+h4, h4, .h4 { line-height: 15px; line-height: 1.5rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
-h5, h5, .h5 { line-height: 13px; line-height: 1.3rem; }
+h5, h5, .h5 { line-height: 13px; line-height: 1.3rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
 h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 
@@ -2501,14 +2492,14 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 
 body .feature { font-family: "URWEgyptienneW01-Light" !important; }
 body .feature p, body .feature ul, body .feature ol, body .feature li, body .feature blockquote { font-size: 18px !important; font-size: 1.8rem !important; line-height: 24px !important; line-height: 2.4rem !important; }
-body .feature h2 { line-height: 44px; line-height: 4.4rem; padding-bottom: 20px; padding-bottom: 2rem; text-transform: uppercase; }
+body .feature h2 { line-height: 44px; line-height: 4.4rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; padding-bottom: 20px; padding-bottom: 2rem; text-transform: uppercase; }
 body .values { font-family: "Raleway", sans-serif !important; text-transform: uppercase; text-align: center; }
 body .values p { font-family: "Raleway", sans-serif !important; }
 body .heading-line-height-reset { line-height: 1.57143; line-height: 1.57143; }
 body .fullscreen { min-height: inherit; height: 100%; width: 100%; background-size: cover; background-repeat: no-repeat; padding-bottom: 0; }
 body section .down-arrow { text-transform: uppercase; position: absolute; bottom: 20px; bottom: 2rem; font-size: 10px !important; font-size: 1rem !important; margin: 0 auto; width: 100%; color: white; -webkit-animation-name: fadeInOut; animation-name: fadeInOut; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-duration: 2s; animation-duration: 2s; -webkit-animation-direction: alternate; animation-direction: alternate; }
 body .container-fluid#content { position: relative; padding-top: 90px; padding-top: 9rem; }
-body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; color: #163d34; }
+body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; color: #163d34; }
 body .container-fluid#content .featured { height: 290px; height: 29rem; background-position: center center; background-size: cover; background-repeat: no-repeat; }
 body .container-fluid#content .featured .container { position: relative; }
 body .container-fluid#content .featured .container .stock-ticker { position: absolute; top: 0; right: 0; }

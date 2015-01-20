@@ -415,43 +415,14 @@ $larger-text-mag: 1.3;
 	@include fontMetrics( 16px, 24px );
 	p,ul,ol,li,blockquote{
 		@include fontMetrics( 16px, 24px );
+		-webkit-font-feature-settings: 'lnum';
+		-moz-font-feature-settings: 'lnum';
+		-ms-font-feature-settings: 'lnum';
 	}
 }
 
 .body-copy,.normal-text{
 	@extend %body-copy;
-}
-
-%medium-body-copy{
-	@include fontMetrics( (15px * $medium-text-mag), (24px * $medium-text-mag) );
-	p,ul,ol,li,blockquote{
-		@include fontMetrics( (15px * $medium-text-mag), (24px * $medium-text-mag) );
-	}
-}
-%large-body-copy{
-	@include fontMetrics( (15px * $large-text-mag), (24px * $large-text-mag) );
-	p,ul,ol,li,blockquote{
-		@include fontMetrics( (15px * $large-text-mag), (24px * $large-text-mag) );
-	}
-}
-%larger-body-copy{
-	@include fontMetrics( (15px * $larger-text-mag), (24px * $larger-text-mag) );
-	p,ul,ol,li,blockquote{
-		@include fontMetrics( (15px * $larger-text-mag), (24px * $larger-text-mag) );
-	}
-}
-
-.normal-text{
-	@extend %body-copy;
-}
-.medium-text{
-	@extend %medium-body-copy;
-}
-.large-text{
-	@extend %large-body-copy;
-}
-.larger-text{
-	@extend %larger-body-copy;
 }
 
 .hidden{
@@ -1029,9 +1000,7 @@ body{
 					color: $green-dark;
 				}
 			}
-			p,ul,ol,li,blockquote{
-				@extend %body-copy;
-			}
+			@extend %body-copy;
 			
 			//Feature
 			.featured{
