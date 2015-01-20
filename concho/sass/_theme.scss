@@ -1208,6 +1208,14 @@ body{
 					}
 				}
 			}
+			
+			.disclaimer{
+				p{
+					font-weight: 500;
+					@include rem(font-size, 12px);
+				}
+			}
+			
 		}
 		&.overlay{
 			padding-left: 0;
