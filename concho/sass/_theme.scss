@@ -254,7 +254,24 @@ table{
 		}
 	}
 }
-
+.table-nav{
+		ul{
+			&.list-inline{
+				li{
+					a{
+						@include rem(font-size, 13px);
+						@include rem(border-right, 1px solid $gray);
+						@include rem(padding-right, 15px);
+					}
+					&:last-child{
+						a{
+							border-right: none;
+						}
+					}
+				}
+			}
+		}
+}
 //== Shadows
 .box-shadow-all-sides{
 	@include box-shadow(0 0 5px 2px $gray);
