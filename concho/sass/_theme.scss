@@ -459,17 +459,32 @@ $larger-text-mag: 1.3;
 }
 
 //Families
-.raleway{
+%raleway{
 	@include font-family($font-family-raleway);
 }
+%raleway-bold{
+	@include font-family($font-family-raleway);
+	font-weight: bold;
+}
+%raleway-light{
+	@include font-family($font-family-raleway);
+	font-weight: 300;
+}
+%raleway-medium{
+	@include font-family($font-family-raleway);
+	font-weight: 500;
+}
+%raleway{
+	@extend %raleway;
+}
 .raleway-bold{
-	@include font-family($font-family-raleway-bold);
+	@extend %raleway-bold;
 }
 .raleway-light{
-	@include font-family($font-family-raleway-light);
+	@extend %raleway-light;
 }
 .raleway-medium{
-	@include font-family($font-family-raleway-medium);
+	@extend %raleway-medium;
 }
 .egyptienne-light{
 	@include font-family($font-family-egyptienne-light);
@@ -827,7 +842,7 @@ h6,.h6{
 // -------------------------
 .nav-pills {
 	background: transparent inline-image('../images/ui/divider_gray.png') no-repeat right center;
-	@include font-family($font-family-raleway-bold);
+	@extend %raleway-bold;
 	text-transform: uppercase;
   > li {
     float: left;
@@ -1071,7 +1086,7 @@ body{
 									@include rem(line-height, 40px);
 									color: $gray;
 									&.current-price{
-										@include font-family($font-family-raleway-bold);
+										@extend %raleway-bold;
 									}
 									&.change{
 										.fa{
@@ -1117,9 +1132,9 @@ body{
 			.quick-links{
 				@include rem(font-size, 13px);
 				color: $gray;
-				@include font-family($font-family-raleway-bold);
+				@extend %raleway-bold;
 				h2{
-					@include font-family($font-family-raleway-light);
+					@extend %raleway-light;
 					color: $white;
 					margin-top: 0;
 					margin-bottom: 0;
@@ -1160,7 +1175,7 @@ body{
 			}
 			//Main article styles
 			article[role="article"]{
-				@include font-family($font-family-raleway);
+				@extend %raleway;
 				color: $green-bright;
 				&.item{
 					@include padding-bottom-2x();
@@ -1168,7 +1183,7 @@ body{
 					@include padding-right();
 				}
 				h2{
-					@include font-family($font-family-raleway);
+					@extend %raleway;
 					@include rem(font-size, 18px);
 					@include rem(margin-top, 10px);
 					line-height: normal;

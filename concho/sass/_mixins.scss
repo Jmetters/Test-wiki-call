@@ -9,17 +9,17 @@
 @mixin h3{
 	@extend .h3;
 	@include rem(line-height, 18px);
-	font-family: $font-family-raleway-bold;
+	@extend %raleway-bold;
 }
 @mixin h4{
 	@extend .h4;
 	@include rem(line-height, 15px);
-	font-family: $font-family-raleway-bold;
+	@extend %raleway-bold;
 }
 @mixin h5{
 	@extend .h5;
 	@include rem(line-height, 13px);
-	font-family: $font-family-raleway-bold;
+	@extend %raleway-bold;
 }
 @mixin font-color($color){
 	color: $color !important;
