@@ -2255,7 +2255,7 @@ table.upcoming-events td { background-color: #d9d8d3; border-bottom: 1px solid w
 .btn-default:active, .btn-default.active, .btn-primary:active, .btn-primary.active, .btn-dark-blue:active, .btn-dark-blue.active, .btn-success:active, .btn-success.active, .btn-info:active, .btn-info.active, .btn-warning:active, .btn-warning.active, .btn-danger:active, .btn-danger.active { -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
 .btn-default a, .btn-primary a, .btn-dark-blue a, .btn-success a, .btn-info a, .btn-warning a, .btn-danger a { color: white; }
 
-.btn { padding: 14px 12px; font-size: 14px; line-height: 1.42857; border-radius: 0; position: relative; font-family: "Raleway", sans-serif; font-size: 13px !important; font-size: 1.3rem !important; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
+.btn { padding: 11px 12px; font-size: 14px; line-height: 1.42857; border-radius: 0; position: relative; font-family: "Raleway", sans-serif; font-size: 13px !important; font-size: 1.3rem !important; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
 .btn:active, .btn.active { background-image: none; }
 
 .btn-default { border: 0; color: white !important; padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; text-decoration: none !important; text-shadow: none; border-color: #163d34; }
@@ -2306,7 +2306,7 @@ input.btn-transparent:hover { background: white; }
 
 body .container-fluid#content article[role="article"], body .container-fluid#content article[role="article"] h2 { font-family: "Raleway", sans-serif !important; }
 
-table th, .raleway-bold, h3, .h3, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .nav-pills, body .container-fluid#content .featured .container .stock-ticker .price ul li.current-price, body .container-fluid#content .quick-links { font-family: "Raleway", sans-serif !important; font-weight: bold; }
+table th, .raleway-bold, h3, .h3, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .nav-pills, body .container-fluid#content .featured .container .stock-ticker .price ul li.current-price, body .container-fluid#content .stock-ticker.big .price ul li.current-price, body .container-fluid#content .quick-links { font-family: "Raleway", sans-serif !important; font-weight: bold; }
 
 .raleway-light, body .container-fluid#content .quick-links h2 { font-family: "Raleway", sans-serif !important; font-weight: 300; }
 
@@ -2518,6 +2518,9 @@ body .container-fluid#content .featured .container .stock-ticker .price { backgr
 body .container-fluid#content .featured .container .stock-ticker .price ul { padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; margin-bottom: 0; }
 body .container-fluid#content .featured .container .stock-ticker .price ul li { line-height: 40px; line-height: 4rem; color: #7f7f73; }
 body .container-fluid#content .featured .container .stock-ticker .price ul li.change .fa { color: #68bc49; }
+body .container-fluid#content .stock-ticker.big .symbol ul li.exchange { font-size: 54px; font-size: 5.4rem; color: #163d34; }
+body .container-fluid#content .stock-ticker.big .price ul li { font-size: 32px; font-size: 3.2rem; }
+body .container-fluid#content .stock-ticker.big .price ul li.change .fa { color: #68bc49; font-size: 32px; font-size: 3.2rem; }
 body .container-fluid#content .tools { text-align: right; }
 body .container-fluid#content .tools ul.list-inline { margin-top: 15px; margin-top: 1.5rem; margin-bottom: 20px; margin-bottom: 2rem; }
 body .container-fluid#content .tools ul.list-inline li { padding-left: 0; padding-right: 0; }

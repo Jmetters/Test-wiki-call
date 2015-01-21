@@ -330,7 +330,7 @@ table{
 
 // Common styles
 .btn {
-	@include button-size(14px, $padding-base-horizontal, $font-size-base, $line-height-base, 0);
+	@include button-size(11px, $padding-base-horizontal, $font-size-base, $line-height-base, 0);
 	position: relative;
 	font-family: $font-family-sans-serif;
 	@include rem(font-size, 13px !important);
@@ -1097,6 +1097,38 @@ body{
 					}
 				}
 			}
+			
+			.stock-ticker{
+				&.big{
+					.symbol{
+						ul{
+							li{
+								&.exchange{
+									@include rem(font-size, 54px);
+									color: $green-dark;
+								}
+							}
+						}
+					}
+					.price{
+						ul{
+							li{
+								@include rem(font-size, 32px);
+								&.current-price{
+									@extend %raleway-bold;
+								}
+								&.change{
+									.fa{
+										color: $green-bright;
+										@include rem(font-size, 32px);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
 			.tools{
 				text-align: right;
 				ul{
