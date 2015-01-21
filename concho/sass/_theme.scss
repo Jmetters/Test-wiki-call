@@ -1128,7 +1128,15 @@ body{
 					}
 				}
 			}
-			
+			.graphs{
+				h5{
+					@include fontMetrics(11px,40px);
+					background-color: $gray-medium;
+					color: $white;
+					@include padding-left-small();
+					@include margin-bottom-small();
+				}
+			}
 			.tools{
 				text-align: right;
 				ul{

@@ -2521,6 +2521,7 @@ body .container-fluid#content .featured .container .stock-ticker .price ul li.ch
 body .container-fluid#content .stock-ticker.big .symbol ul li.exchange { font-size: 54px; font-size: 5.4rem; color: #163d34; }
 body .container-fluid#content .stock-ticker.big .price ul li { font-size: 32px; font-size: 3.2rem; }
 body .container-fluid#content .stock-ticker.big .price ul li.change .fa { color: #68bc49; font-size: 32px; font-size: 3.2rem; }
+body .container-fluid#content .graphs h5 { font-size: 11px; font-size: 1.1rem; line-height: 40px; line-height: 4rem; background-color: #aba99e; color: white; padding-left: 14px; padding-left: 1.4rem; margin-bottom: 20px; margin-bottom: 2rem; }
 body .container-fluid#content .tools { text-align: right; }
 body .container-fluid#content .tools ul.list-inline { margin-top: 15px; margin-top: 1.5rem; margin-bottom: 20px; margin-bottom: 2rem; }
 body .container-fluid#content .tools ul.list-inline li { padding-left: 0; padding-right: 0; }
