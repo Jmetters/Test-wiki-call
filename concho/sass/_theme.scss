@@ -234,6 +234,8 @@ table{
 			margin-bottom: 0;
 			&.file-types{
 				li{
+					padding-left: 0;
+					padding-right: 0;
 					a{
 						display: block;
 						text-indent: -1000em;
