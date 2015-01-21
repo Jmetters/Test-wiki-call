@@ -716,16 +716,17 @@ h6,.h6{
 					white-space: nowrap;
 					padding: 0 20px;
 					background: $green-dark;
-					@include fontMetrics(13px, 46px);
-					
+					@include fontMetrics(13px, 50px);
+					text-transform: uppercase;
+					font-weight: bold;
 					&:hover {
-						background: $green-bright;
-						color: $green-dark;
+						background: $navbar-submenu-divider;
+						color: $white;
 						text-decoration: none;
 					}
 				}
 				li{
-					border-top: 1px solid $green-dark;
+					border-top: 1px solid $navbar-submenu-divider;
 				}
 				li:first-child {
 					border-top: none;

@@ -2393,9 +2393,9 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 .navbar-default .list-inline > li.on a, .navbar-default .list-inline > li:hover a { background: none; color: #163d34; text-decoration: none; }
 .navbar-default .list-inline > li:first-child a { border-left: 1px solid #d9d8d3; border-left: 0.1rem solid #d9d8d3; }
 .navbar-default .list-inline > li .sub-menu { display: none; position: absolute; top: 80px; top: 8rem; left: 0; padding: 0; list-style-type: none; text-align: left; }
-.navbar-default .list-inline > li .sub-menu a { display: block; color: white; white-space: nowrap; padding: 0 20px; background: #163d34; font-size: 13px; font-size: 1.3rem; line-height: 46px; line-height: 4.6rem; }
-.navbar-default .list-inline > li .sub-menu a:hover { background: #68bc49; color: #163d34; text-decoration: none; }
-.navbar-default .list-inline > li .sub-menu li { border-top: 1px solid #163d34; }
+.navbar-default .list-inline > li .sub-menu a { display: block; color: white; white-space: nowrap; padding: 0 20px; background: #163d34; font-size: 13px; font-size: 1.3rem; line-height: 50px; line-height: 5rem; text-transform: uppercase; font-weight: bold; }
+.navbar-default .list-inline > li .sub-menu a:hover { background: #11261f; color: white; text-decoration: none; }
+.navbar-default .list-inline > li .sub-menu li { border-top: 1px solid #11261f; }
 .navbar-default .list-inline > li .sub-menu li:first-child { border-top: none; }
 .navbar-default .list-inline > li .sub-menu .on a { background: #68bc49; color: #163d34; text-decoration: none; }
 .navbar-default .list-inline > li:hover .sub-menu { display: block; }
