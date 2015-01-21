@@ -785,7 +785,6 @@ h6,.h6{
 			}
 			&.has-children{
 				&>a{
-					display: inline-block;
 					@include rem(padding, 10px 15px);
 					&:after{
 						display: inline-block;
