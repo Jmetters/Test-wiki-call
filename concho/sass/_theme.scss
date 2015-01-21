@@ -921,29 +921,34 @@ h6,.h6{
 		}
 	}
 	
-	.search-results-form{
-		position: relative;
-		.form-control{
-			color: $gray;
-			border-color: $gray;
-			background-color: $white;
-			font-family: $font-family-sans-serif;
-			@include placeholder($gray);
-		}
-		.form-control-feedback{
-			@include rem(font-size, 16px);
-			color: $green-bright;
-		}
-		input[type="submit"]{
-			top: 0;
-			text-indent: -1000em;
-			background-color: transparent;
-			position: absolute;
-			border: 0;
-			z-index: 3;
-			$shadow: none;
-			@include box-shadow($shadow);
-		}
+	.search-tool{
+		@include padding-left();
+		@include padding-right-small();
+		@include margin-bottom-small();
+			.form-control{
+				border-color: darken($green-dark, 5%);
+				background-color: darken($green-dark, 5%);
+				@include placeholder($white);
+				color: $white;
+			}
+			.form-control-feedback{
+				@include rem(top, 20px);
+				@include transition(all .4s ease);
+				@include rem(right, ($grid-gutter-width / 2) );
+				background-color: darken($green-dark, 5%);
+				color: $white;
+				@include rem(border-left, 1px solid $green-dark);
+			}
+			input[type="submit"]{
+				position: absolute;
+				@include rem(top, 20px);
+				@include rem(right, ($grid-gutter-width / 2) );
+				width: $input-height-base;
+				height: $input-height-base;
+				background-color: transparent;
+				text-indent: -1000em;
+				z-index: 1;
+			}
 	}
 
 }
