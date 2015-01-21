@@ -2614,6 +2614,11 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .tools ul.dropdown-menu li a { border-right: 1px solid #7f7f73; border-right: 0.1rem solid #7f7f73; padding-left: 15px; padding-left: 1.5rem; padding-right: 15px; padding-right: 1.5rem; font-size: 11px; font-size: 1.1rem; color: #7f7f73; }
   body .container-fluid#content .tools ul.dropdown-menu li a:hover, body .container-fluid#content .tools ul.dropdown-menu li a:focus { color: #163d34; text-decoration: none; }
   body .container-fluid#content .tools ul.dropdown-menu li:last-child a { border-right: none; }
+  body .container-fluid#content .quick-links { background-color: transparent; }
+  body .container-fluid#content .quick-links .row div { min-height: 100px; min-height: 10rem; }
+  body .container-fluid#content .quick-links .row div h2 { padding-top: 30px; padding-top: 3rem; margin-bottom: 0; min-height: initial; line-height: normal; }
+  body .container-fluid#content .quick-links .row div a { min-height: 100px; min-height: 10rem; padding: 0; }
+  body .container-fluid#content .quick-links .row div a span { display: block; padding-top: 20px; padding-top: 2rem; padding-bottom: 10px; padding-bottom: 1rem; }
   #main-container .row-offcanvas .container-outer { margin-top: 20px; margin-top: 2rem; }
   #main-container .row-offcanvas .sidebar { display: none; }
   .navbar-default { min-height: 80px; min-height: 8rem; }
