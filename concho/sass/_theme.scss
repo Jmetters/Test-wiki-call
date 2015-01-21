@@ -1371,6 +1371,24 @@ body{
 							}
 						}
 					}
+					&.sub-pages{
+						li{
+							background-color: $green-dark;
+							@include rem(padding, 0 20px);
+							a{
+								display: block;
+								color: $white;
+								text-decoration: none;
+								font-weight: bold;
+								@include fontMetrics(13px, 50px);
+							}
+							&:hover,
+							&:focus,
+							&.on{
+								background-color: darken($green-dark, 5%);
+							}
+						}
+					}
 				}
 			}
 			
