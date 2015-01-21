@@ -43,7 +43,16 @@
 			<div class="row row-offcanvas row-offcanvas-right main-row">
 				<div class="sidebar-offcanvas visible-sm visible-xs col-sm-8 col-xs-8 nopadding-left nopadding-right">
 					<div class="menu-container padding-bottom-small">
-<ul class="menu nav">
+						<div class="search-tool">
+							<div id="p_lt_ctl00_SideBarSearchBox_pnlSearch" class="searchBox" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;p_lt_ctl00_SideBarSearchBox_btnSearch&#39;)">
+								<label for="p_lt_ctl00_SideBarSearchBox_txtWord" id="p_lt_ctl00_SideBarSearchBox_lblSearch" style="display:none;">Search for:</label>
+								<input name="p$lt$ctl00$SideBarSearchBox$txtWord" type="text" maxlength="1000" id="p_lt_ctl00_SideBarSearchBox_txtWord" class="form-control" placeholder="Search" />
+								<input type="submit" name="p$lt$ctl00$SideBarSearchBox$btnSearch" value="Go" id="p_lt_ctl00_SideBarSearchBox_btnSearch" class="btn" />
+								<div id="p_lt_ctl00_SideBarSearchBox_pnlPredictiveResultsHolder" class="predictiveSearchHolder"></div>
+							</div>
+							<span class="glyphicon glyphicon-search form-control-feedback"></span>
+						</div>
+						<ul class="menu nav">
 							<li class="menu-item has-children">
 								<a href="#">About</a>
 							</li>
@@ -53,18 +62,18 @@
 							<li class="menu-item">
 								<a href="#">News</a>
 							</li>
-							<li class="menu-item on has-children">
+							<li class="menu-item off has-children">
 								<a href="#">Investors</a>
-								<ul class="sub-menu on">
+								<ul class="sub-menu off">
 									<li class="menu-item">
 										<a href="#">Investor News</a>
 									</li>
 									<li class="menu-item">
 										<a href="#">Events & Presentations</a>
 									</li>
-									<li class="menu-item on has-children">
+									<li class="menu-item off has-children">
 										<a href="/ir_sec_filings.html">Financial Reports</a>
-										<ul class="sub-menu on">
+										<ul class="sub-menu off">
 											<li class="menu-item">
 												<a href="#">SEC Filings</a>
 											</li>
@@ -104,8 +113,27 @@
 							</li>
 						</ul>
 					</div>
-					
-					<a class="navbar-brand" href="/">Concho</a>
+					<div class="row">
+						<div class="col-sm-4 col-xs-4 text-left padding-left">
+							<a class="navbar-brand" href="/">Concho</a>
+						</div>
+						<div class="col-sm-8 col-xs-8 text-right">
+							<ul class="list-inline social text-right">
+								<li class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<a href="#" class="fa fa-facebook fa-stack-1x fa-inverse" target="_blank"></a>
+								</li>
+								<li class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<a href="#" class="fa fa-twitter fa-stack-1x fa-inverse" target="_blank"></a>
+								</li>
+								<li class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<a href="#" class="fa fa-linkedin fa-stack-1x fa-inverse" target="_blank"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div><!-- /.sidebar-offcanvas -->
 				
 				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">

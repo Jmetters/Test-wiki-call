@@ -2408,7 +2408,7 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 .navbar { margin-bottom: 0; }
 
 .sidebar-offcanvas { padding-top: 20px; padding-top: 2rem; background-color: #163d34; font-family: "Raleway", sans-serif; font-weight: 300; font-size: 18px; font-size: 1.8rem; -webkit-box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); }
-.sidebar-offcanvas .nav li a { padding: 10px 50px 10px 15px; padding: 1rem 5rem 1rem 1.5rem; }
+.sidebar-offcanvas .nav li a { padding: 10px 50px 10px 15px; padding: 1rem 5rem 1rem 1.5rem; text-decoration: none; width: 100%; }
 .sidebar-offcanvas .nav li.has-children > a { display: inline-block; padding: 10px 15px; padding: 1rem 1.5rem; }
 .sidebar-offcanvas .nav li.has-children > a:after { display: inline-block; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: "\f106"; text-align: right; }
 .sidebar-offcanvas .nav li.has-children.on > a:after { content: "\f107"; }

@@ -780,6 +780,8 @@ h6,.h6{
 		li{
 			a{
 				@include rem(padding, 10px 50px 10px 15px);
+				text-decoration: none;
+				width: 100%;
 			}
 			&.has-children{
 				&>a{
