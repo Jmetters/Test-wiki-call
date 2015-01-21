@@ -854,12 +854,13 @@ h6,.h6{
 							&:hover,
 							&:focus,
 							&.on{
-								background-color: $gray-medium;
+								background-color: $white;
 								a{
-									color: $white;
+									color: $gray-medium;
 								}
 							}
 							background-color: $gray-lightest;
+							@include rem(border-bottom, 1px solid $gray-light);
 							@include rem(font-size, 13px);
 							a{
 								color: $gray-medium;
