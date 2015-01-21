@@ -776,6 +776,35 @@ h6,.h6{
 	@include rem(font-size, 18px);
 	@include box-shadow(inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5));
 	.nav{
+		//All li elements
+		li{
+			a{
+				@include rem(padding, 10px 50px 10px 15px);
+			}
+			&.has-children{
+				&>a{
+					display: inline-block;
+					@include rem(padding, 10px 15px);
+					&:after{
+						display: inline-block;
+						vertical-align: middle;
+						@include rem(padding-left, 20px);
+						font-family: 'FontAwesome';
+						font-weight: normal;
+						@include rem(font-size, 21px);
+						content: $fa-var-angle-up;
+						text-align: right;
+					}
+				}
+				&.on{
+					&>a{
+						&:after{
+							content: $fa-var-angle-down;
+						}
+					}
+				}
+			}
+		}
 		&>li{
 			text-align: right;
 			@include rem(border-bottom, 1px solid $navbar-submenu-divider);
@@ -789,6 +818,53 @@ h6,.h6{
 				&:hover{
 					background-color: transparent;
 					color: $white;
+				}
+			}
+			>.sub-menu{
+				&.off{
+					display: none;
+				}
+				@extend .list-unstyled;
+				&>li{
+					&:hover,
+					&:focus,
+					&.on{
+						background-color: $gray-medium;
+						a{
+							color: $white;
+						}
+					}
+					background-color: $gray-light;
+					font-weight: bold;
+					@include rem(font-size, 15px);
+					@include rem(line-height, 40px);
+					@include rem(border-bottom, 1px solid $white);
+					text-transform: uppercase;
+					height: auto;
+					a{
+						color: $gray-medium;
+					}
+					>.sub-menu{
+						&.off{
+							display: none;
+						}
+						@extend .list-unstyled;
+						&>li{
+							&:hover,
+							&:focus,
+							&.on{
+								background-color: $gray-medium;
+								a{
+									color: $white;
+								}
+							}
+							background-color: $gray-lightest;
+							@include rem(font-size, 13px);
+							a{
+								color: $gray-medium;
+							}
+						}
+					}
 				}
 			}
 		}

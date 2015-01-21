@@ -629,7 +629,7 @@ a.bg-danger:hover { background-color: #e4b9b9; }
 ul, ol { margin-top: 0; margin-bottom: 10px; }
 ul ul, ul ol, ol ul, ol ol { margin-bottom: 0; }
 
-.list-unstyled { padding-left: 0; list-style: none; }
+.list-unstyled, .sidebar-offcanvas .nav > li > .sub-menu, .sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu { padding-left: 0; list-style: none; }
 
 .list-inline { padding-left: 0; list-style: none; margin-left: -5px; }
 .list-inline > li { display: inline-block; padding-left: 5px; padding-right: 5px; }
@@ -2408,10 +2408,24 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 .navbar { margin-bottom: 0; }
 
 .sidebar-offcanvas { padding-top: 20px; padding-top: 2rem; background-color: #163d34; font-family: "Raleway", sans-serif; font-weight: 300; font-size: 18px; font-size: 1.8rem; -webkit-box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); }
+.sidebar-offcanvas .nav li a { padding: 10px 50px 10px 15px; padding: 1rem 5rem 1rem 1.5rem; }
+.sidebar-offcanvas .nav li.has-children > a { display: inline-block; padding: 10px 15px; padding: 1rem 1.5rem; }
+.sidebar-offcanvas .nav li.has-children > a:after { display: inline-block; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: "\f106"; text-align: right; }
+.sidebar-offcanvas .nav li.has-children.on > a:after { content: "\f107"; }
 .sidebar-offcanvas .nav > li { text-align: right; border-bottom: 1px solid #11261f; border-bottom: 0.1rem solid #11261f; }
 .sidebar-offcanvas .nav > li:hover, .sidebar-offcanvas .nav > li:focus, .sidebar-offcanvas .nav > li.on { background-color: #11261f; }
 .sidebar-offcanvas .nav > li a { color: white; }
 .sidebar-offcanvas .nav > li a:hover { background-color: transparent; color: white; }
+.sidebar-offcanvas .nav > li > .sub-menu.off { display: none; }
+.sidebar-offcanvas .nav > li > .sub-menu > li { background-color: #d9d8d3; font-weight: bold; font-size: 15px; font-size: 1.5rem; line-height: 40px; line-height: 4rem; border-bottom: 1px solid white; border-bottom: 0.1rem solid white; text-transform: uppercase; height: auto; }
+.sidebar-offcanvas .nav > li > .sub-menu > li:hover, .sidebar-offcanvas .nav > li > .sub-menu > li:focus, .sidebar-offcanvas .nav > li > .sub-menu > li.on { background-color: #aba99e; }
+.sidebar-offcanvas .nav > li > .sub-menu > li:hover a, .sidebar-offcanvas .nav > li > .sub-menu > li:focus a, .sidebar-offcanvas .nav > li > .sub-menu > li.on a { color: white; }
+.sidebar-offcanvas .nav > li > .sub-menu > li a { color: #aba99e; }
+.sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu.off { display: none; }
+.sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li { background-color: #e7e6e4; font-size: 13px; font-size: 1.3rem; }
+.sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li:hover, .sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li:focus, .sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li.on { background-color: #aba99e; }
+.sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li:hover a, .sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li:focus a, .sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li.on a { color: white; }
+.sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li a { color: #aba99e; }
 .sidebar-offcanvas .navbar-brand { display: block; float: none; padding: 20px 0; width: 32px; width: 3.2rem; height: 32px; height: 3.2rem; margin: 0 auto; background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAcCAYAAAAAwr0iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4NzBCNTVGOTk4MjAxMUU0OEYwQkJDQkRFMjYyQUFGMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4NzBCNTVGQTk4MjAxMUU0OEYwQkJDQkRFMjYyQUFGMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjg3MEI1NUY3OTgyMDExRTQ4RjBCQkNCREUyNjJBQUYyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjg3MEI1NUY4OTgyMDExRTQ4RjBCQkNCREUyNjJBQUYyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+FgbOSwAAA2lJREFUeNqkl1lIVVEUho/zUFFmpYkmDlihBhVFZCYVCUUDKDS/BUWDUNFTM0VF9CT0JKH1oGUkZEoEZQMpZYSJTVLYYIY2aplmOZz+bf+pxe6cc6/XBR/37LX22fvfw1l7X8M0TWOY+IEQzTcb3AN3wWOQLGJl5j8r8jd8tziQByrBSzBVxBpBDJgDUkGyiI3m7ydQNZyRp4BWMZpbWnyriG0T/qv0XQKTvJ2BCDAPBAnfc5AGqlnOAkdEvIh1lCUKv8nfi6DZ0yjDwTrwgqorQYJWJwAUi9EuFrEd9FUIXw19iarsScBm83/7CQ7Z1D3KeCMIpm8k6KfPqtfEjWl4I0CNbjLIA/c1IW1gpVZ/E2OlwpdPXxDLqvOTTgIiwQQXQengIHgmhFRrn9lS+vewnATeg+ks3wYL7ASEgVq+fJ1Tmqt2qoOYWeAU6OY7JSCasQzQDOayXMi9pJ6PgzG6ADXqV6azfQDnwRYwzUbMfG6uR2A7fWngGJ9ngGVgFMiS7/oNqjCMeJAN+sB4EMVflWySmFQCxKf0mcmnFlwGNaAbTAS5YAAUgkgQCprAWNDJWL/VkCXAk/mxAdVgLEVFgzAQAtrBG/AQPKEvnH7XDrwV4I2NYMcdHKWd+VPQ304DQTmnvGsInan3gpkZAzml30APlypAq686TAAnQIHeUAan1hf7BV5T/DgeNLFcMjvrshvJWxcBP0DrYM7+k9cbQAs3q8GZi2euX8jN+pTxVI68i8JUG2V2AmqouJ6dtXCHq87eibpqw6WwYTVrmWCKOKDqQDGnegX3QSkPKSXgJpdIWxznrBcKMsEBUAW+OOSIs0w4a8Ad+nrBKnBG1Mux68d68GfGWw8KQB3ocUlM7Uy16iYUwyRl2XeemBuE76PIkrYCKkzv7AFYLRrYDwZEvAVEgVTtvXKnmbYelrt02qnubmCmeHEt+KrVq+OyRdos10ZPAuTlwTJ1CdkNIkQdJaLBRqQc4TUt1mtziTGcjuMSnvvZml8dVhccZijf5lIi7YrbncPuAuInyupms9dlQ+4SdXMc6uwbigBDm+42h0b7tNtQHL8Mu3rpvgqIBTvFJdKyVnG7sf6Y3HAQWs9P3CcBEvVZneM/nWQtdtrlCzrsqe3h/i1bIna6WoIO0sPb8CJPbfwWYAACy1HI6jCwuwAAAABJRU5ErkJggg==') no-repeat center center; background-size: contain; text-indent: -10000em; }
 .sidebar-offcanvas .navbar-brand:hover, .sidebar-offcanvas .navbar-brand:focus { text-decoration: none; }
 @media (min-width: 992px) { .navbar > .container .sidebar-offcanvas .navbar-brand, .navbar > .container-fluid .sidebar-offcanvas .navbar-brand { margin-left: 0; } }
@@ -2543,9 +2557,9 @@ body .container-fluid#content article[role="article"].item { padding-bottom: 80p
 body .container-fluid#content article[role="article"] h2 { font-size: 18px; font-size: 1.8rem; margin-top: 10px; margin-top: 1rem; line-height: normal; color: #68bc49; }
 body .container-fluid#content article[role="article"] p, body .container-fluid#content article[role="article"] ul, body .container-fluid#content article[role="article"] ol, body .container-fluid#content article[role="article"] li, body .container-fluid#content article[role="article"] blockquote { font-size: 18px; font-size: 1.8rem; line-height: 28px; line-height: 2.8rem; }
 body .container-fluid#content article[role="article"] a { font-weight: 400; }
-body .container-fluid#content ul.list-unstyled.reports { margin-bottom: 0; }
-body .container-fluid#content ul.list-unstyled.reports li.details { padding: 20px; padding: 2rem; background-color: #d9d8d3; }
-body .container-fluid#content ul.list-unstyled.reports li.details a { font-weight: bold; font-size: 13px; font-size: 1.3rem; color: #163d34; }
+body .container-fluid#content ul.list-unstyled.reports, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.reports.sub-menu, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.reports.sub-menu { margin-bottom: 0; }
+body .container-fluid#content ul.list-unstyled.reports li.details, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.reports.sub-menu li.details, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.reports.sub-menu li.details { padding: 20px; padding: 2rem; background-color: #d9d8d3; }
+body .container-fluid#content ul.list-unstyled.reports li.details a, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.reports.sub-menu li.details a, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.reports.sub-menu li.details a { font-weight: bold; font-size: 13px; font-size: 1.3rem; color: #163d34; }
 body .container-fluid#content .disclaimer p { font-weight: 500; font-size: 12px; font-size: 1.2rem; }
 body .container-fluid#content .form label { font-size: 13px; font-size: 1.3rem; font-weight: bold; }
 body .container-fluid#content .form p.form-required { color: #163d34; font-size: 12px; font-size: 1.2rem; }
