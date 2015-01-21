@@ -43,32 +43,105 @@
 			<div class="row row-offcanvas row-offcanvas-right main-row">
 				<div class="sidebar-offcanvas visible-sm visible-xs col-sm-8 col-xs-8 nopadding-left nopadding-right">
 					<div class="menu-container padding-bottom-small">
+						<div class="search-tool">
+							<div id="p_lt_ctl00_SideBarSearchBox_pnlSearch" class="searchBox" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;p_lt_ctl00_SideBarSearchBox_btnSearch&#39;)">
+								<label for="p_lt_ctl00_SideBarSearchBox_txtWord" id="p_lt_ctl00_SideBarSearchBox_lblSearch" style="display:none;">Search for:</label>
+								<input name="p$lt$ctl00$SideBarSearchBox$txtWord" type="text" maxlength="1000" id="p_lt_ctl00_SideBarSearchBox_txtWord" class="form-control" placeholder="Search" />
+								<input type="submit" name="p$lt$ctl00$SideBarSearchBox$btnSearch" value="Go" id="p_lt_ctl00_SideBarSearchBox_btnSearch" class="btn" />
+								<div id="p_lt_ctl00_SideBarSearchBox_pnlPredictiveResultsHolder" class="predictiveSearchHolder"></div>
+							</div>
+							<span class="glyphicon glyphicon-search form-control-feedback"></span>
+						</div>
 						<ul class="menu nav">
-							<li class="menu-item">
-								<a href="#">About</a>
+							<li class="menu-item has-children">
+								<a href="javascript:void(0);">About</a>
 							</li>
-							<li class="menu-item">
+							<li class="menu-item has-children">
 								<a href="#">Operations</a>
 							</li>
 							<li class="menu-item">
 								<a href="#">News</a>
 							</li>
-							<li class="menu-item">
+							<li class="menu-item on has-children">
 								<a href="#">Investors</a>
+								<ul class="sub-menu on">
+									<li class="menu-item">
+										<a href="#">Investor News</a>
+									</li>
+									<li class="menu-item">
+										<a href="/ir_events_presentations.html">Events & Presentations</a>
+									</li>
+									<li class="menu-item off has-children">
+										<a href="javascript:void(0);">Financial Reports</a>
+										<ul class="sub-menu on">
+											<li class="menu-item on">
+												<a href="/ir_sec_filings.html">SEC Filings</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Quarterly Reports</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Annual Reports & Proxy</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Non-GAAP Measures</a>
+											</li>
+											<li class="menu-item">
+												<a href="/ir_analyst_coverage.html">Analyst Coverage</a>
+											</li>
+										</ul>										
+									</li>
+									<li class="menu-item has-children">
+										<a href="javascript:void(0);">Corporate Governance</a>
+									</li>
+									<li class="menu-item">
+										<a href="#">Stock Information</a>
+									</li>
+									<li class="menu-item has-children">
+										<a href="javascript:void(0);">Resources</a>
+										<ul class="sub-menu off">
+											<li class="menu-item">
+												<a href="/ir_email_alerts.html">Email Alerts</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">FAQs</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item has-children">
+								<a href="javascript:void(0);">Community</a>
+							</li>
+							<li class="menu-item has-children">
+								<a href="javascript:void(0);">Careers</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">Community</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">Careers</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">Contact</a>
+								<a href="/ir_request_info.html">Contact</a>
 							</li>
 						</ul>
 					</div>
-					
-					<a class="navbar-brand" href="/">Concho</a>
+					<div class="row">
+						<div class="col-sm-4 col-xs-4 text-left padding-left">
+							<a class="navbar-brand" href="/">Concho</a>
+						</div>
+						<div class="col-sm-8 col-xs-8 text-right">
+							<ul class="list-inline social text-right">
+								<li class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<a href="#" class="fa fa-facebook fa-stack-1x fa-inverse" target="_blank"></a>
+								</li>
+								<li class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<a href="#" class="fa fa-twitter fa-stack-1x fa-inverse" target="_blank"></a>
+								</li>
+								<li class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<a href="#" class="fa fa-linkedin fa-stack-1x fa-inverse" target="_blank"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div><!-- /.sidebar-offcanvas -->
 				
 				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
