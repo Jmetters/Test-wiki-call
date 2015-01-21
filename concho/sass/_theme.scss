@@ -773,14 +773,16 @@ h6,.h6{
 	background-color: $green-dark;
 	font-family: $font-family-sans-serif;
 	font-weight: 300;
-	@include rem(font-size, 36px);
+	@include rem(font-size, 18px);
 	@include box-shadow(inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5));
 	.nav{
 		&>li{
-			text-align: center;
-			@include rem(border-bottom, 1px solid $white);
-			&:hover{
-				
+			text-align: right;
+			@include rem(border-bottom, 1px solid $navbar-submenu-divider);
+			&:hover,
+			&:focus,
+			&.on{
+				background-color: $navbar-submenu-divider;
 			}
 			a{
 				color: $white;
