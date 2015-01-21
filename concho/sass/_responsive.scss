@@ -3,10 +3,6 @@
 // Max: 767
 @media (max-width: $screen-xs-max) {
 	
-	.border-lavender-right{
-		border-right: 0;
-	}
-	
 	.vertical-align-lg{
 		@include vertical-align-reset;
 	}
@@ -64,7 +60,9 @@
 			
 				//Feature
 				.featured{
-					
+					.stock-ticker{
+						
+					}
 				}
 				
 			}
@@ -82,9 +80,6 @@
 	}
 	.navbar-default{
 		@include rem(min-height, $navbar-height-collapse);
-		.emergency{
-			position: relative;
-		}
 		&.navbar-fixed-top{
 			position: relative;
 			top: auto;
@@ -245,46 +240,14 @@
 	
 	//== Footer
 	footer#footer[role="contentinfo"]{
-		padding-top: 0;
-		text-align: center;
 		.container{
-			padding-left: 0;
-			padding-right: 0;
-			ul{
-				background-color: $white;
-				text-align: left;
-				&.list-inline{
-					li {
-						display: table;
-						width: 100%;
-						@include rem(font-size, 30px);
-						@include rem(border-bottom, 1px solid $gray-light);
-						@include padding-top-xsmall();
-						@include padding-bottom-xsmall();
-						&:after{
-							display: table-cell;
-							vertical-align: middle;
-							padding-left: 10px;
-							font-family: 'FontAwesome';
-							font-weight: normal;
-							@include rem(font-size, 19px);
-							content: $fa-var-angle-right;
-						}
-						&:hover{
-							background-color: $gray-light;
-						}
-						a{
-							display: table-cell;
-							width: 90%;
-							@include padding-left();
-							border-right: none !important;
-							text-decoration: none;
-							&:hover{
-								color: $brand-primary;
-							}
-						}
-					}
-				}
+			.menu-column{
+				float: right !important;
+			}
+		}
+		.container-fluid{
+			&.copyright{
+				@include rem(line-height, 24px);
 			}
 		}
 	}
