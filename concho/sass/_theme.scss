@@ -893,6 +893,34 @@ h6,.h6{
 			}
 		}
 	}
+	
+	.social{
+		@include rem(padding-right, 48px);
+		li{
+			@include transition(all .4s ease);
+			i{
+				@include transition(all .4s ease);
+				color: $green-mint;
+			}
+			a{
+				@include transition(all .4s ease);
+				color: $green-dark;
+				padding-left: 0;
+				padding-right: 0;
+				border-right: none;
+			}
+			&:hover,
+			&:focus{
+				i{
+					color: $white;
+				}
+				a{
+					color: $green-dark;
+				}
+			}
+		}
+	}
+	
 	.search-results-form{
 		position: relative;
 		.form-control{
