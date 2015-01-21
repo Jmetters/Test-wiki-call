@@ -2378,9 +2378,9 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 
 .navbar-default { background: white; border-radius: 8px; border-top: 10px solid #163d34; border-top: 1rem solid #163d34; border-right: none; border-bottom: none; border-left: none; -webkit-box-shadow: none; box-shadow: none; font-family: "Raleway", sans-serif; font-size: 16px; font-size: 1.6rem; }
 .navbar-default .menu-header-container { margin: 0 14px; }
-.navbar-default .navbar-toggle { float: left; height: 80px; height: 8rem; border: 0; padding: 9px; padding: 0.9rem; color: #3d7762; }
+.navbar-default .navbar-toggle { float: left; height: 80px; height: 8rem; border-left: 1px solid #d9d8d3; border-top: 0; border-right: 0; border-bottom: 0; padding: 28px 14px 28px 28px; padding: 2.8rem 1.4rem 2.8rem 2.8rem; color: #aba99e; }
 .navbar-default .navbar-toggle:hover { background-color: transparent; color: #163d34; }
-.navbar-default .navbar-toggle:before { content: "\f0c9"; font-family: FontAwesome; font-style: normal; font-weight: normal; font-size: 51px; font-size: 5.1rem; }
+.navbar-default .navbar-toggle:before { content: "\f0c9"; font-family: FontAwesome; font-style: normal; font-weight: normal; font-size: 21px; font-size: 2.1rem; }
 .navbar-default .navbar-toggle:focus { background-color: transparent; color: #163d34; }
 .navbar-default .navbar-header { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; }
 .navbar-default .navbar-header .navbar-brand { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; float: left; padding: 20px 0; font-size: 18px; line-height: 20px; height: 80px; height: 8rem; width: 200px; width: 20rem; background: transparent url("../images/logo.png") no-repeat left center; text-indent: -10000em; }

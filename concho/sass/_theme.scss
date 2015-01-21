@@ -619,9 +619,12 @@ h6,.h6{
 	.navbar-toggle{
 		float: left;
 		@include rem(height, $navbar-height-collapse);
-		border: 0;
-		@include rem(padding, 9px);
-		color: $green-mint;		
+		border-left: 1px solid $gray-light;
+		border-top: 0;
+		border-right: 0;
+		border-bottom: 0;
+		@include rem(padding, 28px 14px 28px 28px);
+		color: $gray-medium;		
 		&:hover {
 			background-color: transparent;
 			color: $brand-primary;
@@ -631,7 +634,7 @@ h6,.h6{
 			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
-			@include rem(font-size, 51px);
+			@include rem(font-size, 21px);
 		}
 		&:focus{
 			background-color: transparent;
