@@ -64,7 +64,48 @@
 						
 					}
 				}
-				
+				.tools{
+					text-align: right;
+					@include rem(margin-top, 17px);
+					@include rem(margin-bottom, 20px);
+					a{
+						&.dropdown-toggle{
+							display: block;
+							@include rem(padding-right, 32px);
+							background: inline-image('../images/ui/icon_briefcase.png') no-repeat right center;
+							text-transform: uppercase;
+							color: $gray;
+							@include rem(font-size, 11px);
+						}
+					}
+					ul{
+						&.dropdown-menu{
+							left: initial;
+							right: 0;
+							li{
+								padding-left: 0;
+								padding-right: 0;
+								a{
+									@include rem(border-right, 1px solid $gray);
+									@include rem(padding-left, 15px);
+									@include rem(padding-right, 15px);
+									@include rem(font-size, 11px);
+									color: $gray;
+									&:hover,
+									&:focus{
+										color: $green-dark;
+										text-decoration: none;
+									}
+								}
+								&:last-child{
+									a{
+										border-right: none;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -317,6 +358,48 @@
 				//Feature
 				.featured{
 					
+				}
+				.tools{
+					text-align: right;
+					@include rem(margin-top, 17px);
+					@include rem(margin-bottom, 20px);
+					a{
+						&.dropdown-toggle{
+							display: block;
+							@include rem(padding-right, 32px);
+							background: inline-image('../images/ui/icon_briefcase.png') no-repeat right center;
+							text-transform: uppercase;
+							color: $gray;
+							@include rem(font-size, 11px);
+						}
+					}
+					ul{
+						&.dropdown-menu{
+							left: initial;
+							right: 0;
+							li{
+								padding-left: 0;
+								padding-right: 0;
+								a{
+									@include rem(border-right, 1px solid $gray);
+									@include rem(padding-left, 15px);
+									@include rem(padding-right, 15px);
+									@include rem(font-size, 11px);
+									color: $gray;
+									&:hover,
+									&:focus{
+										color: $green-dark;
+										text-decoration: none;
+									}
+								}
+								&:last-child{
+									a{
+										border-right: none;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
