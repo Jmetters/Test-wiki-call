@@ -3,6 +3,10 @@
 // Max: 767
 @media (max-width: $screen-xs-max) {
 	
+	.xs-padding-top-small{
+		@include padding-top-small();
+	}
+	
 	.vertical-align-lg{
 		@include vertical-align-reset;
 	}
@@ -363,8 +367,8 @@
 // Min: 768 Max: 991
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 	
-	.border-lavender-right{
-		border-right: 0;
+	.sm-padding-top-small{
+		@include padding-top-small();
 	}
 	
 	.vertical-align-lg{
