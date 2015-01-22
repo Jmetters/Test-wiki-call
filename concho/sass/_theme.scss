@@ -1265,6 +1265,26 @@ body{
 					@include margin-bottom-small();
 					text-transform: uppercase;
 				}
+				&.single{
+					h2{
+						&.page-title{
+							@include fontMetrics(16px, 24px);
+							@extend %raleway;
+							font-weight: normal;
+							@include rem(margin-top, 10px);
+							@include rem(margin-bottom, 5px);
+						}
+					}
+					h3{
+						&.officer-title{
+							margin-top: 0;
+							@include margin-bottom-small();
+							@include fontMetrics(12px, 16px);
+							font-weight: 500;
+							color: $green-bright;
+						}
+					}
+				}
 			}
 			.tools{
 				text-align: right;
@@ -1374,6 +1394,7 @@ body{
 							&.details{
 								@include padding-small();
 								background-color: $gray-light;
+								@include border-white-top();
 								h3{
 									@include fontMetrics(16px,24px);
 									color: $text-color;
