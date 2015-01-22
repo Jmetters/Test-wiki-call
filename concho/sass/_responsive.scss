@@ -158,6 +158,33 @@
 					}
 				}
 				
+				.stock-ticker{
+					&.big{
+						.symbol{
+							ul{
+								li{
+									&.exchange{
+									}
+								}
+							}
+						}
+						.price{
+							ul{
+								li{
+									@include rem(font-size, 25px);
+									&.current-price{
+									}
+									&.change{
+										.fa{
+											@include rem(font-size, 25px);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
 				//
 				// Legend
 				// --------------------------------------------------
