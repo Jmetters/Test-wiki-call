@@ -534,11 +534,11 @@ hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ee
 
 .sr-only-focusable:active, .sr-only-focusable:focus { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
 
-h1, h2, h3, h4, h5, h6, h1, .h1, body .feature h2, h2, .h2, h3, .h3, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .h6 { font-family: "URWEgyptienneW01-Light"; font-weight: normal; line-height: 1.57143; color: black; }
-h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 .small, h5 small, h5 .small, h6 small, h6 .small, h1 small, .h1 small, body .feature h2 small, h1 .small, .h1 .small, body .feature h2 .small, h2 small, .h2 small, h2 .small, .h2 .small, h3 small, .h3 small, body .container-fluid#content h1.page-title small, h3 .small, .h3 .small, body .container-fluid#content h1.page-title .small, h4 small, .h4 small, h4 .small, .h4 .small, h5 small, .h5 small, h5 .small, .h5 .small, .h6 small, .h6 .small { font-weight: normal; line-height: 1; color: #d9d8d3; }
+h1, h2, h3, h4, h5, h6, h1, .h1, body .feature h2, h2, .h2, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .h6 { font-family: "URWEgyptienneW01-Light"; font-weight: normal; line-height: 1.57143; color: black; }
+h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 .small, h5 small, h5 .small, h6 small, h6 .small, h1 small, .h1 small, body .feature h2 small, h1 .small, .h1 .small, body .feature h2 .small, h2 small, .h2 small, h2 .small, .h2 .small, h3 small, .h3 small, .panel.panel-faqs .panel-heading .panel-title small, body .container-fluid#content h1.page-title small, h3 .small, .h3 .small, .panel.panel-faqs .panel-heading .panel-title .small, body .container-fluid#content h1.page-title .small, h4 small, .h4 small, h4 .small, .h4 .small, h5 small, .h5 small, h5 .small, .h5 .small, .h6 small, .h6 .small { font-weight: normal; line-height: 1; color: #d9d8d3; }
 
-h1, h1, .h1, body .feature h2, h2, h2, .h2, h3, h3, .h3, body .container-fluid#content h1.page-title { margin-top: 20px; margin-bottom: 10px; }
-h1 small, h1 .small, h1 small, .h1 small, body .feature h2 small, h1 .small, .h1 .small, body .feature h2 .small, h2 small, h2 .small, h2 small, .h2 small, h2 .small, .h2 .small, h3 small, h3 .small, h3 small, .h3 small, body .container-fluid#content h1.page-title small, h3 .small, .h3 .small, body .container-fluid#content h1.page-title .small { font-size: 65%; }
+h1, h1, .h1, body .feature h2, h2, h2, .h2, h3, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title { margin-top: 20px; margin-bottom: 10px; }
+h1 small, h1 .small, h1 small, .h1 small, body .feature h2 small, h1 .small, .h1 .small, body .feature h2 .small, h2 small, h2 .small, h2 small, .h2 small, h2 .small, .h2 .small, h3 small, h3 .small, h3 small, .h3 small, .panel.panel-faqs .panel-heading .panel-title small, body .container-fluid#content h1.page-title small, h3 .small, .h3 .small, .panel.panel-faqs .panel-heading .panel-title .small, body .container-fluid#content h1.page-title .small { font-size: 65%; }
 
 h4, h4, .h4, h5, h5, .h5, h6, .h6 { margin-top: 10px; margin-bottom: 10px; }
 h4 small, h4 .small, h4 small, .h4 small, h4 .small, .h4 .small, h5 small, h5 .small, h5 small, .h5 small, h5 .small, .h5 .small, h6 small, h6 .small, .h6 small, .h6 .small { font-size: 75%; }
@@ -547,7 +547,7 @@ h1, h1, .h1, body .feature h2 { font-size: 47px; }
 
 h2, h2, .h2 { font-size: 33px; }
 
-h3, h3, .h3, body .container-fluid#content h1.page-title { font-size: 15px; }
+h3, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title { font-size: 15px; }
 
 h4, h4, .h4 { font-size: 13px; }
 
@@ -2308,9 +2308,9 @@ input.btn-transparent:hover { background: white; }
 
 .hidden { display: none; }
 
-body .container-fluid#content .graphs.single h2.page-title, body .container-fluid#content .management.single h2.page-title, body .container-fluid#content article[role="article"], body .container-fluid#content article[role="article"] h2 { font-family: "Raleway", sans-serif !important; }
+body .container-fluid#content .graphs.single h2.page-title, body .container-fluid#content .management.single h2.page-title, body .container-fluid#content .faqs.single h2.page-title, body .container-fluid#content article[role="article"], body .container-fluid#content article[role="article"] h2 { font-family: "Raleway", sans-serif !important; }
 
-table th, .raleway-bold, h3, .h3, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .nav-pills, body .container-fluid#content .featured .container .stock-ticker .price ul li.current-price, body .container-fluid#content .stock-ticker.big .price ul li.current-price, body .container-fluid#content .quick-links { font-family: "Raleway", sans-serif !important; font-weight: bold; }
+table th, .raleway-bold, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .nav-pills, body .container-fluid#content .featured .container .stock-ticker .price ul li.current-price, body .container-fluid#content .stock-ticker.big .price ul li.current-price, body .container-fluid#content .quick-links { font-family: "Raleway", sans-serif !important; font-weight: bold; }
 
 .raleway-light, body .container-fluid#content .quick-links h2 { font-family: "Raleway", sans-serif !important; font-weight: 300; }
 
@@ -2374,7 +2374,7 @@ h1, h1, .h1, body .feature h2 { line-height: 44px; line-height: 4.4rem; -webkit-
 
 h2, h2, .h2 { line-height: 34px; line-height: 3.4rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
-h3, h3, .h3, body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
+h3, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
 h4, h4, .h4 { line-height: 15px; line-height: 1.5rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
@@ -2475,53 +2475,18 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 
 .panel-danger > .panel-heading { background-image: -webkit-linear-gradient(top, #f2dede 0%, #ebcccc 100%); background-image: -o-linear-gradient(top, #f2dede 0%, #ebcccc 100%); background-image: linear-gradient(to bottom, #f2dede 0%, #ebcccc 100%); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2DEDE', endColorstr='#FFEBCCCC', GradientType=0); }
 
-/*
-.panel{
-	@include border-white-top();
-	&:last-child{
-		@include border-white-bottom();
-	}
-	&.panel-faqs{
-		background: none;
-		$shadow: none;
-		@include box-shadow($shadow);
-		.panel-heading{
-			@include rem(padding, 15px);
-			background-color: transparent;
-			.panel-title{
-				@include h3();
-				@include font-family($font-family-serif);
-				@include nomargin-top();
-				@include nomargin-bottom();
-				a{
-					display: block;
-					@include rem(min-height, 50px);
-					@include rem(line-height, 50px);
-					@include rem(padding-right, 60px);
-					color: $white;
-					background: transparent url('../images/ui/toggle_open.png') no-repeat center right;
-					&.collapsed{
-						color: $white;
-						background: transparent url('../images/ui/toggle_closed.png') no-repeat center right;
-					}
-				}
-			}
-		}
-		.panel-body{
-			background: $offwhite;
-			@include rem(padding-right, 80px);
-			p,ul,ol,li,blockquote{
-				@include fontMetrics( 15px, 24px );
-			}
-		}
-		.panel-collapse{
-			.panel-body{
-				border: 0;
-			}
-		}
-	}
-}
-*/
+.panel { border-top: 1px solid #d9d8d3; border-top: 0.1rem solid #d9d8d3; }
+.panel:first-child { border-top: none; }
+.panel:last-child { border-bottom: 1px solid #d9d8d3; border-bottom: 0.1rem solid #d9d8d3; }
+.panel.panel-faqs { background: none; -webkit-box-shadow: none; box-shadow: none; }
+.panel.panel-faqs .panel-heading { padding: 15px; padding: 1.5rem; background-color: transparent; }
+.panel.panel-faqs .panel-heading .panel-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; font-size: 16px; font-size: 1.6rem; font-weight: normal; margin-top: 0 !important; margin-bottom: 0 !important; }
+.panel.panel-faqs .panel-heading .panel-title a { display: block; min-height: 25px; min-height: 2.5rem; line-height: 25px; line-height: 2.5rem; padding-right: 60px; padding-right: 6rem; color: #163d34; background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1QzlEREJCQTlBOTMxMUU0OEYwQkJDQkRFMjYyQUFGMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1QzlEREJCQjlBOTMxMUU0OEYwQkJDQkRFMjYyQUFGMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVDOUREQkI4OUE5MzExRTQ4RjBCQkNCREUyNjJBQUYyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVDOUREQkI5OUE5MzExRTQ4RjBCQkNCREUyNjJBQUYyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+CTcGNwAAACZJREFUeNpi/P//PwO5gImBAjCqmUTAUl9fQnZcMY7G81DRDBBgAHtmCIryv4HZAAAAAElFTkSuQmCC') no-repeat center right; }
+.panel.panel-faqs .panel-heading .panel-title a.collapsed { color: #7f7f73; background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1QzlEREJCRTlBOTMxMUU0OEYwQkJDQkRFMjYyQUFGMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1QzlEREJCRjlBOTMxMUU0OEYwQkJDQkRFMjYyQUFGMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVDOUREQkJDOUE5MzExRTQ4RjBCQkNCREUyNjJBQUYyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVDOUREQkJEOUE5MzExRTQ4RjBCQkNCREUyNjJBQUYyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hznp1gAAACdJREFUeNpiYMAD6uqK/+OTZ2KgAIxqJhEwEooOssFoPA8mzQABBgDzJgdkmoAAWQAAAABJRU5ErkJggg==') no-repeat center right; }
+.panel.panel-faqs .panel-body { padding-right: 80px; padding-right: 8rem; }
+.panel.panel-faqs .panel-body p, .panel.panel-faqs .panel-body ul, .panel.panel-faqs .panel-body ol, .panel.panel-faqs .panel-body li, .panel.panel-faqs .panel-body blockquote { font-size: 15px; font-size: 1.5rem; line-height: 24px; line-height: 2.4rem; }
+.panel.panel-faqs .panel-collapse .panel-body { border: 0; }
+
 .well { background-image: -webkit-linear-gradient(top, #e8e8e8 0%, whitesmoke 100%); background-image: -o-linear-gradient(top, #e8e8e8 0%, whitesmoke 100%); background-image: linear-gradient(to bottom, #e8e8e8 0%, #f5f5f5 100%); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE8E8E8', endColorstr='#FFF5F5F5', GradientType=0); border-color: gainsboro; -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
 body .feature { font-family: "URWEgyptienneW01-Light" !important; }
@@ -2550,9 +2515,9 @@ body .container-fluid#content .featured .container .stock-ticker .price ul li.ch
 body .container-fluid#content .stock-ticker.big .symbol ul li.exchange { font-size: 54px; font-size: 5.4rem; color: #163d34; }
 body .container-fluid#content .stock-ticker.big .price ul li { font-size: 32px; font-size: 3.2rem; }
 body .container-fluid#content .stock-ticker.big .price ul li.change .fa { color: #68bc49; font-size: 32px; font-size: 3.2rem; }
-body .container-fluid#content .graphs h5, body .container-fluid#content .graphs h5, body .container-fluid#content .graphs .h5, body .container-fluid#content .management h5, body .container-fluid#content .management h5, body .container-fluid#content .management .h5 { font-size: 11px; font-size: 1.1rem; line-height: 40px; line-height: 4rem; background-color: #aba99e; color: white; padding-left: 14px; padding-left: 1.4rem; margin-bottom: 20px; margin-bottom: 2rem; text-transform: uppercase; }
-body .container-fluid#content .graphs.single h2.page-title, body .container-fluid#content .management.single h2.page-title { font-size: 16px; font-size: 1.6rem; line-height: 24px; line-height: 2.4rem; font-weight: normal; margin-top: 10px; margin-top: 1rem; margin-bottom: 5px; margin-bottom: 0.5rem; }
-body .container-fluid#content .graphs.single h3.officer-title, body .container-fluid#content .management.single h3.officer-title { margin-top: 0; margin-bottom: 20px; margin-bottom: 2rem; font-size: 12px; font-size: 1.2rem; line-height: 16px; line-height: 1.6rem; font-weight: 500; color: #68bc49; }
+body .container-fluid#content .graphs h5, body .container-fluid#content .graphs h5, body .container-fluid#content .graphs .h5, body .container-fluid#content .management h5, body .container-fluid#content .management h5, body .container-fluid#content .management .h5, body .container-fluid#content .faqs h5, body .container-fluid#content .faqs h5, body .container-fluid#content .faqs .h5 { font-size: 11px; font-size: 1.1rem; line-height: 40px; line-height: 4rem; background-color: #aba99e; color: white; padding-left: 14px; padding-left: 1.4rem; margin-bottom: 20px; margin-bottom: 2rem; text-transform: uppercase; }
+body .container-fluid#content .graphs.single h2.page-title, body .container-fluid#content .management.single h2.page-title, body .container-fluid#content .faqs.single h2.page-title { font-size: 16px; font-size: 1.6rem; line-height: 24px; line-height: 2.4rem; font-weight: normal; margin-top: 10px; margin-top: 1rem; margin-bottom: 5px; margin-bottom: 0.5rem; }
+body .container-fluid#content .graphs.single h3.officer-title, body .container-fluid#content .management.single h3.officer-title, body .container-fluid#content .faqs.single h3.officer-title { margin-top: 0; margin-bottom: 20px; margin-bottom: 2rem; font-size: 12px; font-size: 1.2rem; line-height: 16px; line-height: 1.6rem; font-weight: 500; color: #68bc49; }
 body .container-fluid#content .tools { text-align: right; }
 body .container-fluid#content .tools ul.list-inline { margin-top: 15px; margin-top: 1.5rem; margin-bottom: 20px; margin-bottom: 2rem; }
 body .container-fluid#content .tools ul.list-inline li { padding-left: 0; padding-right: 0; }
@@ -2601,7 +2566,7 @@ body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid tra
 #main-container .row-offcanvas .popover .popover-content { padding: 0; }
 #main-container .row-offcanvas .popover .popover-content p, #main-container .row-offcanvas .popover .popover-content ul, #main-container .row-offcanvas .popover .popover-content ol, #main-container .row-offcanvas .popover .popover-content li, #main-container .row-offcanvas .popover .popover-content blockquote { padding: 0 14px; padding: 0 1.4rem; font-size: 13px; font-size: 1.3rem; }
 #main-container .row-offcanvas .popover .popover-content img { display: block; max-width: 100%; height: auto; padding: 14px; padding: 1.4rem; }
-#main-container .row-offcanvas .popover .popover-content h1, #main-container .row-offcanvas .popover .popover-content h1, #main-container .row-offcanvas .popover .popover-content .h1, #main-container .row-offcanvas .popover .popover-content body .feature h2, body .feature #main-container .row-offcanvas .popover .popover-content h2, #main-container .row-offcanvas .popover .popover-content h2, #main-container .row-offcanvas .popover .popover-content h2, #main-container .row-offcanvas .popover .popover-content .h2, #main-container .row-offcanvas .popover .popover-content h3, #main-container .row-offcanvas .popover .popover-content h3, #main-container .row-offcanvas .popover .popover-content .h3, #main-container .row-offcanvas .popover .popover-content body .container-fluid#content h1.page-title, body .container-fluid#content #main-container .row-offcanvas .popover .popover-content h1.page-title, #main-container .row-offcanvas .popover .popover-content h4, #main-container .row-offcanvas .popover .popover-content h4, #main-container .row-offcanvas .popover .popover-content .h4, #main-container .row-offcanvas .popover .popover-content h5, #main-container .row-offcanvas .popover .popover-content h5, #main-container .row-offcanvas .popover .popover-content .h5, #main-container .row-offcanvas .popover .popover-content h6, #main-container .row-offcanvas .popover .popover-content .h6 { font-family: "Raleway", sans-serif !important; text-transform: uppercase; padding-left: 14px; padding-left: 1.4rem; border-left: 6px solid black; border-left: 0.6rem solid black; line-height: inherit; color: black; }
+#main-container .row-offcanvas .popover .popover-content h1, #main-container .row-offcanvas .popover .popover-content h1, #main-container .row-offcanvas .popover .popover-content .h1, #main-container .row-offcanvas .popover .popover-content body .feature h2, body .feature #main-container .row-offcanvas .popover .popover-content h2, #main-container .row-offcanvas .popover .popover-content h2, #main-container .row-offcanvas .popover .popover-content h2, #main-container .row-offcanvas .popover .popover-content .h2, #main-container .row-offcanvas .popover .popover-content h3, #main-container .row-offcanvas .popover .popover-content h3, #main-container .row-offcanvas .popover .popover-content .h3, #main-container .row-offcanvas .popover .popover-content .panel.panel-faqs .panel-heading .panel-title, .panel.panel-faqs .panel-heading #main-container .row-offcanvas .popover .popover-content .panel-title, #main-container .row-offcanvas .popover .popover-content body .container-fluid#content h1.page-title, body .container-fluid#content #main-container .row-offcanvas .popover .popover-content h1.page-title, #main-container .row-offcanvas .popover .popover-content h4, #main-container .row-offcanvas .popover .popover-content h4, #main-container .row-offcanvas .popover .popover-content .h4, #main-container .row-offcanvas .popover .popover-content h5, #main-container .row-offcanvas .popover .popover-content h5, #main-container .row-offcanvas .popover .popover-content .h5, #main-container .row-offcanvas .popover .popover-content h6, #main-container .row-offcanvas .popover .popover-content .h6 { font-family: "Raleway", sans-serif !important; text-transform: uppercase; padding-left: 14px; padding-left: 1.4rem; border-left: 6px solid black; border-left: 0.6rem solid black; line-height: inherit; color: black; }
 #main-container .row-offcanvas .owl-item { text-align: center; padding-left: 28px; padding-left: 2.8rem; padding-right: 28px; padding-right: 2.8rem; }
 #main-container .row-offcanvas .owl-controls { width: 100%; text-align: center; }
 #main-container .row-offcanvas .owl-controls .owl-page span { background: transparent; border: 2px solid #68bc49; border: 0.2rem solid #68bc49; }
@@ -2710,7 +2675,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body.single article[role="article"] img.avatar-90 { width: 90px; }
   body.single article[role="article"], body.blog article[role="article"] { margin-left: 0; }
   .page-content { margin-left: 0; }
-  .page-content .page-content-inner h1, .page-content .page-content-inner h2, .page-content .page-content-inner h3, .page-content .page-content-inner h4, .page-content .page-content-inner h5, .page-content .page-content-inner h6, .page-content .page-content-inner h1, .page-content .page-content-inner .h1, .page-content .page-content-inner body .feature h2, body .feature .page-content .page-content-inner h2, .page-content .page-content-inner h2, .page-content .page-content-inner .h2, .page-content .page-content-inner h3, .page-content .page-content-inner .h3, .page-content .page-content-inner body .container-fluid#content h1.page-title, body .container-fluid#content .page-content .page-content-inner h1.page-title, .page-content .page-content-inner h4, .page-content .page-content-inner .h4, .page-content .page-content-inner h5, .page-content .page-content-inner .h5, .page-content .page-content-inner .h6, .page-content .page-content-inner ul, .page-content .page-content-inner ol, .page-content .page-content-inner blockquote, .page-content .page-content-inner p { margin-right: 0; margin-right: 0; }
+  .page-content .page-content-inner h1, .page-content .page-content-inner h2, .page-content .page-content-inner h3, .page-content .page-content-inner h4, .page-content .page-content-inner h5, .page-content .page-content-inner h6, .page-content .page-content-inner h1, .page-content .page-content-inner .h1, .page-content .page-content-inner body .feature h2, body .feature .page-content .page-content-inner h2, .page-content .page-content-inner h2, .page-content .page-content-inner .h2, .page-content .page-content-inner h3, .page-content .page-content-inner .h3, .page-content .page-content-inner .panel.panel-faqs .panel-heading .panel-title, .panel.panel-faqs .panel-heading .page-content .page-content-inner .panel-title, .page-content .page-content-inner body .container-fluid#content h1.page-title, body .container-fluid#content .page-content .page-content-inner h1.page-title, .page-content .page-content-inner h4, .page-content .page-content-inner .h4, .page-content .page-content-inner h5, .page-content .page-content-inner .h5, .page-content .page-content-inner .h6, .page-content .page-content-inner ul, .page-content .page-content-inner ol, .page-content .page-content-inner blockquote, .page-content .page-content-inner p { margin-right: 0; margin-right: 0; }
   .post-content p { width: 100%; }
   #contact-map { height: 160px; }
   footer#footer[role="contentinfo"] .container .menu-column { float: right !important; }

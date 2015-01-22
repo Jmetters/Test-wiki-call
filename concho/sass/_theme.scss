@@ -1047,11 +1047,14 @@ h6,.h6{
 //
 // Panels
 
-/*
+//
 .panel{
-	@include border-white-top();
+	@include border-top();
+	&:first-child{
+		border-top: none;
+	}
 	&:last-child{
-		@include border-white-bottom();
+		@include border-bottom();
 	}
 	&.panel-faqs{
 		background: none;
@@ -1062,25 +1065,25 @@ h6,.h6{
 			background-color: transparent;
 			.panel-title{
 				@include h3();
-				@include font-family($font-family-serif);
+				@include rem(font-size, 16px);
+				font-weight: normal;
 				@include nomargin-top();
 				@include nomargin-bottom();
 				a{
 					display: block;
-					@include rem(min-height, 50px);
-					@include rem(line-height, 50px);
+					@include rem(min-height, 25px);
+					@include rem(line-height, 25px);
 					@include rem(padding-right, 60px);
-					color: $white;
-					background: transparent url('../images/ui/toggle_open.png') no-repeat center right;
+					color: $green-dark;
+					background: transparent inline-image('../images/ui/toggle_open.png') no-repeat center right;
 					&.collapsed{
-						color: $white;
-						background: transparent url('../images/ui/toggle_closed.png') no-repeat center right;
+						color: $gray;
+						background: transparent inline-image('../images/ui/toggle_closed.png') no-repeat center right;
 					}
 				}
 			}
 		}
 		.panel-body{
-			background: $offwhite;
 			@include rem(padding-right, 80px);
 			p,ul,ol,li,blockquote{
 				@include fontMetrics( 15px, 24px );
@@ -1093,7 +1096,7 @@ h6,.h6{
 		}
 	}
 }
-*/
+//
 
 //
 // Wells
@@ -1263,7 +1266,8 @@ body{
 				}
 			}
 			.graphs,
-			.management{
+			.management,
+			.faqs{
 				h5,.h5{
 					@include fontMetrics(11px,40px);
 					background-color: $gray-medium;
