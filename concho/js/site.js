@@ -4,105 +4,6 @@ Array.prototype.remove = function(v) {
     });
 };
 
-var homeFeaturedCarousel = {
-	
-	pagination : ".slide-slideshow-home-featured-carousel .owl-controls",
-	slideshow : ".slide-slideshow-home-featured-carousel .slideshow",
-	next : ".slide-slideshow-home-featured-carousel .slideshowouter .next",
-	prev : ".slide-slideshow-home-featured-carousel .slideshowouter .prev",
-	item : ".slide-slideshow-home-featured-carousel .item",
-	owlControls : ".slide-slideshow-home-featured-carousel .owl-controls",
-	
-	init : function(){
-		if($().owlCarousel){
-			var owl = $(homeFeaturedCarousel.slideshow).owlCarousel({
-					"items"	: 1,
-					"singleItem" : true,
-					"autoPlay" : true,
-					"transitionStyle" : "fade",
-					"lazyLoad" : true,
-					"dragBeforeAnimFinish" : true,
-					"mouseDrag" : true,
-					"touchDrag" : true,
-					"scrollPerPage" : true
-			});
-			// Custom Navigation Events
-			$(homeFeaturedCarousel.next).click(function(){
-				owl.trigger('owl.next');
-			});
-			$(homeFeaturedCarousel.prev).click(function(){
-				owl.trigger('owl.prev');
-			});
-		}
-	}
-};
-
-var careResources = {
-	
-	pagination : ".slide-slideshow .owl-controls",
-	slideshow : ".slide-slideshow .slideshow",
-	next : ".slide-slideshow .slideshowouter .next",
-	prev : ".slide-slideshow .slideshowouter .prev",
-	item : ".slide-slideshow .item",
-	owlControls : ".slide-slideshow .owl-controls",
-	
-	init : function(){
-		if($().owlCarousel){
-			var owl = $(careResources.slideshow).owlCarousel({
-					"items"	: 3,
-					"transitionStyle" : "fade",
-					"lazyLoad" : true,
-					"dragBeforeAnimFinish" : true,
-					"mouseDrag" : true,
-					"touchDrag" : true,
-					"scrollPerPage" : true
-			});
-			// Custom Navigation Events
-			$(careResources.next).click(function(){
-				owl.trigger('owl.next');
-			});
-			$(careResources.prev).click(function(){
-				owl.trigger('owl.prev');
-			});
-			careResources.controls('first');
-		}
-	},
-	controls : function(e){
-		if($().owlCarousel){
-			if( e == 'first'){
-				$(careResources.next + ',' + careResources.prev).hide();
-				var slideshowHeight = $(careResources.slideshow).height();
-				var navHeight = $(careResources.next).outerHeight();
-				var navTop = (slideshowHeight - navHeight) / 2;
-				
-				if(navTop >= 2){
-					$(careResources.next + ',' + careResources.prev).css({'top' : navTop});
-				}
-				
-
-				$(careResources.next + ',' + careResources.prev).show();
-			}else{
-				/*
-				$('.project-top-slideshow img').bind('resize',function(){
-					$(window).trigger('resize');
-				});
-				$(window).bind('resize', function(){
-					$('.project-slide.slideshowouter .next,.project-slide.slideshowouter .prev').hide();
-					var slideshowHeight = $(".project-top-slideshow").height();
-					var navHeight = $('.project-slide.slideshowouter .next').outerHeight();
-					var navTop = (slideshowHeight / 2) - navHeight;
-
-					if(navTop >= 2){
-						$('.project-slide.slideshowouter .next,.project-slide.slideshowouter .prev').css({'top' : navTop});
-					}
-					$('.project-slide.slideshowouter .next,.project-slide.slideshowouter .prev').show();
-				});
-				*/
-			}
-		}
-	}
-};
-
 var offCanvasNav = {
 	init : function(){
 		offCanvasNav.calcOffCanvasHeight();
@@ -235,11 +136,6 @@ var enquireBreakPoints = {
 		gridToggle.reset();
 		gridToggle.init();
 		offCanvasNav.calcOffCanvasHeight();
-
-		/**
-		 * Owl Navigation positioning
-		 */
-		careResources.controls();
 
 		if (smallest) {
 
@@ -513,8 +409,6 @@ var countCSS = {
 $(document).ready(function($) {
 	sq.log("Document Ready");
 	sq.init();
-	careResources.init();
-	homeFeaturedCarousel.init();
 	lazyLoading.init();
 	enquireBreakPoints.init();
 	bootstrapClassHelpers.init();
