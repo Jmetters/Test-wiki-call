@@ -646,7 +646,13 @@
 }
 // Min: 992 Max: 1199
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-	
+	.md-nopadding-left{
+		padding-left: 0 !important;
+	}
+	.md-nopadding-right{
+		padding-right: 0 !important;
+	}
+
 	.vertical-align-lg{
 		//@include vertical-align-reset;
 	}
@@ -759,6 +765,12 @@
 }
 // 1200
 @media (min-width: $screen-lg-min) {
+	.lg-nopadding-left{
+		padding-left: 0 !important;
+	}
+	.lg-nopadding-right{
+		padding-right: 0 !important;
+	}
 	#contact-map {
 		height: 400px;
 	}
