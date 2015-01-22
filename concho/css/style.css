@@ -2190,7 +2190,11 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 .nomargin-top { margin-top: 0 !important; }
 
+.nomargin-right { margin-right: 0 !important; }
+
 .nomargin-bottom { margin-bottom: 0 !important; }
+
+.nomargin-left { margin-left: 0 !important; }
 
 .noborder { border: none !important; }
 
@@ -2524,7 +2528,7 @@ body .container-fluid#content .tools ul.list-inline { margin-top: 15px; margin-t
 body .container-fluid#content .tools ul.list-inline li { padding-left: 0; padding-right: 0; }
 body .container-fluid#content .tools ul.list-inline li a { border-right: 1px solid #7f7f73; border-right: 0.1rem solid #7f7f73; padding-left: 15px; padding-left: 1.5rem; padding-right: 15px; padding-right: 1.5rem; font-size: 11px; font-size: 1.1rem; color: #7f7f73; }
 body .container-fluid#content .tools ul.list-inline li a:hover, body .container-fluid#content .tools ul.list-inline li a:focus { color: #163d34; text-decoration: none; }
-body .container-fluid#content .tools ul.list-inline li:last-child a { border-right: none; }
+body .container-fluid#content .tools ul.list-inline li:last-child a { border-right: none; padding-right: 0; }
 body .container-fluid#content .quick-links { font-size: 13px; font-size: 1.3rem; color: #7f7f73; }
 body .container-fluid#content .quick-links h2 { color: white; margin-top: 0; margin-bottom: 0; line-height: 100px; line-height: 10rem; }
 body .container-fluid#content .quick-links a { color: #7f7f73; }

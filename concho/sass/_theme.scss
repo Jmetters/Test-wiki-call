@@ -134,8 +134,14 @@
 .nomargin-top{
 	margin-top: 0 !important;
 }
+.nomargin-right{
+	margin-right: 0 !important;
+}
 .nomargin-bottom{
 	margin-bottom: 0 !important;
+}
+.nomargin-left{
+	margin-left: 0 !important;
 }
 
 //== Borders
@@ -1332,6 +1338,7 @@ body{
 							&:last-child{
 								a{
 									border-right: none;
+									padding-right: 0; 
 								}
 							}
 						}
