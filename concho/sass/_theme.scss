@@ -1259,6 +1259,7 @@ body{
 								@include rem(font-size, 32px);
 								&.current-price{
 									@extend %raleway-bold;
+									color: $green-dark;
 								}
 								&.change{
 									.fa{
@@ -1473,6 +1474,11 @@ body{
 							&.on{
 								background-color: darken($green-dark, 5%);
 							}
+						}
+					}
+					&.stock-info{
+						li{
+							@include rem(line-height, 32px);
 						}
 					}
 				}
