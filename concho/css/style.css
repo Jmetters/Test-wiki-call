@@ -2732,8 +2732,6 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body.single article[role="article"], body.blog article[role="article"] { margin-left: 0; }
   .page-content { margin-left: 0; }
   .page-content .page-content-inner h4 { margin-right: 65px; margin-right: 6.5rem; }
-  footer#footer[role="contentinfo"] { padding-top: 0; text-align: center; }
-  footer#footer[role="contentinfo"] .container { padding-left: 0; padding-right: 0; width: 100%; }
   footer#footer[role="contentinfo"] .container ul { background-color: white; text-align: left; }
   footer#footer[role="contentinfo"] .container ul.list-inline li { display: table; width: 100%; font-size: 30px; font-size: 3rem; border-bottom: 1px solid #d9d8d3; border-bottom: 0.1rem solid #d9d8d3; padding-top: 10px; padding-top: 1rem; padding-bottom: 10px; padding-bottom: 1rem; }
   footer#footer[role="contentinfo"] .container ul.list-inline li:after { display: table-cell; vertical-align: middle; padding-left: 10px; font-family: 'FontAwesome'; font-weight: normal; font-size: 19px; font-size: 1.9rem; content: "\f105"; }
