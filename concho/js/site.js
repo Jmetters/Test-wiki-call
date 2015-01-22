@@ -409,9 +409,16 @@ var gridToggle = {
 		$( '.grid-post-details .details' )
 			.css({transition: ''}).height(highestCol);
 
+		quickLinks = $('.quick-links .item');
+		var highestCol = Math.max.apply( null, $(quickLinks).map(function(){ return $(this).height(); }).get() );
+		//sq.log(items.length + " items, highest is " + highestCol);
+		$( '.quick-links .item' )
+			.css({transition: ''}).height(highestCol);
+
+
 	},
 	reset : function(){
-		$('.grid-post-details .details').css({height: 'auto', transition: 'none'});
+		$('.grid-post-details .details,.quick-links .item').css({height: 'auto', transition: 'none'});
 		enquireBreakPoints.reset();
 	}
 };
