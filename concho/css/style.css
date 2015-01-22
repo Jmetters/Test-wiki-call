@@ -2340,6 +2340,8 @@ table th, .raleway-bold, h3, .h3, body .container-fluid#content h1.page-title, h
 
 .font-size-72 { font-size: 72px; font-size: 7.2rem; }
 
+.white { color: white; }
+
 .green-dark { color: #163d34; }
 
 .background-green-dark { background-color: #163d34; }
@@ -2379,6 +2381,8 @@ h4, h4, .h4 { line-height: 15px; line-height: 1.5rem; -webkit-font-feature-setti
 h5, h5, .h5 { line-height: 13px; line-height: 1.3rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
 h6, .h6 { line-height: 24px; line-height: 2.4rem; }
+
+.nowrap { white-space: nowrap; }
 
 .navbar-default { background: white; border-radius: 8px; border-top: 10px solid #163d34; border-top: 1rem solid #163d34; border-right: none; border-bottom: none; border-left: none; -webkit-box-shadow: none; box-shadow: none; font-family: "Raleway", sans-serif; font-size: 16px; font-size: 1.6rem; }
 .navbar-default .menu-header-container { margin: 0 14px; }
@@ -2580,6 +2584,10 @@ body .container-fluid#content ul.list-unstyled.sub-pages li, body .container-flu
 body .container-fluid#content ul.list-unstyled.sub-pages li a, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.sub-pages.sub-menu li a, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.sub-pages.sub-menu li a { display: block; color: white; text-decoration: none; font-weight: bold; font-size: 13px; font-size: 1.3rem; line-height: 22px; line-height: 2.2rem; }
 body .container-fluid#content ul.list-unstyled.sub-pages li:hover, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.sub-pages.sub-menu li:hover, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.sub-pages.sub-menu li:hover, body .container-fluid#content ul.list-unstyled.sub-pages li:focus, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.sub-pages.sub-menu li:focus, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.sub-pages.sub-menu li:focus, body .container-fluid#content ul.list-unstyled.sub-pages li.on, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.sub-pages.sub-menu li.on, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.sub-pages.sub-menu li.on { background-color: #0f2a24; }
 body .container-fluid#content .disclaimer p { font-weight: 500; font-size: 12px; font-size: 1.2rem; }
+body .container-fluid#content .legend-column { position: relative; min-height: 106px; min-height: 10.6rem; }
+body .container-fluid#content .legend-column .legend { position: absolute; bottom: 0; font-size: 11px; font-size: 1.1rem; }
+body .container-fluid#content .legend-column .legend li { font-size: 11px; font-size: 1.1rem; line-height: 16px; line-height: 1.6rem; }
+body .container-fluid#content .legend-column .legend li .fa { font-size: 16px; font-size: 1.6rem; }
 body .container-fluid#content .form label { font-size: 13px; font-size: 1.3rem; font-weight: bold; }
 body .container-fluid#content .form p.form-required { color: #163d34; font-size: 12px; font-size: 1.2rem; }
 body .container-fluid#content .form input[type="text"] { -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
@@ -2629,7 +2637,8 @@ footer#footer ul.social li:hover i, footer#footer ul.social li:focus i { color: 
 footer#footer ul.social li:hover a, footer#footer ul.social li:focus a { color: #163d34; }
 footer#footer .copyright { background-color: #0f2a24; font-size: 10px; font-size: 1rem; line-height: 40px; line-height: 4rem; }
 footer#footer .copyright ul.list-inline { margin-bottom: 0; }
-footer#footer .copyright ul.list-inline li a { color: #3d7762; border-right: 1px solid #3d7762; border-right: 0.1rem solid #3d7762; padding-right: 10px; padding-right: 1rem; }
+footer#footer .copyright ul.list-inline li a { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; color: #3d7762; border-right: 1px solid #3d7762; border-right: 0.1rem solid #3d7762; padding-right: 10px; padding-right: 1rem; }
+footer#footer .copyright ul.list-inline li a:hover, footer#footer .copyright ul.list-inline li a:focus { color: white; }
 footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
 
 @media (max-width: 767px) { .xs-padding-top-small { padding-top: 20px; padding-top: 2rem; }
@@ -2658,6 +2667,8 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .quick-links .row div h2 { padding-top: 30px; padding-top: 3rem; margin-bottom: 0; min-height: initial; line-height: normal; }
   body .container-fluid#content .quick-links .row div a { min-height: 100px; min-height: 10rem; padding: 0; text-decoration: none; }
   body .container-fluid#content .quick-links .row div a span { display: block; padding-top: 20px; padding-top: 2rem; padding-bottom: 10px; padding-bottom: 1rem; }
+  body .container-fluid#content .legend-column { position: relative; min-height: initial; }
+  body .container-fluid#content .legend-column .legend { position: relative; bottom: initial; }
   .nav-pills { background: none; }
   .nav-pills > li { border-right: 1px solid white; border-right: 0.1rem solid white; }
   .nav-pills > li > a { font-size: 11px; font-size: 1.1rem; padding: 8px 2px; padding: 0.8rem 0.2rem; }
@@ -2724,6 +2735,8 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .tools ul.dropdown-menu li a { border-right: 1px solid #7f7f73; border-right: 0.1rem solid #7f7f73; padding-left: 15px; padding-left: 1.5rem; padding-right: 15px; padding-right: 1.5rem; font-size: 11px; font-size: 1.1rem; color: #7f7f73; }
   body .container-fluid#content .tools ul.dropdown-menu li a:hover, body .container-fluid#content .tools ul.dropdown-menu li a:focus { color: #163d34; text-decoration: none; }
   body .container-fluid#content .tools ul.dropdown-menu li:last-child a { border-right: none; }
+  body .container-fluid#content .legend-column { position: relative; min-height: initial; }
+  body .container-fluid#content .legend-column .legend { position: relative; bottom: initial; }
   body .grid-posts.upcoming-events article[role="article"] section:after, body .grid-posts-2.upcoming-events article[role="article"] section:after, body .grid-posts-3.upcoming-events article[role="article"] section:after, body .grid-posts-events.upcoming-events article[role="article"] section:after { display: none; }
   body .grid-posts.upcoming-events article[role="article"] header, body .grid-posts-2.upcoming-events article[role="article"] header, body .grid-posts-3.upcoming-events article[role="article"] header, body .grid-posts-events.upcoming-events article[role="article"] header { position: relative; padding-bottom: 40px; padding-bottom: 4rem; }
   body .grid-posts.upcoming-events article[role="article"] header a.btn, body .grid-posts-2.upcoming-events article[role="article"] header a.btn, body .grid-posts-3.upcoming-events article[role="article"] header a.btn, body .grid-posts-events.upcoming-events article[role="article"] header a.btn { position: absolute; bottom: 0; }

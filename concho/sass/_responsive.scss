@@ -139,7 +139,17 @@
 						}
 					}
 				}
-				
+				//
+				// Legend
+				// --------------------------------------------------
+				.legend-column{
+					position: relative;
+					min-height: initial;
+					.legend{
+						position: relative;
+						bottom: initial;
+					}
+				}
 			}
 		}
 	}
@@ -463,6 +473,17 @@
 								}
 							}
 						}
+					}
+				}
+				//
+				// Legend
+				// --------------------------------------------------
+				.legend-column{
+					position: relative;
+					min-height: initial;
+					.legend{
+						position: relative;
+						bottom: initial;
 					}
 				}
 			}

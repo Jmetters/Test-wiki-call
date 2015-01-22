@@ -538,6 +538,9 @@ $larger-text-mag: 1.3;
 }
 
 //Colors
+.white{
+	color: $white;
+}
 .green-dark{
 	color: $green-dark;
 }
@@ -602,6 +605,10 @@ h5,.h5{
 }
 h6,.h6{
 	@include rem(line-height, 24px);
+}
+
+.nowrap{
+	white-space: nowrap;
 }
 
 //
@@ -1454,6 +1461,26 @@ body{
 					@include rem(font-size, 12px);
 				}
 			}
+			
+			//
+			// Legend
+			// --------------------------------------------------
+			.legend-column{
+				position: relative;
+				@include rem(min-height, 106px);
+				.legend{
+					position: absolute;
+					bottom: 0;
+					@include rem(font-size, 11px);
+					li{
+						@include fontMetrics(11px, 16px);
+						.fa{
+							@include rem(font-size, 16px);
+						}
+					}
+				}
+			}
+			
 			//
 			// Forms
 			// --------------------------------------------------
@@ -1705,9 +1732,14 @@ footer{
 					margin-bottom: 0;
 					li{
 						a{
+							@include transition(all .4s ease);
 							color: $green-mint;
 							@include rem(border-right, 1px solid $green-mint);
 							@include rem(padding-right, 10px);
+							&:hover,
+							&:focus{
+								color: $white;
+							}
 						}
 						&:last-child{
 							a{
