@@ -735,8 +735,8 @@ h6,.h6{
 				}
 				.on {
 					a {
-						background: $green-bright;
-						color: $green-dark;
+						background: $navbar-submenu-divider;
+						color: $white;
 						text-decoration: none;
 					}
 				}
@@ -1592,6 +1592,8 @@ footer{
 			.form-control{
 				border-color: darken($green-dark, 5%);
 				background-color: darken($green-dark, 5%);
+				@include placeholder($white);
+				color: $white;
 			}
 			.form-control-feedback{
 				@include transition(all .4s ease);
