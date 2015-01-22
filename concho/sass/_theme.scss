@@ -213,6 +213,14 @@
 	@include hover-black(25);
 }
 
+a{
+	text-decoration: none;
+	&:hover,
+	&:focus{
+		text-decoration: none;
+	}
+}
+
 //== Tables
 .table-responsive{
 	border: none;
@@ -1247,13 +1255,15 @@ body{
 					}
 				}
 			}
-			.graphs{
-				h5{
+			.graphs,
+			.management{
+				h5,.h5{
 					@include fontMetrics(11px,40px);
 					background-color: $gray-medium;
 					color: $white;
 					@include padding-left-small();
 					@include margin-bottom-small();
+					text-transform: uppercase;
 				}
 			}
 			.tools{
@@ -1357,12 +1367,30 @@ body{
 			//specific UL styling
 			ul{
 				&.list-unstyled{
-					&.reports{
+					&.reports,
+					&.officer{
 						margin-bottom: 0;
 						li{
 							&.details{
 								@include padding-small();
 								background-color: $gray-light;
+								h3{
+									@include fontMetrics(16px,24px);
+									color: $text-color;
+									font-weight: normal;
+									margin-top: 0;
+									a{
+										@include fontMetrics(16px,24px);
+										color: $text-color;
+										font-weight: normal;
+										margin-top: 0;
+										text-decoration: none;
+										&:hover,
+										&:focus{
+											color: $green-dark;
+										}
+									}
+								}
 								a{
 									font-weight: bold;
 									@include rem(font-size, 13px);
@@ -1371,16 +1399,23 @@ body{
 							}
 						}
 					}
+					&.officer{
+						p{
+							@include rem(font-size, 12px);
+							font-weight: 500;
+							line-height: normal;
+						}
+					}
 					&.sub-pages{
 						li{
 							background-color: $green-dark;
-							@include rem(padding, 0 20px);
+							@include rem(padding, 10px 20px);
 							a{
 								display: block;
 								color: $white;
 								text-decoration: none;
 								font-weight: bold;
-								@include fontMetrics(13px, 50px);
+								@include fontMetrics(13px, 22px);
 							}
 							&:hover,
 							&:focus,

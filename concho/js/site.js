@@ -400,53 +400,18 @@ var sq = {
 }
 
 var gridToggle = {
-	which: "b", // controls which set of selectors to use in the reset method
 	init : function(){
 		gridToggle.reset();//Reset heights to get correct values
 
-		items = $('.grid-posts article[role="article"]');
+		items = $('.grid-post-details .details');
 		var highestCol = Math.max.apply( null, $(items).map(function(){ return $(this).height(); }).get() );
 		//sq.log(items.length + " items, highest is " + highestCol);
-		$( '.grid-posts article[role="article"]' )
+		$( '.grid-post-details .details' )
 			.css({transition: ''}).height(highestCol);
-
-		items2 = $('.grid-posts-2 article[role="article"]');
-		var highestCol2 = Math.max.apply( null, $(items2).map(function(){ return $(this).height(); }).get() );
-		//sq.log(items.length + " items, highest is " + highestCol);
-		$( '.grid-posts-2 article[role="article"] header' )
-			.css({transition: ''}).height(highestCol2);
-
-		items3 = $('.grid-posts-3 article[role="article"]');
-		var highestCol3 = Math.max.apply( null, $(items3).map(function(){ return $(this).height(); }).get() );
-		//sq.log(items.length + " items, highest is " + highestCol);
-		$( '.grid-posts-3 article[role="article"] header' )
-			.css({transition: ''}).height(highestCol3);
-		
-		events = $('.grid-posts-events article[role="article"]');
-			var highestColEvents = Math.max.apply( null, $(events).map(function(){ return ( $(this).height() + $('header a.btn', this).height() ); }).get() );
-			//sq.log(items.length + " items, highest is " + highestCol);
-			$( '.grid-posts-events article[role="article"] header,.grid-posts-events article[role="article"] section' )
-				.css({transition: ''}).height(highestColEvents);
-		bios = $('.grid-post-bios article[role="article"]');
-			var highestColBio = Math.max.apply( null, $(bios).map(function(){ return $(this).height(); }).get() );
-			//sq.log(items.length + " items, highest is " + highestCol);
-			$( '.grid-post-bios article[role="article"]' )
-				.css({transition: ''}).height(highestColBio);
-		bioLinks = $('.grid-post-bios article[role="article"] footer a');
-			var highestColBioLink = Math.max.apply( null, $(bioLinks).map(function(){ return $(this).height(); }).get() );
-			sq.log(bioLinks.length + " bioLinks, highest is " + highestColBioLink);
-			$( '.grid-post-bios article[role="article"] footer a' )
-				.css({transition: ''}).height(highestColBioLink);
 
 	},
 	reset : function(){
-		selectors = {
-			// original selectors
-			a: '.grid-posts article[role="article"]',
-			// original selectors, plus bio link selector
-			b: '.grid-posts article[role="article"]'
-		}
-		$(selectors[gridToggle.which]).css({height: 'auto', transition: 'none'});
+		$('.grid-post-details .details').css({height: 'auto', transition: 'none'});
 		enquireBreakPoints.reset();
 	}
 };
