@@ -1265,6 +1265,17 @@ body{
 					}
 				}
 			}
+			.upcoming-events{
+				h5,.h5{
+					@include border-white-top();
+					@include fontMetrics(11px,31px);
+					background-color: $gray-medium;
+					color: $white;
+					@include padding-left-small();
+					@include margin-bottom-small();
+					text-transform: uppercase;
+				}
+			}
 			.graphs,
 			.management,
 			.faqs{
@@ -1399,7 +1410,8 @@ body{
 			ul{
 				&.list-unstyled{
 					&.reports,
-					&.officer{
+					&.officer,
+					&.events{
 						margin-bottom: 0;
 						li{
 							&.details{

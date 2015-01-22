@@ -110,6 +110,18 @@
 						}
 					}
 				}
+				//specific UL styling
+				ul{
+					&.list-unstyled{
+						&.events{
+							li{
+								&.details{
+									background-color: transparent;
+								}
+							}
+						}
+					}
+				}
 				
 				.quick-links{
 					background-color: transparent;
@@ -482,6 +494,20 @@
 						}
 					}
 				}
+				
+				//specific UL styling
+				ul{
+					&.list-unstyled{
+						&.events{
+							li{
+								&.details{
+									background-color: transparent;
+								}
+							}
+						}
+					}
+				}
+				
 				//
 				// Legend
 				// --------------------------------------------------
