@@ -1530,6 +1530,10 @@ body{
 							background-color: $green-dark;
 							@include rem(padding, 10px 20px);
 							text-transform: uppercase;
+							@include rem(border-bottom, 1px solid darken($green-dark, 5%));
+							&:last-child{
+								border-bottom: none;
+							}
 							a{
 								display: block;
 								color: $white;
