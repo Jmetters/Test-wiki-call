@@ -2659,7 +2659,6 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .stock-ticker.big .price ul li.change .fa { font-size: 25px; font-size: 2.5rem; }
   body .container-fluid#content .legend-column { position: relative; min-height: initial; }
   body .container-fluid#content .legend-column .legend { position: relative; bottom: initial; }
-  .nav-pills { background: none; }
   .nav-pills > li { border-right: 1px solid white; border-right: 0.1rem solid white; }
   .nav-pills > li > a { font-size: 11px; font-size: 1.1rem; }
   .nav-pills > li + li { border-right: 1px solid white; border-right: 0.1rem solid white; }
