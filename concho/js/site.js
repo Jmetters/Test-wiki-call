@@ -133,7 +133,6 @@ var enquireBreakPoints = {
 		/**
 		 * Grid Toggle
 		 */
-		gridToggle.reset();
 		gridToggle.init();
 		offCanvasNav.calcOffCanvasHeight();
 
