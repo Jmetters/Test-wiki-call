@@ -1529,6 +1529,7 @@ body{
 						li{
 							background-color: $green-dark;
 							@include rem(padding, 10px 20px);
+							text-transform: uppercase;
 							a{
 								display: block;
 								color: $white;
