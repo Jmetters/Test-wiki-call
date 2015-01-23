@@ -1195,6 +1195,21 @@ body{
 					@include padding-right-small();
 					@include padding-bottom-small();
 					@include padding-left-small();
+					&.upcoming-events{
+						.inner-wrap{
+							background: $green-dark inline-image('../images/ui/icon_calendar.png') no-repeat right bottom;
+						}
+					}
+					&.current-presentation{
+						.inner-wrap{
+							background: $green-dark inline-image('../images/ui/icon_presentation.png') no-repeat right bottom;
+						}
+					}
+					&.email-alerts{
+						.inner-wrap{
+							background: $green-dark inline-image('../images/ui/icon_envelope.png') no-repeat right bottom;
+						}
+					}
 					h4{
 						color: $green-bright;
 					}
@@ -1211,7 +1226,7 @@ body{
 					.inner-wrap{
 						@include padding-top-xsmall();
 						@include padding-right-small();
-						@include padding-bottom-small();
+						@include padding-bottom();
 						@include padding-left-small();
 					}
 				}
