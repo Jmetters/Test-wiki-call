@@ -699,7 +699,7 @@ h6,.h6{
 			&:hover,
 			&:focus {
 				text-decoration: none;
-				@include opacity(.8);
+				//@include opacity(.8);
 			}
 
 			@media (min-width: $grid-float-breakpoint) {
@@ -1764,7 +1764,7 @@ footer{
 				&:hover,
 				&:focus {
 					text-decoration: none;
-					@include opacity(.8);
+					//@include opacity(.8);
 				}
 
 			}
