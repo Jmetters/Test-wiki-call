@@ -45,7 +45,7 @@
 
 //Font size mixins
 @mixin font-size($size){
-	@include rem(font-size, $size, true);
+	@include rem(font-size, $size !important, true);
 }
 
 @mixin background-white(){

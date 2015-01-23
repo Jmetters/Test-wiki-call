@@ -311,10 +311,15 @@ var gridToggle = {
 		$( '.quick-links .item' )
 			.css({transition: ''}).height(highestCol);
 
+		quickNews = $('.quick-news .item .inner-wrap');
+		var highestCol = Math.max.apply( null, $(quickNews).map(function(){ return $(this).height(); }).get() );
+		//sq.log(items.length + " items, highest is " + highestCol);
+		$( '.quick-news .item .inner-wrap' )
+			.css({transition: ''}).height(highestCol);
 
 	},
 	reset : function(){
-		$('.grid-post-details .details,.quick-links .item').css({height: 'auto', transition: 'none'});
+		$('.grid-post-details .details,.quick-links .item,.quick-news .item .inner-wrap').css({height: 'auto', transition: 'none'});
 		enquireBreakPoints.reset();
 	}
 };

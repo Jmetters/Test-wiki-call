@@ -458,7 +458,10 @@ $larger-text-mag: 1.3;
 
 %body-copy{
 	@include fontMetrics( 16px, 24px );
-	p,ul,ol,li,blockquote,td{
+	-webkit-font-feature-settings: 'lnum';
+	-moz-font-feature-settings: 'lnum';
+	-ms-font-feature-settings: 'lnum';
+	p,ul,ol,li,blockquote,td,a{
 		@include fontMetrics( 16px, 24px );
 		-webkit-font-feature-settings: 'lnum';
 		-moz-font-feature-settings: 'lnum';
@@ -502,8 +505,11 @@ $larger-text-mag: 1.3;
 .raleway-medium{
 	@extend %raleway-medium;
 }
-.egyptienne-light{
+%egyptienne-light{
 	@include font-family($font-family-egyptienne-light);
+}
+.egyptienne-light{
+	@extend %egyptienne-light;
 }
 
 //Font weights
@@ -582,6 +588,15 @@ $larger-text-mag: 1.3;
 }
 .background-gray-light{
 	background-color: $gray-light;
+	&.contacts{
+		a{
+			color: $gray;
+			&:hover,
+			&:focus{
+				color: $green-dark;
+			}
+		}
+	}
 }
 .gray-lightest{
 	color: $gray-lightest;
@@ -981,7 +996,7 @@ h6,.h6{
 // Pills
 // -------------------------
 .nav-pills {
-	background: transparent inline-image('../images/ui/divider_gray.png') no-repeat right center;
+	background: transparent inline-image('../images/ui/divider_gray.png') repeat-x right center;
 	@extend %raleway-bold;
 	text-transform: uppercase;
   > li {
@@ -1162,7 +1177,6 @@ body{
 	}
 	.container-fluid{
 		&#content{
-			
 			position: relative;
 			@include rem(padding-top, $navbar-height + 10px);
 			h1{
@@ -1174,6 +1188,37 @@ body{
 			}
 			@extend %body-copy;
 			
+			.quick-news{
+				.item{
+					@include padding-top-small();
+					@include padding-right-small();
+					@include padding-bottom-small();
+					@include padding-left-small();
+					h4{
+						color: $green-bright;
+					}
+					p{
+						color: $white;
+					}
+					.inner-wrap{
+						@include padding-top-xsmall();
+						@include padding-right-small();
+						@include padding-bottom-small();
+						@include padding-left-small();
+					}
+				}
+			}
+			
+			.statement{
+				@extend %egyptienne-light;
+				@include fontMetrics(32px, 40px);
+				color: $green-dark;
+			}
+			.section-content{
+				a{
+					@include rem(font-size, 13px);
+				}
+			}
 			//Feature
 			.featured{
 				@include rem(height, 290px);
