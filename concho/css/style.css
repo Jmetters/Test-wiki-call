@@ -2571,7 +2571,7 @@ body .container-fluid#content ul.list-unstyled.stock-info li, body .container-fl
 body .container-fluid#content .disclaimer p { font-weight: 500; font-size: 12px; font-size: 1.2rem; }
 body .container-fluid#content .legend-column { position: relative; min-height: 106px; min-height: 10.6rem; }
 body .container-fluid#content .legend-column .legend { position: absolute; bottom: 0; font-size: 11px; font-size: 1.1rem; }
-body .container-fluid#content .legend-column .legend li { font-size: 11px; font-size: 1.1rem; line-height: 16px; line-height: 1.6rem; }
+body .container-fluid#content .legend-column .legend li { font-size: 11px; font-size: 1.1rem; line-height: 16px; line-height: 1.6rem; padding-right: 10px !important; padding-right: 1rem !important; padding-left: 10px !important; padding-left: 1rem !important; }
 body .container-fluid#content .legend-column .legend li .fa { font-size: 16px; font-size: 1.6rem; }
 body .container-fluid#content .form label { font-size: 13px; font-size: 1.3rem; font-weight: bold; }
 body .container-fluid#content .form p.form-required { color: #163d34; font-size: 12px; font-size: 1.2rem; }

@@ -1571,6 +1571,8 @@ body{
 					@include rem(font-size, 11px);
 					li{
 						@include fontMetrics(11px, 16px);
+						@include rem(padding-right, 10px !important);
+						@include rem(padding-left, 10px !important);
 						.fa{
 							@include rem(font-size, 16px);
 						}
