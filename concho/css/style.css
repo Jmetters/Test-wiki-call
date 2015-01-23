@@ -2508,6 +2508,8 @@ body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.
 body .container-fluid#content .quick-news .item { padding-top: 20px; padding-top: 2rem; padding-right: 14px; padding-right: 1.4rem; padding-bottom: 20px; padding-bottom: 2rem; padding-left: 14px; padding-left: 1.4rem; }
 body .container-fluid#content .quick-news .item h4 { color: #68bc49; }
 body .container-fluid#content .quick-news .item p { color: white; }
+body .container-fluid#content .quick-news .item a { color: white; }
+body .container-fluid#content .quick-news .item a:hover, body .container-fluid#content .quick-news .item a:focus { color: #68bc49; }
 body .container-fluid#content .quick-news .item .inner-wrap { padding-top: 10px; padding-top: 1rem; padding-right: 14px; padding-right: 1.4rem; padding-bottom: 20px; padding-bottom: 2rem; padding-left: 14px; padding-left: 1.4rem; }
 body .container-fluid#content .statement { font-size: 32px; font-size: 3.2rem; line-height: 40px; line-height: 4rem; color: #163d34; }
 body .container-fluid#content .section-content a { font-size: 13px; font-size: 1.3rem; }

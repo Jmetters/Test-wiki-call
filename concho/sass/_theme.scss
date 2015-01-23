@@ -1200,6 +1200,13 @@ body{
 					p{
 						color: $white;
 					}
+					a{
+						color: $white;
+						&:hover,
+						&:focus{
+							color: $green-bright;
+						}
+					}
 					.inner-wrap{
 						@include padding-top-xsmall();
 						@include padding-right-small();
