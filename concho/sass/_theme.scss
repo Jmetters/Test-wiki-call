@@ -285,7 +285,7 @@ table{
 			&.list-inline{
 				li{
 					a{
-						@include rem(font-size, 13px);
+						@include rem(font-size, 13px !important);
 						@include rem(border-right, 1px solid $gray);
 						@include rem(padding-right, 15px);
 					}
