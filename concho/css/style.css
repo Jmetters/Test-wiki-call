@@ -2521,7 +2521,7 @@ body .container-fluid#content .featured .container .stock-ticker .symbol ul { pa
 body .container-fluid#content .featured .container .stock-ticker .symbol ul li { line-height: 40px; line-height: 4rem; color: white; }
 body .container-fluid#content .featured .container .stock-ticker .symbol ul li.exchange { display: table; width: 100%; }
 body .container-fluid#content .featured .container .stock-ticker .symbol ul li.exchange:after { display: table-cell; vertical-align: middle; padding-left: 10px; font-family: 'FontAwesome'; font-weight: normal; font-size: 19px; font-size: 1.9rem; content: "\f105"; text-align: right; }
-body .container-fluid#content .featured .container .stock-ticker .symbol ul li.exchange a { display: block; color: white; text-decoration: none; }
+body .container-fluid#content .featured .container .stock-ticker .symbol ul li.exchange a { color: white; text-decoration: none; }
 body .container-fluid#content .featured .container .stock-ticker .price { background-color: #d9d8d3; }
 body .container-fluid#content .featured .container .stock-ticker .price ul { padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; margin-bottom: 0; }
 body .container-fluid#content .featured .container .stock-ticker .price ul li { line-height: 40px; line-height: 4rem; color: #7f7f73; }
@@ -2656,7 +2656,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .legend-column .legend { position: relative; bottom: initial; }
   .nav-pills { background: none; }
   .nav-pills > li { border-right: 1px solid white; border-right: 0.1rem solid white; }
-  .nav-pills > li > a { font-size: 11px; font-size: 1.1rem; padding: 8px 2px; padding: 0.8rem 0.2rem; }
+  .nav-pills > li > a { font-size: 11px; font-size: 1.1rem; }
   .nav-pills > li + li { border-right: 1px solid white; border-right: 0.1rem solid white; }
   .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus { color: white; background-color: #163d34; }
   #main-container .row-offcanvas .container-outer { margin-top: 20px; margin-top: 2rem; }

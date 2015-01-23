@@ -210,7 +210,7 @@
 		// Links rendered as pills
 		> a {
 			@include rem(font-size, 11px);
-			@include rem(padding, 8px 2px);
+			//@include rem(padding, 8px 2px);
 		}
 		+ li {
 			@include rem(border-right, 1px solid $white);
