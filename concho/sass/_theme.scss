@@ -1248,6 +1248,7 @@ body{
 				background-position: center center;
 				background-size: cover;
 				background-repeat: no-repeat;
+				
 				.container{
 					position: relative;
 					.stock-ticker{
@@ -1306,6 +1307,22 @@ body{
 						}
 					}
 				}
+				
+				&.carousel{
+					height: auto;
+					img{
+						width: 100%;
+						height: auto;
+					}
+					.container{
+						.stock-ticker{
+							top: initial;
+							bottom: 0;
+						}
+					}
+				}
+				
+				
 			}
 			
 			.stock-ticker{

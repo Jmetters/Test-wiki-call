@@ -2529,6 +2529,9 @@ body .container-fluid#content .featured .container .stock-ticker .price { backgr
 body .container-fluid#content .featured .container .stock-ticker .price ul { padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; margin-bottom: 0; }
 body .container-fluid#content .featured .container .stock-ticker .price ul li { line-height: 40px; line-height: 4rem; color: #7f7f73; }
 body .container-fluid#content .featured .container .stock-ticker .price ul li.change .fa { color: #68bc49; }
+body .container-fluid#content .featured.carousel { height: auto; }
+body .container-fluid#content .featured.carousel img { width: 100%; height: auto; }
+body .container-fluid#content .featured.carousel .container .stock-ticker { top: initial; bottom: 0; }
 body .container-fluid#content .stock-ticker.big .symbol ul li.exchange { font-size: 54px; font-size: 5.4rem; color: #163d34; }
 body .container-fluid#content .stock-ticker.big .price ul li { font-size: 32px; font-size: 3.2rem; }
 body .container-fluid#content .stock-ticker.big .price ul li.current-price { color: #163d34; }

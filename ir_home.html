@@ -57,9 +57,9 @@
 							<li class="menu-item">
 								<a href="#">News</a>
 							</li>
-							<li class="menu-item off has-children">
+							<li class="menu-item on has-children">
 								<a href="javascript:void(0);">Investors</a>
-								<ul class="sub-menu off">
+								<ul class="sub-menu on">
 									<li class="menu-item">
 										<a href="/ir_investor_news.html">Investor News</a>
 									</li>
@@ -171,8 +171,8 @@
 										<li class="menu-item">
 											<a href="#">News</a>
 										</li>
-										<li class="menu-item">
-											<a href="/ir_home.html">Investors</a>
+										<li class="menu-item on">
+											<a href="#">Investors</a>
 											<ul class="sub-menu off">
 												<li class="menu-item">
 													<a href="/ir_investor_news.html">Investor News</a>
@@ -216,7 +216,7 @@
 				</nav><!-- /.navbar -->
 				<div id="content" class="container-fluid nopadding-left nopadding-right">
 					<!-- //TODO: per breakpoint height setting for featured image -->
-					<div class="featured carousel">
+					<div class="featured lazy" data-original="/concho/images/featured_home.jpg">
 						<div class="container">
 							<div class="stock-ticker">
 								<div class="symbol">
@@ -233,26 +233,117 @@
 								</div>
 							</div>
 						</div>
-						
-						<div class="slide-slideshow-home-featured-carousel owl-theme">
-								<div class="slide slideshowouter">
-									<div class="slideshow">
-										<div class="item">
-											<img src="/concho/images/featured_home_1.jpg" height="700" width="1600" />
-										</div>
-									</div>
-								</div>
-						</div>
-						
-					</div><!-- /.featured.carousel -->
+					</div>
 					
 					<div class="container">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-7 col-xs-7">
+								<h1 class="page-title">Investor Relations</h1>
+							</div>
+							<div class="col-lg-8 col-md-8 hidden-sm hidden-xs tools nopadding-right">
+								<ul class="list-inline">
+									<li><a href="#">PRINT PAGE</a></li>
+									<li><a href="#">E-MAIL ALERTS</a></li>
+									<li><a href="#">RSS FEEDS</a></li>
+									<li><a href="#">FINANCIAL TEAR SHEET</a></li>
+									<li><a href="#">IR CONTACTS</a></li>
+									<li><a href="#">REQUEST INFORMATION</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-5 col-xs-5 visible-sm visible-xs nopadding-left nopadding-right tools">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Investor Toolkit</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">PRINT PAGE</a></li>
+									<li><a href="#">E-MAIL ALERTS</a></li>
+									<li><a href="#">RSS FEEDS</a></li>
+									<li><a href="#">FINANCIAL TEAR SHEET</a></li>
+									<li><a href="#">IR CONTACTS</a></li>
+									<li><a href="#">REQUEST INFORMATION</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //.container -->
+					
+					<div class="container-fluid background-gray-light quick-links margin-bottom">
+						<div class="container">
+							<div class="row hidden-xs">
+								<div class="col-lg-2 col-md-2 col-sm-2 background-green-bright">
+									<h2 class="h1">Q3</h2>
+								</div>
+								<div class="col-lg-10 col-md-10 col-sm-10 nopadding-left nopadding-right">
+									<ul class="nav nav-justified">
+										<li>
+											<a href="#">
+												<span>
+													<img src="/concho/images/ui/icon-news.png" />
+												</span>
+												VIEW PRESS RELEASE
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>
+													<img src="/concho/images/ui/icon-presentation.png" />
+												</span>
+												VIEW PRESENTATION
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>
+													<img src="/concho/images/ui/icon-mic.png" />
+												</span>
+												LISTEN TO WEBCAST
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="row visible-xs">
+								<div class="col-xs-6 background-green-bright border-white-right border-white-bottom item">
+									<h2 class="h1">Q3</h2>
+								</div>
+								<div class="col-xs-6 background-gray-light border-white-bottom item">
+									<a href="#">
+										<span>
+											<img src="/concho/images/ui/icon-news.png" />
+										</span>
+										VIEW PRESS RELEASE
+									</a>
+								</div>
+								<div class="col-xs-6 background-gray-light border-white-right item">
+									<a href="#">
+										<span>
+											<img src="/concho/images/ui/icon-presentation.png" />
+										</span>
+										VIEW PRESENTATION
+									</a>
+								</div>
+								<div class="col-xs-6 background-gray-light item">
+									<a href="#">
+										<span>
+											<img src="/concho/images/ui/icon-mic.png" />
+										</span>
+										LISTEN TO WEBCAST
+									</a>
+								</div>
+							</div>
+						</div><!-- //.container -->
+					</div><!-- //.container-fluid -->
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 col-md-8 padding-bottom">
+								<p class="statement">Concho was built on a strategy of spending within cash flow and using the balance 
+									sheet to make acquisitions and grow the business. This strategy has allowed us 
+									to consistently increase production while maintaining our financial health in a 
+									wide variety of market conditions. </p>
+							</div>
+						</div>
 						<div class="row section-nav margin-bottom">
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<ul class="nav nav-pills">
 									<li role="presentation" class="active"><a href="#">Recent News</a></li>
-									<li role="presentation"><a href="#">Upcoming Events</a></li>
-									<li role="presentation"><a href="#">Presentations</a></li>
 								</ul>
 							</div>
 						</div>
@@ -279,7 +370,63 @@
 								<a href="#">READ ARTICLE</a>
 							</div>
 						</div><!-- /.row -->
+						<div class="row quick-news margin-bottom-2x">
+							<div class="col-lg-4 col-md-4 upcoming-events item">
+								<div class="background-green-dark inner-wrap">
+									<h4>UPCOMING EVENTS</h4>
+									<p>
+										<a href="#">Capital One Securities, Inc. 9th Annual Energy Conference.</a>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 current-presentation item">
+								<div class="background-green-dark inner-wrap">
+									<h4>CURRENT PRESENTATION</h4>
+									<p>
+										<a href="#">Concho Resources Inc. January Investor Presentation.</a>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 email-alerts item">
+								<div class="background-green-dark inner-wrap">
+									<h4>EMAIL ALERTS</h4>
+									<p>
+										<a href="#">Stay up to speed on the latest investor news. Sign up to receive Concho email alerts and notifications.</a>
+									</p>
+								</div>
+							</div>
+						</div><!-- /.row -->
 					</div><!-- /.container -->
+					<div class="container-fluid background-gray-light contacts">
+						<div class="container">
+							<div class="row padding-top padding-bottom">
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+									<h4 class="green-dark">IR CONTACTS</h4>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 margin-bottom-small">
+											Price Moncrief<br />
+											Vice President, Capital Markets and Strategy<br />
+											<a href="tel:+14326837443">(432) 683-7443</a><br />
+											<a href="mailto:ir@conchoresources.com">ir@conchoresources.com</a>
+										</div>
+										<div class="col-lg-6 col-md-6 margin-bottom-small">
+											Megan Hays<br />
+											Director, Investor Relations<br />
+											<a href="tel:+14326852533">(432) 685-2533</a><br />
+											<a href="mailto:mhays@conchoresources.com">mhays@conchoresources.com</a>
+										</div>
+									</div><!-- /.row -->
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+									<h4 class="green-dark">TRANSFER AGENT</h4>
+									American Stock Transfer & Trust Company<br />
+									59 Maiden Lane, Plaza Level<br />
+									New York, NY 10038<br />
+									<a href="http://www.amstock.com" target="_blank">www.amstock.com</a>
+								</div>
+							</div>
+						</div><!-- /.container -->
+					</div>
 				</div><!-- /#content -->
 
 				<footer id="footer" class="padding-top" role="contentinfo">
@@ -310,7 +457,7 @@
 												<a href="#">News</a>
 											</li>
 											<li class="menu-item">
-												<a href="/ir_home.html">Investors</a>
+												<a href="/">Investors</a>
 											</li>
 										</ul>
 									</div>
