@@ -1341,6 +1341,27 @@ body{
 							@include rem(top, -40px);
 						}
 					}
+					.owl-item{
+					}
+					.owl-controls{
+						position: absolute;
+						@include rem(bottom, 20px);
+						width: 100%;
+						text-align: left;
+						@include rem(padding-left, 44px);
+						.owl-page{
+							span{
+								background: $white;
+								@include rem(border, 2px solid $white);
+							}
+							&.active{
+								span{
+									background: $green-dark;
+									@include rem(border, 2px solid $green-dark);
+								}
+							}
+						}
+					}
 				}
 			}
 			
@@ -1689,26 +1710,6 @@ body{
 					@include rem(border-left, 6px solid $black);
 					line-height: inherit;
 					color: $black;
-				}
-			}
-		}
-		.owl-item{
-			text-align: center;
-			@include padding-left();
-			@include padding-right();
-		}
-		.owl-controls{
-			width: 100%;
-			text-align: center;
-			.owl-page{
-				span{
-					background: transparent;
-					@include rem(border, 2px solid $green-bright);
-				}
-				&.active{
-					span{
-						@include rem(border, 2px solid $white);
-					}
 				}
 			}
 		}

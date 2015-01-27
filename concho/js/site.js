@@ -4,6 +4,39 @@ Array.prototype.remove = function(v) {
     });
 };
 
+var homeFeaturedCarousel = {
+	pagination : ".slide-slideshow .owl-controls",
+	slideshow : ".slide-slideshow .slideshow",
+	next : ".slide-slideshow .slideshowouter .next",
+	prev : ".slide-slideshow .slideshowouter .prev",
+	item : ".slide-slideshow .item",
+	owlControls : ".slide-slideshow .owl-controls",
+	
+	init : function(){
+		if($().owlCarousel){
+			var owl = $(homeFeaturedCarousel.slideshow).owlCarousel({
+					"items"	: 1,
+					"singleItem" : true,
+					"autoPlay" : true,
+					"transitionStyle" : "fade",
+					"stopOnHover": true,
+					"lazyLoad" : true,
+					"dragBeforeAnimFinish" : true,
+					"mouseDrag" : true,
+					"touchDrag" : true,
+					"scrollPerPage" : true
+			});
+			// Custom Navigation Events
+			$(homeFeaturedCarousel.next).click(function(){
+				owl.trigger('owl.next');
+			});
+			$(homeFeaturedCarousel.prev).click(function(){
+				owl.trigger('owl.prev');
+			});
+		}
+	}
+};
+
 var offCanvasNav = {
 	init : function(){
 		offCanvasNav.calcOffCanvasHeight();
@@ -413,6 +446,7 @@ var countCSS = {
 $(document).ready(function($) {
 	sq.log("Document Ready");
 	sq.init();
+	homeFeaturedCarousel.init();
 	lazyLoading.init();
 	enquireBreakPoints.init();
 	bootstrapClassHelpers.init();
