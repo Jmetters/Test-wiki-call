@@ -1365,6 +1365,18 @@ body{
 				}
 			}
 			
+			.container{
+				&.timeline{
+					&.details{
+						h1{
+							@include rem(font-size, 54px);
+							@include font-family($font-family-sans-serif);
+							color: $green-bright;
+						}
+					}
+				}
+			}
+			
 			.stock-ticker{
 				&.big{
 					.symbol{
@@ -1511,6 +1523,24 @@ body{
 					}
 					div:first-child{
 						@include rem(border-left, 1px solid $white);
+					}
+				}
+				&.timeline{
+					li{
+						a{
+							@include rem(line-height, 100px);
+							&:hover,
+							&:focus{
+								background-color: $green-dark;
+								color: $white;
+							}
+						}
+						&.on{
+							a{
+								background-color: $green-dark;
+								color: $white;
+							}
+						}
 					}
 				}
 			}

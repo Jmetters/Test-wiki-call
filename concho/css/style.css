@@ -2539,6 +2539,7 @@ body .container-fluid#content .featured.carousel .container .stock-ticker { posi
 body .container-fluid#content .featured.carousel .owl-controls { position: absolute; bottom: 20px; bottom: 2rem; width: 100%; text-align: left; padding-left: 44px; padding-left: 4.4rem; }
 body .container-fluid#content .featured.carousel .owl-controls .owl-page span { background: white; border: 2px solid white; border: 0.2rem solid white; }
 body .container-fluid#content .featured.carousel .owl-controls .owl-page.active span { background: #163d34; border: 2px solid #163d34; border: 0.2rem solid #163d34; }
+body .container-fluid#content .container.timeline.details h1 { font-size: 54px; font-size: 5.4rem; font-family: "Raleway", sans-serif !important; color: #68bc49; }
 body .container-fluid#content .stock-ticker.big .symbol ul li.exchange { font-size: 54px; font-size: 5.4rem; color: #163d34; }
 body .container-fluid#content .stock-ticker.big .price ul li { font-size: 32px; font-size: 3.2rem; }
 body .container-fluid#content .stock-ticker.big .price ul li.current-price { color: #163d34; }
@@ -2562,6 +2563,9 @@ body .container-fluid#content .quick-links .row div ul.nav-justified li a { min-
 body .container-fluid#content .quick-links .row div ul.nav-justified li a span { display: block; padding-top: 20px; padding-top: 2rem; padding-bottom: 10px; padding-bottom: 1rem; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li:last-child { border-right: none; }
 body .container-fluid#content .quick-links .row div:first-child { border-left: 1px solid white; border-left: 0.1rem solid white; }
+body .container-fluid#content .quick-links.timeline li a { line-height: 100px; line-height: 10rem; }
+body .container-fluid#content .quick-links.timeline li a:hover, body .container-fluid#content .quick-links.timeline li a:focus { background-color: #163d34; color: white; }
+body .container-fluid#content .quick-links.timeline li.on a { background-color: #163d34; color: white; }
 body .container-fluid#content article[role="article"] { color: #68bc49; }
 body .container-fluid#content article[role="article"].item { padding-bottom: 80px; padding-bottom: 8rem; padding-left: 28px; padding-left: 2.8rem; padding-right: 28px; padding-right: 2.8rem; }
 body .container-fluid#content article[role="article"] h2 { font-size: 18px; font-size: 1.8rem; margin-top: 10px; margin-top: 1rem; line-height: normal; color: #68bc49; }
