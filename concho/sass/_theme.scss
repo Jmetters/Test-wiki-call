@@ -1309,20 +1309,39 @@ body{
 				}
 				
 				&.carousel{
+					position: relative;
 					height: auto;
 					img{
 						width: 100%;
 						height: auto;
 					}
+					.hero-text{
+						position: absolute;
+						top: 20%;
+						@include rem(width, 458px);
+						@include rem(padding, 7px 44px 27px 44px);
+						background: transparent inline-image('../images/bg_hero-text.png') repeat;
+						color: $white;
+						h2{
+							color: $white;
+						}
+						a{
+							font-weight: 700;
+							@include rem(font-size, 13px);
+							color: $green-dark;
+							&:hover,
+							&:focus{
+								color: $green-mint;
+							}
+						}
+					}
 					.container{
 						.stock-ticker{
-							top: initial;
-							bottom: 0;
+							position: relative;
+							@include rem(top, -40px);
 						}
 					}
 				}
-				
-				
 			}
 			
 			.stock-ticker{
