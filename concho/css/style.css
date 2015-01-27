@@ -2566,6 +2566,13 @@ body .container-fluid#content .quick-links .row div:first-child { border-left: 1
 body .container-fluid#content .quick-links.timeline li a { line-height: 100px; line-height: 10rem; }
 body .container-fluid#content .quick-links.timeline li a:hover, body .container-fluid#content .quick-links.timeline li a:focus { background-color: #163d34; color: white; }
 body .container-fluid#content .quick-links.timeline li.on a { background-color: #163d34; color: white; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div { border-right: none; text-align: left; min-height: initial; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div li a { min-height: initial; line-height: normal; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div .btn { text-transform: uppercase !important; text-align: left; padding-top: 0; padding-bottom: 0; line-height: 40px; line-height: 4rem; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div .btn:after { display: inline-block; float: right; border-left: 1px solid #266a5a; border-left: 0.1rem solid #266a5a; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: "\f107"; text-align: right; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div .dropdown-menu { border-top-right-radius: 0px; border-top-left-radius: 0px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-color: #3d7762; color: white; min-width: initial; width: 100%; padding: 20px; padding: 2rem; text-align: center; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div .dropdown-menu a { display: block; color: white; line-height: 24px; line-height: 2.4rem; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div .dropdown-menu a:hover, body .container-fluid#content .quick-links.timeline .phone-timeline div .dropdown-menu a:focus { background: transparent; color: #68bc49; }
 body .container-fluid#content article[role="article"] { color: #68bc49; }
 body .container-fluid#content article[role="article"].item { padding-bottom: 80px; padding-bottom: 8rem; padding-left: 28px; padding-left: 2.8rem; padding-right: 28px; padding-right: 2.8rem; }
 body .container-fluid#content article[role="article"] h2 { font-size: 18px; font-size: 1.8rem; margin-top: 10px; margin-top: 1rem; line-height: normal; color: #68bc49; }
