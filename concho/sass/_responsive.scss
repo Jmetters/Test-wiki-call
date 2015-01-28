@@ -235,9 +235,6 @@
 			.container-outer{
 				@include rem( margin-top, 20px );
 			}
-			.sidebar{
-				display: none;
-			}
 		}
 	}
 	.navbar-default{

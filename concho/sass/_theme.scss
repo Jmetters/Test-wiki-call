@@ -1237,6 +1237,9 @@ body{
 				@include fontMetrics(32px, 40px);
 				color: $green-dark;
 			}
+			h2.statement{
+				margin-top: 0;
+			}
 			.section-content{
 				a{
 					@include rem(font-size, 13px);
@@ -1361,6 +1364,14 @@ body{
 								}
 							}
 						}
+					}
+				}
+				&.map{
+					position: relative;
+					height: auto;
+					img{
+						width: 100%;
+						height: auto;
 					}
 				}
 			}
@@ -1690,6 +1701,19 @@ body{
 					&.stock-info{
 						li{
 							@include rem(line-height, 32px);
+						}
+					}
+				}
+				&.sidebar{
+					li{
+						@include rem(padding-bottom, $padding-small);
+						&.fun-fact{
+							background: transparent inline-image('../images/bg_fun-fact.jpg') no-repeat left top;
+							@include border-top();
+							@include padding-top-xsmall();
+							@include rem(padding-left, 47px);
+							@include rem(padding-right, 47px);
+							color: $green-bright;
 						}
 					}
 				}
