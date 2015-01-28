@@ -2259,15 +2259,17 @@ table.upcoming-events td { background-color: #d9d8d3; border-bottom: 1px solid w
 
 .box-shadow-all-sides { -webkit-box-shadow: 0 0 5px 2px #7f7f73; box-shadow: 0 0 5px 2px #7f7f73; }
 
-.btn-default, .btn-primary, .btn-dark-blue, .btn-success, .btn-info, .btn-warning, .btn-danger { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-.btn-default:active, .btn-default.active, .btn-primary:active, .btn-primary.active, .btn-dark-blue:active, .btn-dark-blue.active, .btn-success:active, .btn-success.active, .btn-info:active, .btn-info.active, .btn-warning:active, .btn-warning.active, .btn-danger:active, .btn-danger.active { -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-.btn-default a, .btn-primary a, .btn-dark-blue a, .btn-success a, .btn-info a, .btn-warning a, .btn-danger a { color: white; }
+.btn-default, .btn-default-left, .btn-primary, .btn-dark-blue, .btn-success, .btn-info, .btn-warning, .btn-danger { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
+.btn-default:active, .btn-default.active, .btn-default-left:active, .btn-default-left.active, .btn-primary:active, .btn-primary.active, .btn-dark-blue:active, .btn-dark-blue.active, .btn-success:active, .btn-success.active, .btn-info:active, .btn-info.active, .btn-warning:active, .btn-warning.active, .btn-danger:active, .btn-danger.active { -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+.btn-default a, .btn-default-left a, .btn-primary a, .btn-dark-blue a, .btn-success a, .btn-info a, .btn-warning a, .btn-danger a { color: white; }
 
 .btn { padding: 11px 12px; font-size: 14px; line-height: 1.42857; border-radius: 0; position: relative; font-family: "Raleway", sans-serif; font-size: 13px !important; font-size: 1.3rem !important; font-weight: 700; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
 .btn:active, .btn.active { background-image: none; }
 
 .btn-default { border: 0; color: white !important; padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; text-decoration: none !important; text-shadow: none; border-color: #163d34; }
 .btn-default:hover, .btn-default:active { color: white !important; border-color: #163d34; }
+
+.btn-text-left { text-align: left; }
 
 .btn-primary { border: 0; color: #68bc49 !important; padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; text-decoration: none !important; }
 .btn-primary:hover, .btn-primary:active { color: white !important; border-color: #163d34; }

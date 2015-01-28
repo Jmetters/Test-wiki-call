@@ -309,6 +309,7 @@ table{
 
 // Common styles
 .btn-default,
+.btn-default-left,
 .btn-primary,
 .btn-dark-blue,
 .btn-success,
@@ -365,6 +366,11 @@ table{
 	text-shadow: none;
 	border-color: $btn-default-border;
 }
+
+.btn-text-left{
+	text-align: left;
+}
+
 .btn-primary { 
 	@include btn-styles($brand-primary, $green-bright);
 }
