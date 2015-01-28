@@ -1744,6 +1744,45 @@ body{
 					-ms-font-feature-settings: 'lnum';
 				}
 			}
+			
+			//
+			// About > Strategy
+			// --------------------------------------------------
+			.strategy-steps{
+				.item-wrap{
+					&:after{
+						position: absolute;
+						@include rem(top, 25px);
+						@include rem(right, 7px);
+						vertical-align: middle;
+						@include rem(padding-left, 20px);
+						font-family: 'FontAwesome';
+						font-weight: normal;
+						@include rem(font-size, 21px);
+						content: $fa-var-caret-right;
+						text-align: right;
+						color: $green-bright;
+					}
+					.item{
+						background-color: $gray-light;
+						h2{
+							@include font-family($font-family-sans-serif);
+							@include fontMetrics(16px, 28px);
+							color: $white;
+							@include rem(padding, $padding-large $padding-small);
+							background-color: $green-bright;
+						}
+						section{
+							@include rem(padding, $padding-xsmall $padding-small $padding-small $padding-small);
+						}
+					}
+					&:last-child{
+						&:after{
+							content: "";
+						}
+					}
+				}
+			}
 		}
 		&.overlay{
 			padding-left: 0;

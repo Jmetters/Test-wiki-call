@@ -349,9 +349,21 @@ var gridToggle = {
 		$( '.quick-news .item .inner-wrap' )
 			.css({transition: ''}).height(highestCol);
 
+		strategyStepsHeader = $('.strategy-steps .item h2');
+		var highestCol = Math.max.apply( null, $(strategyStepsHeader).map(function(){ return $(this).height(); }).get() );
+		//sq.log(items.length + " items, highest is " + highestCol);
+		$( '.strategy-steps .item h2' )
+			.css({transition: ''}).height(highestCol);
+
+		strategyStepsSection = $('.strategy-steps .item section');
+		var highestCol = Math.max.apply( null, $(strategyStepsSection).map(function(){ return $(this).height(); }).get() );
+		//sq.log(items.length + " items, highest is " + highestCol);
+		$( '.strategy-steps .item section' )
+			.css({transition: ''}).height(highestCol);
+
 	},
 	reset : function(){
-		$('.grid-post-details .details,.quick-links .item,.quick-news .item .inner-wrap').css({height: 'auto', transition: 'none'});
+		$('.grid-post-details .details,.quick-links .item,.quick-news .item .inner-wrap,.strategy-steps .item h2,.strategy-steps .item section').css({height: 'auto', transition: 'none'});
 		enquireBreakPoints.reset();
 	}
 };

@@ -2598,6 +2598,11 @@ body .container-fluid#content .legend-column .legend li .fa { font-size: 16px; f
 body .container-fluid#content .form label { font-size: 13px; font-size: 1.3rem; font-weight: bold; }
 body .container-fluid#content .form p.form-required { color: #163d34; font-size: 12px; font-size: 1.2rem; }
 body .container-fluid#content .form input[type="text"] { -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
+body .container-fluid#content .strategy-steps .item-wrap:after { position: absolute; top: 25px; top: 2.5rem; right: 7px; right: 0.7rem; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: "\f0da"; text-align: right; color: #68bc49; }
+body .container-fluid#content .strategy-steps .item-wrap .item { background-color: #d9d8d3; }
+body .container-fluid#content .strategy-steps .item-wrap .item h2 { font-family: "Raleway", sans-serif !important; font-size: 16px; font-size: 1.6rem; line-height: 28px; line-height: 2.8rem; color: white; padding: 40px 20px; padding: 4rem 2rem; background-color: #68bc49; }
+body .container-fluid#content .strategy-steps .item-wrap .item section { padding: 10px 20px 20px 20px; padding: 1rem 2rem 2rem 2rem; }
+body .container-fluid#content .strategy-steps .item-wrap:last-child:after { content: ""; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }
