@@ -1828,6 +1828,19 @@ body{
 					}
 				}
 			}
+			//
+			// News & Media Section
+			// -----------------------------------------------------------------
+			.media{
+				ul{
+					&.sidebar{
+						li{
+							@include rem(padding-bottom, 24px);
+						}
+					}
+				}
+			}
+			
 		}
 		&.overlay{
 			padding-left: 0;

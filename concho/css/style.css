@@ -2617,6 +2617,7 @@ body .container-fluid#content .strategy-steps .item-wrap .item { background-colo
 body .container-fluid#content .strategy-steps .item-wrap .item h2 { font-family: "Raleway", sans-serif !important; font-size: 16px; font-size: 1.6rem; line-height: 28px; line-height: 2.8rem; color: white; padding: 40px 20px; padding: 4rem 2rem; background-color: #68bc49; }
 body .container-fluid#content .strategy-steps .item-wrap .item section { padding: 10px 20px 20px 20px; padding: 1rem 2rem 2rem 2rem; }
 body .container-fluid#content .strategy-steps .item-wrap:last-child:after { content: ""; }
+body .container-fluid#content .media ul.sidebar li { padding-bottom: 24px; padding-bottom: 2.4rem; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }
