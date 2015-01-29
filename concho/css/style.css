@@ -2624,6 +2624,8 @@ body .container-fluid#content .strategy-steps .item-wrap .item h2 { font-family:
 body .container-fluid#content .strategy-steps .item-wrap .item section { padding: 10px 20px 20px 20px; padding: 1rem 2rem 2rem 2rem; }
 body .container-fluid#content .strategy-steps .item-wrap:last-child:after { content: ""; }
 body .container-fluid#content .media ul.sidebar li { padding-bottom: 24px; padding-bottom: 2.4rem; }
+body .container-fluid#content .donation h2 { font-family: "URWEgyptienneW01-Medium_923528" !important; font-size: 120px; font-size: 12rem; line-height: 92px; line-height: 9.2rem; font-weight: normal; color: #68bc49; }
+body .container-fluid#content .donation h3 { font-family: "URW Egyptienne W01 Bold" !important; font-size: 24px; font-size: 2.4rem; line-height: 36px; line-height: 3.6rem; font-weight: normal; padding-left: 84px; padding-left: 8.4rem; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }
