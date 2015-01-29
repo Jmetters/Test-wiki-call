@@ -1445,6 +1445,36 @@ body{
 					@include margin-bottom-small();
 					text-transform: uppercase;
 				}
+				ul{
+					&.list-unstyled{
+						&.quick-links{
+							li{
+								display: table;
+								width: 100%;
+								background-color: $gray-light;
+								@include border-white-top();
+								@include rem(font-size, 16px);
+								font-weight: normal;
+								@include padding-top-small();
+								@include padding-bottom-small();
+								&:after{
+									display: table-cell;
+									vertical-align: middle;
+									padding-left: 10px;
+									font-family: 'FontAwesome';
+									font-weight: normal;
+									@include rem(font-size, 21px);
+									content: $fa-var-angle-right;
+								}
+								a{
+									display: table-cell;
+									width: 90%;
+									@include padding-left-small();
+								}
+							}
+						}
+					}
+				}
 			}
 			.graphs,
 			.management,
