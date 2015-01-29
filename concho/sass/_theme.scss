@@ -741,7 +741,7 @@ h6,.h6{
 			&.on,
 			&:hover{
 				border-bottom: none;
-				background-color: none;
+				background-color: transparent;
 				&:before{
 					@include opacity(1);
 				}
@@ -773,6 +773,7 @@ h6,.h6{
 					@include fontMetrics(13px, 50px);
 					text-transform: uppercase;
 					font-weight: bold;
+					border-left: none;
 					&:hover {
 						background: $navbar-submenu-divider;
 						color: $white;
