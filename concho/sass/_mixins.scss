@@ -99,6 +99,21 @@
 @mixin border-white-bottom(){
 	@include rem(border-bottom, 1px solid $white);
 }
+@mixin border-green-bright-all(){
+	@include rem(border, 1px solid $green-bright)
+}
+@mixin border-green-bright-top(){
+	@include rem(border-top, 1px solid $green-bright)
+}
+@mixin border-green-bright-left(){
+	@include rem(border-left, 1px solid $green-bright);
+}
+@mixin border-green-bright-right(){
+	@include rem(border-right, 1px solid $green-bright);
+}
+@mixin border-green-bright-bottom(){
+	@include rem(border-bottom, 1px solid $green-bright);
+}
 @mixin border-transparent-all(){
 	@include rem(border, 1px solid transparent);
 }

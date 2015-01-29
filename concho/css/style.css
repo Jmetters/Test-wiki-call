@@ -2220,6 +2220,16 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 .border-white-bottom { border-bottom: 1px solid white; border-bottom: 0.1rem solid white; }
 
+.border-green-bright-all { border: 1px solid #68bc49; border: 0.1rem solid #68bc49; }
+
+.border-green-bright-top { border-top: 1px solid #68bc49; border-top: 0.1rem solid #68bc49; }
+
+.border-green-bright-left { border-left: 1px solid #68bc49; border-left: 0.1rem solid #68bc49; }
+
+.border-green-bright-right { border-right: 1px solid #68bc49; border-right: 0.1rem solid #68bc49; }
+
+.border-green-bright-bottom { border-bottom: 1px solid #68bc49; border-bottom: 0.1rem solid #68bc49; }
+
 .border-radius-all-8 { border-top-right-radius: 8px; border-top-left-radius: 8px; border-bottom-right-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; border-bottom-left-radius: 8px; border-top-left-radius: 8px; }
 
 .hover-white-05:hover, .hover-white-5:hover { background-color: rgba(255, 255, 255, 0.05); }
@@ -2626,6 +2636,8 @@ body .container-fluid#content .strategy-steps .item-wrap:last-child:after { cont
 body .container-fluid#content .media ul.sidebar li { padding-bottom: 24px; padding-bottom: 2.4rem; }
 body .container-fluid#content .donation h2 { font-family: "URWEgyptienneW01-Medium_923528" !important; font-size: 120px; font-size: 12rem; line-height: 92px; line-height: 9.2rem; font-weight: normal; color: #68bc49; }
 body .container-fluid#content .donation h3 { font-family: "URW Egyptienne W01 Bold" !important; font-size: 24px; font-size: 2.4rem; line-height: 36px; line-height: 3.6rem; font-weight: normal; padding-left: 84px; padding-left: 8.4rem; }
+body .container-fluid#content .gallery a img { border: 1px solid white; border: 0.1rem solid white; padding: 2px; padding: 0.2rem; }
+body .container-fluid#content .gallery a img:hover, body .container-fluid#content .gallery a img:focus { border: 1px solid #68bc49; border: 0.1rem solid #68bc49; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }

@@ -166,7 +166,6 @@
 .border-bottom-none{
 	border-bottom: none !important;
 }
-
 .border-white-all{
 	@include border-white-all();
 }
@@ -182,7 +181,21 @@
 .border-white-bottom{
 	@include border-white-bottom();
 }
-
+.border-green-bright-all{
+	@include border-green-bright-all();
+}
+.border-green-bright-top{
+	@include border-green-bright-top();
+}
+.border-green-bright-left{
+	@include border-green-bright-left();
+}
+.border-green-bright-right{
+	@include border-green-bright-right();
+}
+.border-green-bright-bottom{
+	@include border-green-bright-bottom();
+}
 .border-radius-all-8{
 	@include border-top-radius(8px);
 	@include border-right-radius(8px);
@@ -1910,6 +1923,18 @@ body{
 					@include fontMetrics(24px, 36px);
 					font-weight: normal;
 					@include rem(padding-left, 84px);
+				}
+			}
+			.gallery{
+				a{
+					img{
+						@include border-white-all();
+						@include rem(padding, 2px);
+						&:hover,
+						&:focus{
+							@include border-green-bright-all();
+						}
+					}
 				}
 			}
 			
