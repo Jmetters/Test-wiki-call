@@ -1471,6 +1471,15 @@ body{
 									width: 90%;
 									@include padding-left-small();
 								}
+								&:hover,
+								&:focus{
+									a{
+										color: $green-dark;
+									}
+									&:after{
+										color: $white;
+									}
+								}
 							}
 						}
 					}
