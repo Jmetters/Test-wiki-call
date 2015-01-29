@@ -2700,6 +2700,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .stock-ticker.big .price ul li.change .fa { font-size: 25px; font-size: 2.5rem; }
   body .container-fluid#content .legend-column { position: relative; min-height: initial; }
   body .container-fluid#content .legend-column .legend { position: relative; bottom: initial; }
+  body .container-fluid#content .media .video { border-bottom: none; }
   .nav-pills > li { border-right: 1px solid white; border-right: 0.1rem solid white; }
   .nav-pills > li > a { font-size: 11px; font-size: 1.1rem; }
   .nav-pills > li + li { border-right: 1px solid white; border-right: 0.1rem solid white; }
@@ -2768,6 +2769,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content ul.list-unstyled.events li.details, body .container-fluid#content .sidebar-offcanvas .nav > li > ul.events.sub-menu li.details, .sidebar-offcanvas body .container-fluid#content .nav > li > ul.events.sub-menu li.details { background-color: transparent; }
   body .container-fluid#content .legend-column { position: relative; min-height: initial; }
   body .container-fluid#content .legend-column .legend { position: relative; bottom: initial; }
+  body .container-fluid#content .media .video { border-bottom: none; margin-bottom: 20px; margin-bottom: 2rem; }
   body .grid-posts.upcoming-events article[role="article"] section:after, body .grid-posts-2.upcoming-events article[role="article"] section:after, body .grid-posts-3.upcoming-events article[role="article"] section:after, body .grid-posts-events.upcoming-events article[role="article"] section:after { display: none; }
   body .grid-posts.upcoming-events article[role="article"] header, body .grid-posts-2.upcoming-events article[role="article"] header, body .grid-posts-3.upcoming-events article[role="article"] header, body .grid-posts-events.upcoming-events article[role="article"] header { position: relative; padding-bottom: 40px; padding-bottom: 4rem; }
   body .grid-posts.upcoming-events article[role="article"] header a.btn, body .grid-posts-2.upcoming-events article[role="article"] header a.btn, body .grid-posts-3.upcoming-events article[role="article"] header a.btn, body .grid-posts-events.upcoming-events article[role="article"] header a.btn { position: absolute; bottom: 0; }

@@ -201,6 +201,16 @@
 						bottom: initial;
 					}
 				}
+				
+				
+				//
+				// News
+				// --------------------------------------------------
+				.media{
+					.video{
+						border-bottom: none;
+					}
+				}
 			}
 		}
 	}
@@ -546,6 +556,16 @@
 					.legend{
 						position: relative;
 						bottom: initial;
+					}
+				}
+				
+				//
+				// News
+				// --------------------------------------------------
+				.media{
+					.video{
+						border-bottom: none;
+						@include margin-bottom-small();
 					}
 				}
 			}
