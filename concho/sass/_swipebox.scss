@@ -161,8 +161,8 @@ html.swipebox-html.swipebox-touch {
 		left: 40px;
 		z-index: 1;
 		@include rem(height, 60px);
-		@include rem(width, 200px);
-		background: inline-image('../images/logo.png') no-repeat left center;
+		@include rem(width, 216px);
+		background: inline-image('../images/logo_white.png') no-repeat left center;
 	}
 	&.visible-bars {
 		-webkit-transform: translateY(80px);
