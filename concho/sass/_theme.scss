@@ -661,6 +661,7 @@ h3,.h3{
 }
 h4,.h4{
 	@include h4();
+	color: $green-dark;
 }
 h5,.h5{
 	@include h5();
@@ -1937,7 +1938,17 @@ body{
 					}
 				}
 			}
-			
+			//
+			// Contact
+			// -----------------------------------------------------------------
+
+			ul{
+				&.contact-info{
+					li{
+						@include border-top();
+					}
+				}
+			}
 		}
 		&.overlay{
 			padding-left: 0;

@@ -2402,7 +2402,7 @@ h2, h2, .h2 { line-height: 34px; line-height: 3.4rem; -webkit-font-feature-setti
 
 h3, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
-h4, h4, .h4 { line-height: 15px; line-height: 1.5rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
+h4, h4, .h4 { line-height: 15px; line-height: 1.5rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; color: #163d34; }
 
 h5, h5, .h5 { line-height: 13px; line-height: 1.3rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
@@ -2638,6 +2638,7 @@ body .container-fluid#content .donation h2 { font-family: "URWEgyptienneW01-Medi
 body .container-fluid#content .donation h3 { font-family: "URW Egyptienne W01 Bold" !important; font-size: 24px; font-size: 2.4rem; line-height: 36px; line-height: 3.6rem; font-weight: normal; padding-left: 84px; padding-left: 8.4rem; }
 body .container-fluid#content .gallery a img { border: 1px solid white; border: 0.1rem solid white; padding: 2px; padding: 0.2rem; }
 body .container-fluid#content .gallery a img:hover, body .container-fluid#content .gallery a img:focus { border: 1px solid #68bc49; border: 0.1rem solid #68bc49; }
+body .container-fluid#content ul.contact-info li { border-top: 1px solid #d9d8d3; border-top: 0.1rem solid #d9d8d3; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }
