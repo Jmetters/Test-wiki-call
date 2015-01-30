@@ -1652,7 +1652,7 @@ body{
 								text-align: left;
 								padding-top: 0;
 								padding-bottom: 0;
-								@include rem(line-height, 40px);
+								@include rem(line-height, 100px);
 								&:after{
 									display: inline-block;
 									float: right;

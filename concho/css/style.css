@@ -2597,7 +2597,7 @@ body .container-fluid#content .quick-links.timeline li a:hover, body .container-
 body .container-fluid#content .quick-links.timeline li.on a { background-color: #163d34; color: white; }
 body .container-fluid#content .quick-links.timeline .phone-timeline div { border-right: none; text-align: left; min-height: initial; }
 body .container-fluid#content .quick-links.timeline .phone-timeline div li a { min-height: initial; line-height: normal; }
-body .container-fluid#content .quick-links.timeline .phone-timeline div .btn { text-transform: uppercase !important; text-align: left; padding-top: 0; padding-bottom: 0; line-height: 40px; line-height: 4rem; }
+body .container-fluid#content .quick-links.timeline .phone-timeline div .btn { text-transform: uppercase !important; text-align: left; padding-top: 0; padding-bottom: 0; line-height: 100px; line-height: 10rem; }
 body .container-fluid#content .quick-links.timeline .phone-timeline div .btn:after { display: inline-block; float: right; border-left: 1px solid #266a5a; border-left: 0.1rem solid #266a5a; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: "\f107"; text-align: right; }
 body .container-fluid#content .quick-links.timeline .phone-timeline div .dropdown-menu { border-top-right-radius: 0px; border-top-left-radius: 0px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-color: #3d7762; color: white; min-width: initial; width: 100%; padding: 20px; padding: 2rem; text-align: center; }
 body .container-fluid#content .quick-links.timeline .phone-timeline div .dropdown-menu a { display: block; color: white; line-height: 24px; line-height: 2.4rem; }
@@ -2721,6 +2721,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .quick-links .row div h2 { padding-top: 30px; padding-top: 3rem; margin-bottom: 0; min-height: initial; line-height: normal; }
   body .container-fluid#content .quick-links .row div a { min-height: 100px; min-height: 10rem; padding: 0; text-decoration: none; }
   body .container-fluid#content .quick-links .row div a span { display: block; padding-top: 20px; padding-top: 2rem; padding-bottom: 10px; padding-bottom: 1rem; }
+  body .container-fluid#content .quick-links .row div:first-child { border-left: 0; }
   body .container-fluid#content .stock-ticker.big .price ul li { font-size: 25px; font-size: 2.5rem; }
   body .container-fluid#content .stock-ticker.big .price ul li.change .fa { font-size: 25px; font-size: 2.5rem; }
   body .container-fluid#content .legend-column { position: relative; min-height: initial; }
