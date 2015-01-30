@@ -2701,9 +2701,9 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   body .container-fluid#content .featured { height: 300px; height: 30rem; }
   body .container-fluid#content .featured.carousel { position: relative; height: auto; }
   body .container-fluid#content .featured.carousel img { width: 100%; height: auto; }
-  body .container-fluid#content .featured.carousel .hero-text { position: relative; top: initial; width: 100%; padding: 7px 20px 27px 20px; padding: 0.7rem 2rem 2.7rem 2rem; }
+  body .container-fluid#content .featured.carousel .hero-text { position: relative; top: initial; width: 100%; padding: 7px 20px 37px 20px; padding: 0.7rem 2rem 3.7rem 2rem; }
   body .container-fluid#content .featured.carousel .container .stock-ticker { display: none; }
-  body .container-fluid#content .featured.carousel .owl-controls { position: relative; bottom: 30px; bottom: 3rem; width: 100%; text-align: left; padding-left: 15px; padding-left: 1.5rem; margin-top: 0; }
+  body .container-fluid#content .featured.carousel .owl-controls { position: relative; bottom: 40px; bottom: 4rem; width: 100%; text-align: left; padding-left: 15px; padding-left: 1.5rem; margin-top: 0; }
   body .container-fluid#content .featured.carousel .owl-controls .owl-page span { background: white; border: 2px solid white; border: 0.2rem solid white; }
   body .container-fluid#content .featured.carousel .owl-controls .owl-page.active span { background: #163d34; border: 2px solid #163d34; border: 0.2rem solid #163d34; }
   body .container-fluid#content .tools { text-align: right; margin-top: 17px; margin-top: 1.7rem; margin-bottom: 20px; margin-bottom: 2rem; }

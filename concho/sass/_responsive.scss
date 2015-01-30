@@ -76,7 +76,7 @@
 							position: relative;
 							top: initial;
 							width: 100%;
-							@include rem(padding, 7px $padding-small 27px $padding-small);
+							@include rem(padding, 7px $padding-small 37px $padding-small);
 						}
 						.container{
 							.stock-ticker{
@@ -87,7 +87,7 @@
 						}
 						.owl-controls{
 							position: relative;
-							@include rem(bottom, 30px);
+							@include rem(bottom, 40px);
 							width: 100%;
 							text-align: left;
 							@include rem(padding-left, 15px);
