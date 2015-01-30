@@ -65,8 +65,46 @@
 				//Feature
 				.featured{
 					@include rem(height, 300px);
-					.stock-ticker{
-						
+					&.carousel{
+						position: relative;
+						height: auto;
+						img{
+							width: 100%;
+							height: auto;
+						}
+						.hero-text{
+							position: relative;
+							top: initial;
+							width: 100%;
+							@include rem(padding, 7px $padding-small 27px $padding-small);
+						}
+						.container{
+							.stock-ticker{
+								display: none;
+							}
+						}
+						.owl-item{
+						}
+						.owl-controls{
+							position: relative;
+							@include rem(bottom, 30px);
+							width: 100%;
+							text-align: left;
+							@include rem(padding-left, 15px);
+							margin-top: 0;
+							.owl-page{
+								span{
+									background: $white;
+									@include rem(border, 2px solid $white);
+								}
+								&.active{
+									span{
+										background: $green-dark;
+										@include rem(border, 2px solid $green-dark);
+									}
+								}
+							}
+						}
 					}
 				}
 				.tools{
@@ -211,6 +249,7 @@
 						border-bottom: none;
 					}
 				}
+				
 			}
 		}
 	}
