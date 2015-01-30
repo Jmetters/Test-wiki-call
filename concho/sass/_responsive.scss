@@ -250,6 +250,16 @@
 					}
 				}
 				
+				//
+				// About > Strategy
+				// --------------------------------------------------
+				.strategy-steps{
+					.item-wrap{
+						&:after{
+							content: "";
+						}
+					}
+				}
 			}
 		}
 	}

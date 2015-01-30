@@ -241,7 +241,7 @@
 					
 					<div class="container margin-bottom">
 						<div class="row border-bottom nopadding-right nopadding-left nomargin-left nomargin-right">
-							<div class="col-lg-6 col-md-6 col-sm-7 col-xs-7 nopadding-left padding-bottom-xsmall">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding-left padding-bottom-xsmall">
 								<h1 class="page-title">Concho in the Community</h1>
 							</div>
 						</div>
@@ -281,10 +281,17 @@
 						
 						<div class="row section-nav margin-bottom">
 							<div class="col-lg-12 col-md-12 col-sm-12">
-								<ul class="nav nav-pills">
+								<ul class="nav nav-pills visible-lg visible-md">
 									<li role="presentation" class="active"><a href="#">Recent News</a></li>
 									<li role="presentation"><a href="#">Community News</a></li>
 								</ul>
+								<div class="form-group visible-sm visible-xs">
+									<label for="select1" class="sr-only">Sections</label>
+									<select id="select1" class="form-control">
+										<option value="" selected="selected">Recent News</option>
+										<option value="">Community News</option>
+									</select>
+								</div>
 							</div>
 						</div>
 						<div class="row section-content gallery">
