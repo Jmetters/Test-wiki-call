@@ -1500,8 +1500,9 @@ body{
 								}
 								&:hover,
 								&:focus{
+									background-color: $green-dark;
 									a{
-										color: $green-dark;
+										color: $white;
 									}
 									&:after{
 										color: $white;
