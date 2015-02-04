@@ -1141,11 +1141,11 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active { background-color: #163d34; border-color: #163d34; }
 .btn-default .badge { color: #163d34; background-color: white; }
 
-.btn-primary { color: white; background-color: white; border-color: #f2f2f2; }
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { color: white; background-color: #e6e6e6; border-color: #d4d4d4; }
+.btn-primary { color: white; background-color: #163d34; border-color: #163d34; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { color: white; background-color: #081814; border-color: #06100e; }
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { background-image: none; }
-.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active { background-color: white; border-color: #f2f2f2; }
-.btn-primary .badge { color: white; background-color: white; }
+.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active { background-color: #163d34; border-color: #163d34; }
+.btn-primary .badge { color: #163d34; background-color: white; }
 
 .btn-success { color: white; background-color: #5cb85c; border-color: #4cae4c; }
 .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle { color: white; background-color: #449d44; border-color: #398439; }
@@ -2281,7 +2281,7 @@ table.upcoming-events td { background-color: #d9d8d3; border-bottom: 1px solid w
 
 .btn-text-left { text-align: left; }
 
-.btn-primary { border: 0; color: #68bc49 !important; padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; text-decoration: none !important; }
+.btn-primary { border: 0; color: white !important; padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; text-decoration: none !important; text-shadow: none; border-color: #163d34; }
 .btn-primary:hover, .btn-primary:active { color: white !important; border-color: #163d34; }
 
 .btn-white { border: 0; color: black !important; padding-left: 20px; padding-left: 2rem; padding-right: 20px; padding-right: 2rem; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; text-decoration: none !important; border: 0; text-align: left !important; white-space: inherit; }

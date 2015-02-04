@@ -217,8 +217,8 @@ $btn-default-bg:                 $brand-primary !default;
 $btn-default-border:             $brand-primary !default;
 
 $btn-primary-color:              $white !default;
-$btn-primary-bg:                 $white !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $brand-primary !default;
 
 $btn-success-color:              $white !default;
 $btn-success-bg:                 $brand-success !default;

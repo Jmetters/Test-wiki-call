@@ -386,7 +386,9 @@ table{
 }
 
 .btn-primary { 
-	@include btn-styles($brand-primary, $green-bright);
+	@include btn-styles($btn-primary-bg);
+	text-shadow: none;
+	border-color: $btn-default-border;
 }
 
 .btn-white{
