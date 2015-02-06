@@ -1953,6 +1953,27 @@ body{
 				}
 			}
 			
+			//
+			// Search Results
+			// -----------------------------------------------------------------
+			.search-results{
+				.SearchDialog{
+					@include padding-top();
+					@include padding-left-small();
+					@include padding-right-small();
+					.editing-form-label-cell{
+						.control-label{
+							display: none;
+						}
+					}
+					.form-group{
+						&.form-group-submit{
+							text-align: right;
+						}
+					}
+				}
+			}
+			
 		}
 		&.overlay{
 			padding-left: 0;

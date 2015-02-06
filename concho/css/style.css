@@ -2640,6 +2640,9 @@ body .container-fluid#content .donation h3 { font-family: "URW Egyptienne W01 Bo
 body .container-fluid#content .gallery a img { border: 1px solid white; border: 0.1rem solid white; padding: 2px; padding: 0.2rem; }
 body .container-fluid#content .gallery a img:hover, body .container-fluid#content .gallery a img:focus { border: 1px solid #68bc49; border: 0.1rem solid #68bc49; }
 body .container-fluid#content ul.contact-info li { border-top: 1px solid #d9d8d3; border-top: 0.1rem solid #d9d8d3; }
+body .container-fluid#content .search-results .SearchDialog { padding-top: 40px; padding-top: 4rem; padding-left: 14px; padding-left: 1.4rem; padding-right: 14px; padding-right: 1.4rem; }
+body .container-fluid#content .search-results .SearchDialog .editing-form-label-cell .control-label { display: none; }
+body .container-fluid#content .search-results .SearchDialog .form-group.form-group-submit { text-align: right; }
 body .container-fluid.overlay { padding-left: 0; padding-right: 0; }
 body .container-fluid.overlay:before { content: " "; background: transparent url("../images/ui/bg_multiply_overlay.png") repeat center center; height: 100%; width: 100%; background-size: cover; }
 body .grid-posts .item { border: 1px solid transparent; border: 0.1rem solid transparent; margin-bottom: 30px; margin-bottom: 3rem; }
