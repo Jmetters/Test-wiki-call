@@ -17,6 +17,7 @@ var homeFeaturedCarousel = {
 			var owl = $(homeFeaturedCarousel.slideshow).owlCarousel({
 					"items"	: 1,
 					"singleItem" : true,
+					"autoHeight" : true,
 					"autoPlay" : true,
 					"transitionStyle" : "fade",
 					"stopOnHover": true,
