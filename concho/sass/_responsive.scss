@@ -888,12 +888,14 @@
 							height: auto;
 						}
 						.hero-text{
-							position: relative;
-							top: initial;
-							width: 100%;
-							@include rem(padding, 7px $padding-small 37px $padding-small);
+							position: absolute;
+							top: 0;
+							height: 100%;
+//							width: 100%;
+							//@include rem(padding, 7px $padding-small 37px $padding-small);
 						}
 					}
+					/*
 					.owl-controls{
 						position: relative;
 						@include rem(bottom, 10px !important);
@@ -914,8 +916,10 @@
 							}
 						}
 					}
+					*/
 				}
 			}
+			
 			
 		}
 		section{
