@@ -891,32 +891,8 @@
 							position: absolute;
 							top: 0;
 							height: 100%;
-//							width: 100%;
-							//@include rem(padding, 7px $padding-small 37px $padding-small);
 						}
 					}
-					/*
-					.owl-controls{
-						position: relative;
-						@include rem(bottom, 10px !important);
-						width: 100%;
-						text-align: left;
-						@include rem(padding-left, 15px !important);
-						margin-top: 0;
-						.owl-page{
-							span{
-								background: $white;
-								@include rem(border, 2px solid $white);
-							}
-							&.active{
-								span{
-									background: $green-dark;
-									@include rem(border, 2px solid $green-dark);
-								}
-							}
-						}
-					}
-					*/
 				}
 			}
 			
