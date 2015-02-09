@@ -1363,6 +1363,9 @@ body{
 						width: 100%;
 						height: auto;
 					}
+					.item{
+						background: transparent inline-image('../images/bg_hero-text.png') repeat;
+					}
 					.hero-text{
 						position: absolute;
 						top: 20%;
