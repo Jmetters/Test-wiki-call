@@ -455,6 +455,415 @@ var countCSS = {
 	endOfObject: 1
 };
 
+var q4 = {
+	date: {
+		future: 0, // default
+		past: 1,
+		range: 2,
+		all: 3
+	},
+	sort: {
+		ascending: 0, // default
+		descending: 1
+	},
+	type: {
+		all: 0, // default
+		webcasts: 1,
+		events: 2
+	},
+	lang: {
+		english: 1
+	}
+};
+
+var irdata = {
+	debug: false,
+	
+	host: "http://productdemo.q4web.com/",
+	feeds: {
+		pressreleases: "/feed/PressRelease.svc/GetPressReleaseList",
+		oneevent: "/feed/Event.svc/GetEventList",
+		events: "/feed/Event.svc/GetEventList",
+		onepresentation: "/feed/Presentation.svc/GetPresentationList",
+		presentations: "/feed/Presentation.svc/GetPresentationList",
+		documents: "/feed/FinancialReport.svc/GetFinancialReportList",
+		stockquote: "/feed/StockQuote.svc/GetStockQuoteList",
+	},
+	params: {
+		defaults: {
+			apiKey: "4FFEF45CC2C04E43BE9028FC0483F7FD",
+			languageId: q4.lang.english
+		},
+		pressreleases: {
+			pressReleaseDateFilter: 1,
+			pageSize: 3,
+			includeTags: "true",
+			tagList: ""
+		},
+		oneevent: {
+			eventDateFilter: q4.date.all,			// 3
+			sortOperator:    q4.sort.descending,	// 1
+			pageSize: 1,
+			includeTags: "true",
+			tagList: ""
+		},
+		events: {
+			eventDateFilter: q4.date.all,			// 3
+			sortOperator:    q4.sort.descending,	// 1
+			pageSize: 3,
+			includeTags: "true",
+			tagList: ""
+		},
+		onepresentation: {
+			presentationDateFilter: q4.date.all,		// 3
+			sortOperator:           q4.sort.descending,	// 1
+			pageSize: 1,
+			includeTags: "true",
+			tagList: ""
+		},
+		presentations: {
+			presentationDateFilter: q4.date.all,		// 3
+			sortOperator:           q4.sort.descending,	// 1
+			pageSize: 3,
+			includeTags: "true",
+			tagList: ""
+		},
+		documents: {
+			pageSize: 3,
+			includeTags: "true",
+			tagList: ""
+		},
+		stockquote: {
+			symbol: "JONE",
+			exchange: "NYSE",
+			pageSize: 1
+		},
+	},
+	
+	init: function() {
+		irdata.log("site.js irdata.init()");
+		irdata.initTimeZoneSupport();
+	},
+	
+	getFeed: function(which) {
+		irdata.log("irdata.getFeed(" + which + ")");
+		return $.ajax({
+			type: "GET",
+			url: irdata.getURL(which),
+			dataType: "jsonp"
+		}).fail(function(jqXHR, errorMsg) {
+			irdata.log("irdata.getFeed ajax.fail(): " + errorMsg);
+		});
+	},
+	
+	// ! ----- Date Time Entry Point Methods (call these) -----
+	
+	getStockDateTime: function(dateTimeString) {
+		irdata.log("-----");
+		irdata.log("irdata.getStockDateTime(" + dateTimeString + ")");
+		if (irdata.isDST) {
+			return irdata.processDateTime(dateTimeString, {toTZ: "EST"});
+		} else {
+			return irdata.processDateTime(dateTimeString, {toTZ: "EDT"});
+		}
+	},
+	
+	getDateTime: function (dateTimeString, fromTZ) {
+		irdata.log("-----");
+		if (typeof fromTZ == "undefined") {
+			irdata.log("irdata.getDateTime(" + dateTimeString + ")");
+			return irdata.processDateTime(dateTimeString, {});
+		} else {
+			irdata.log("irdata.getDateTime(" + dateTimeString + ", " + fromTZ + ")");
+			return irdata.processDateTime(dateTimeString, {fromTZ: fromTZ});
+		}
+	},
+	
+	// ! ----- Date Time Process Methods -----
+	
+	initTimeZoneSupport: function() {
+		irdata.log("irdata.initTimeZone()");
+		
+		// define Date.stdTimezoneOffset()
+		Date.prototype.stdTimezoneOffset = function() {
+			var jan = new Date(this.getFullYear(), 0, 1);
+			var jul = new Date(this.getFullYear(), 6, 1);
+			return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+		}
+		
+		// define Date.isDst()
+		Date.prototype.isDst = function() {
+			return this.getTimezoneOffset() < this.stdTimezoneOffset();
+		}
+		
+		// is Daylight Saving Time currently active?
+		irdata.isDST = new Date().isDst();
+		
+		// time zone abbreviations to their string values
+		irdata.offsets = {
+			EST: "-0500", CST: "-0600", MST: "-0700", PST: "-0800",
+			EDT: "-0400", CDT: "-0500", MDT: "-0600", PDT: "-0700",
+			UTC: "+0000", none: ""
+		};
+		
+		// time zone abbreviations to their numeric values in hours
+		irdata.hours = {
+			EST: -5, CST: -6, MST: -7, PST: -8,
+			EDT: -4, CDT: -5, MDT: -6, PDT: -7,
+			UTC:  0
+		};
+		
+		// determine time zone when none is specified
+		if (irdata.isDST) {
+			irdata.defaultFromTZ = "EST";
+			irdata.defaultToTZ   = "CST";
+			irdata.log("Daylight Saving Time is in effect.");
+		} else {
+			irdata.defaultFromTZ = "EDT";
+			irdata.defaultToTZ   = "CDT";
+			irdata.log("Standard Time is in effect.");
+		}
+		
+		irdata.defaultFromOffset = irdata.offsets[irdata.defaultFromTZ];
+		irdata.defaultToHours = irdata.hours[irdata.defaultToTZ];
+	},
+	
+	processDateTime: function(rawDateTimeString, options) {
+		//irdata.log("irdata.processDateTime(" + rawDateTimeString + "), options:");
+		//irdata.log(options);
+		
+		// initialize variables
+		var shortMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+						   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+		
+		// determine the offset to calculate from
+		var fromOffset = irdata.defaultFromOffset;
+		var fromTZ = irdata.defaultFromTZ;
+		if (options && options.fromTZ
+			&& typeof irdata.offsets[options.fromTZ] != "undefined") {
+				fromOffset = irdata.offsets[options.fromTZ];
+				fromTZ = options.fromTZ;
+		}
+		
+		// assemble the string that gets converted into a date time
+		var dateTimeString = rawDateTimeString;
+		if (fromOffset != "") {
+			dateTimeString += " " + fromOffset;
+		}
+		
+		// create the input Date object with offset
+		inDate = new Date(dateTimeString);
+		var offsetDateWasInvalid = false;
+		if (!irdata.isValidDate(inDate)) {
+			//irdata.log("*** Date with offset is invalid, removing offset.");
+			offsetDateWasInvalid = true;
+			dateTimeString = rawDateTimeString;
+			inDate = new Date(dateTimeString);
+		}
+		
+		//irdata.log(dateTimeString + " --> " + utcDate);
+		
+		// ----- now we have the in Date -----
+		
+		// determine the hours to calculate to
+		var toHours = irdata.defaultToHours;
+		var toTZ    = irdata.defaultToTZ;
+		if (options && options.toTZ
+			&& typeof irdata.offsets[options.toTZ] != "undefined"
+			&& typeof irdata.offsets[options.toTZ] != "0") {
+				toHours = irdata.hours[options.toTZ];
+				toTZ = options.toTZ;
+		} else {
+			//irdata.log("Found no options.toTZ");
+		}
+		if (offsetDateWasInvalid) {
+			/** NOTE
+			 * With the development data, invalid dates were only created when there
+			 * was no time provided, when only a date was supplied. In those cases,
+			 * flagged here by offsetDateWasInvalid, I set the toHours multiplier to
+			 * zero and flag the toTZ as Invalid. Only the date portion should be used.
+			 */
+			toHours = 0;
+			toTZ = "Invalid";
+		}
+		
+		/** IMPORTANT
+		 * outDate is an artificial construction. The date and time in the object
+		 * should be correct, but it is represented in UTC artificially.
+		 * Get the date and time from outDate with getUTC____()
+		 */
+		//irdata.log("toHours is " + toHours);
+		outDate = new Date(inDate.getTime() + (toHours * 3600000));
+		
+		// date construction
+		var monthNumber = outDate.getUTCMonth() + 1;
+		var dayNumber   = outDate.getUTCDate();
+		var shortMonth  = shortMonths[outDate.getUTCMonth()];
+		
+		var shortMDY  = shortMonth + " " + dayNumber + ", " + outDate.getUTCFullYear();
+		var dottedMD  = irdata.lpad(monthNumber, 2) + "." + irdata.lpad(dayNumber, 2);
+		var dottedMDY = dottedMD + "." + outDate.getUTCFullYear().toString().substring(2)
+		
+		// time construction
+		var timeHour = outDate.getUTCHours();
+		var timeMin  = irdata.lpad(outDate.getUTCMinutes(), 2);
+
+		var timeHour12 = timeHour;
+		var amPm = "AM";
+		if (timeHour12 > 12) {
+			amPm = "PM";
+			timeHour12 = timeHour12 - 12;
+		}
+		if (timeHour == 12) {
+			amPm = "PM";
+		}
+		if (timeHour12 == 0) {
+			timeHour12 = 12;
+		}
+		
+		var timeHMP  = timeHour12 + ":" + timeMin + " " + amPm
+		var timeHMPZ = timeHMP + " " + toTZ;
+		
+		irdata.log("Converted " + fromTZ + " to " + toTZ);
+		irdata.log(shortMDY + " - " + timeHMPZ);
+		
+		return {
+			shortMDY:      shortMDY,
+			dottedDateMD:  dottedMD,
+			dottedDateMDY: dottedMDY,
+			timeHMP:       timeHMP,
+			timeHMPZ:      timeHMPZ
+		};
+	},
+		
+	isValidDate: function(d) {
+		if (Object.prototype.toString.call(d) !== "[object Date]") {
+			return false;
+		}
+		return !isNaN(d.getTime());
+	},
+
+	// -----
+	
+	lpad: function(value, length) {
+		var padChar = "0";
+		var padding = padChar;
+		for (var i = 0; i < length; i++) {
+			padding += padChar;
+		}
+		
+		return (padding + value).slice(length * -1);
+	},
+	
+	getURL: function(feed) {
+		var paramlist = [];
+		for (name in irdata.params.defaults) {
+			paramlist.push(name + "=" + irdata.params.defaults[name]);
+		}
+		for (name in irdata.params[feed]) {
+			paramlist.push(name + "=" + irdata.params[feed][name]);
+		}
+		paramlist.push("req=" + Math.round(new Date().getTime() / 1000));
+		irdata.log("irdata.getURL(): " + irdata.host + irdata.feeds[feed] + "?" + paramlist.join("&"));
+		return irdata.host + irdata.feeds[feed] + "?" + paramlist.join("&");
+	},
+	
+	// ===== Utility Methods =====
+	
+	log: function(message) {
+		if (this.debug) {
+			if (typeof console == "undefined" || typeof console.log == "undefined") {
+				console = {log: function() {}};
+			}
+			console.log(message);
+		}
+	},
+	
+	// ===== End of Object =====
+	
+	endOfObject: 1
+};
+
+var stock = {
+	debug: false,
+	
+	container: ".stock-ticker",
+	currentPrice:  ".stock-ticker .current-price",
+	change: ".stock-ticker .change",
+	percentChange: ".stock-ticker .percent-change",
+		
+	init: function() {
+		stock.log("stock.init()");
+		stock.update();
+	},
+	
+	update: function() {
+		stock.log("stock.update()");
+		
+		irdata.getFeed("stockquote").done(stock.process);
+	},
+	
+	process: function(result) {
+		stock.log("stock.process()");
+		stock.log(result);
+		
+		var currentPrice = [];
+		var valueChange = [];
+		var percentChange = [];
+		//output.push("NYSE:");
+		//output.push("CXO");
+		
+		if (typeof result.GetStockQuoteListResult[0] != "undefined") {
+			var quote = result.GetStockQuoteListResult[0];
+			
+			if (typeof quote.TradePrice != "undefined") {
+				currentPrice.push("$" + Number(quote.TradePrice).toFixed(2));
+			}
+			
+			if (typeof quote.Change != "undefined") {
+				var prefix = "";
+				if (quote.Change < 0) {
+					prefix += "<span class=\"fa fa-sort-down\"></span>&nbsp;&nbsp;&nbsp;";
+				}
+				if (quote.Change > 0) {
+					prefix += "<span class=\"fa fa-sort-up\"></span>&nbsp;&nbsp;&nbsp;";
+				}
+				valueChange.push(prefix + Number(Math.abs(quote.Change)).toFixed(2) + "&nbsp;&nbsp;&nbsp;|");
+			}
+			
+			if (typeof quote.PercChange != "undefined") {
+				var prefix = "";
+				if (quote.PercChange < 0) {
+					prefix += "- ";
+				}
+				if (quote.PercChange > 0) {
+					prefix += "+ ";
+				}
+				percentChange.push(prefix + Math.abs(quote.PercChange).toFixed(2) + "%");
+			}
+		}
+		
+		$(stock.currentPrice).text(currentPrice.join(" "));
+		$(stock.change).html(valueChange.join(" "));
+		$(stock.percentChange).text(percentChange.join(" "));
+	},
+	
+	// ===== Utility Methods =====
+	
+	log: function(message) {
+		if (this.debug) {
+			if (typeof console == "undefined" || typeof console.log == "undefined") {
+				console = {log: function() {}};
+			}
+			console.log(message);
+		}
+	},
+	
+	// ===== End of Object =====
+	
+	endOfObject: 1
+};
+
 $(document).ready(function($) {
 	sq.log("Document Ready");
 	sq.init();
@@ -466,6 +875,10 @@ $(document).ready(function($) {
 	lbox.init();
 	offCanvasNav.init();	
 	//countCSS.init();
+	
+	irdata.init();
+	stock.init();
+	
 	/**
 	 * Temporary Chrome font fix
 	 */
