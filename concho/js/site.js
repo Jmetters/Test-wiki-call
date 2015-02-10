@@ -898,7 +898,7 @@ var stock = {
 var rc = {
 	debug: false,
 	
-	container: ".section-content",
+	container: ".section-content:not(.gallery)",
 	navItems: ".section-nav .nav > li",
 	mobileNav: ".section-nav #select1",
 	loading: "loading",
