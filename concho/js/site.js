@@ -287,7 +287,9 @@ var sq = {
 			$(sq.timelineNavItem).click(sq.timelineNavClick.navClicked);
 			$(sq.timelineMobileNav).change(sq.timelineNavClick.navClicked);
 		},
-		navClicked : function(){
+		navClicked : function(e){
+			e.preventDefault();
+			
 			var item = $(this).attr("href") || $(this).val();
 			$(sq.timelineItemDetails).addClass("hidden");
 			$(item).removeClass("hidden");
