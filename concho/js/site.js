@@ -937,7 +937,7 @@ var rc = {
 		// mark the proper nav item
 		$(rc.navItems).removeClass("active")
 			.filter("[data-feed=" + which + "]").addClass("active");
-		$(rc.navItems).val(which);
+		$(rc.mobileNav).val(which);
 		// show loading
 		$(rc.container).addClass(rc.loading);
 	},
