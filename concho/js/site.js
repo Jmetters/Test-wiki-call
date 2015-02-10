@@ -945,11 +945,10 @@ var rc = {
 
 			// construct the HTML
 			var theHTML = "";
-			theHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-bottom-small col' + (i + 1 + col) + '">\n';
+			theHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-bottom-small col' + (i + 1 + col) + ' ' + if(i==2){return 'hidden-xs'} + '">\n';
 			if (typeof fields.link != "object") {
 				var linkParams = {
 					href: item[fields.link],
-					//text: date + time + headline
 					text: date + headline
 				};
 				if (fields.target) {
