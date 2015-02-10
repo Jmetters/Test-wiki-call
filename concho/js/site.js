@@ -893,6 +893,237 @@ var stock = {
 	endOfObject: 1
 };
 
+var rc = {
+	debug: false,
+	
+	container: ".section-content",
+	navItems: ".section-nav .nav > li",
+	mobileNav: ".section-nav #select1",
+	loading: "loading",
+	
+	init: function() {
+		rc.log("rc.init()");
+		$(rc.navItems).click(rc.navClicked);
+		$(rc.mobileNav).change(rc.navClicked);
+		rc.updateUI("pressreleases");
+		irdata.getFeed("pressreleases").done(rc.pressreleases);
+	},
+	
+	navClicked: function() {
+		rc.log("rc.navClicked()");
+		var feed = $(this).attr("data-feed") || $(this).val();
+		
+		// empty container and update UI (nav marking, loading)
+		$(rc.container).html('');
+		rc.updateUI(feed);
+		
+		// get data from the feed
+		if (feed == "onecombined") {
+			rc.log("onecombined detected.");
+			$.when(
+				irdata.getFeed("oneevent"),
+				irdata.getFeed("onepresentation")
+			).then(rc[feed], function() {
+				rc.log("onecombined.fail()")
+			});
+		} else {
+			irdata.getFeed(feed).done(rc[feed]);
+		}
+	},
+	
+	updateUI: function(which) {
+		// mark the proper nav item
+		$(rc.navItems).removeClass("active")
+			.filter("[data-feed=" + which + "]").addClass("active");
+		// show loading
+		$(rc.container).addClass(rc.loading);
+	},
+	
+	outputHTML: function(items, fields, col) {
+		var container = $(rc.container);
+		
+		if (typeof col == "undefined") {
+			col = 0;
+		}
+
+		container.removeClass(rc.loading);
+		
+		for (var i = 0; i < items.length; i++) {
+			var item = items[i];
+
+			// request date object
+			var dateTime = irdata.getDateTime(item[fields.datetime]);
+			
+			// construct common output
+			var date = '<h4 class="green-dark">' + dateTime.dottedDateMDY + '</h4>';
+			var headline = '<p>';
+			if (fields.titlePrefix) {
+				headline += fields.titlePrefix;
+			}
+			headline += item[fields.title] + '</p>';
+
+			
+			// construct time
+			var time = '';
+			if (fields.showtime) {
+				time += '<span class="time">';
+				time += dateTime.timeHMPZ;
+				time += '</span>';
+			}
+
+			// construct the HTML
+			var theHTML = "";
+			theHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-bottom-small col' + (i + 1 + col) + ' ' + ((i==2)?'hidden-xs':'') + '">\n';
+			if (typeof fields.link != "object") {
+				var linkParams = {
+					href: item[fields.link],
+					text: date + headline
+				};
+				if (fields.target) {
+					linkParams.target = fields.target;
+				}
+				theHTML += rc.constructLink(linkParams);
+			}
+			theHTML += '</div>\n';
+
+			rc.log(theHTML);
+			
+			// append the HTML
+			container.append(theHTML);
+		}
+	},
+	
+	constructLink: function(link) {
+		// massage the href
+		var href = link.href;
+		if (href.indexOf("http") != 0) {
+			href = irdata.host + href;
+		}
+		var theContent = link.text;
+		// assemble the HTML
+		var theHTML = '<a href="' + href + '"';
+		if (typeof link.target != "undefined") {
+			theHTML += ' target="' + link.target + '"';
+		}
+		if (typeof link.theClass != "undefined") {
+			theHTML += ' class="' + link.theClass + '"';
+		}
+		theHTML += '>READ MORE';
+		theHTML += '</a>';
+		
+		return theContent + theHTML;
+	},
+	
+	pressreleases: function(result) {
+		rc.log("rc.pressreleases()");
+		rc.outputHTML(result.GetPressReleaseListResult, {
+			datetime: "PressReleaseDate",
+			showtime: true,
+			timezone: false,
+			link: "LinkToDetailPage",
+			title: "Headline",
+			target: false
+		});
+	},
+	
+	onecombined: function(event, presentation) {
+		rc.log("rc.onecombined()");
+		rc.outputHTML(event[0].GetEventListResult, {
+			datetime: "StartDate",
+			showtime: true,
+			timezone: "TimeZone",
+			link: "LinkToDetailPage",
+			title: "Title",
+			titlePrefix: "Webcast: ",
+			target: false
+		}, 0, false);
+		rc.outputHTML(presentation[0].GetPresentationListResult, {
+			datetime: "PresentationDate",
+			showtime: true,
+			timezone: false,
+			link: "LinkToDetailPage",
+			title: "Title",
+			titlePrefix: "Presentation: "
+		}, 1);
+	},
+	
+	events: function(result) {
+		rc.log("rc.events()");
+		rc.outputHTML(result.GetEventListResult, {
+			datetime: "StartDate",
+			showtime: true,
+			timezone: "TimeZone",
+			link: "LinkToDetailPage",
+			title: "Title",
+			target: false
+		});
+	},
+	
+	presentations: function(result) {
+		rc.log("rc.presentations()");
+		rc.outputHTML(result.GetPresentationListResult, {
+			datetime: "PresentationDate",
+			showtime: true,
+			timezone: false,
+			link: "LinkToDetailPage",
+			title: "Title"
+		});
+	},
+	
+	documents: function(result) {
+		rc.log("rc.documents()");
+		
+		var docList = [];
+		var desiredListLength = 3;
+		for (var f = 0; f < result.GetFinancialReportListResult.length; f++) {
+			var group = result.GetFinancialReportListResult[f];
+			for (var d = 0; d < group.Documents.length; d++) {
+				var doc = group.Documents[d];
+				doc.ReportDate = group.ReportDate;
+				if (docList.length < desiredListLength) {
+					docList.push(doc);
+				}
+			}
+		}
+		
+		rc.outputHTML(docList, {
+			datetime: "ReportDate",
+			showtime: false,
+			timezone: false,
+			title: "DocumentTitle",
+			link: "DocumentPath",
+			target: "_blank"
+		});
+	},
+	
+	localdocs: function(result) {
+		rc.log("rc.localdocs()");
+		rc.outputHTML(result.LocalDocs, {
+			datetime: "DocumentDate",
+			showtime: false,
+			timezone: false,
+			link: "DocumentLink",
+			title: "DocumentTitle",
+			target: "_blank"
+		});
+	},
+	
+	// ===== Utility Methods =====
+	
+	log: function(message) {
+		if (this.debug) {
+			if (typeof console == "undefined" || typeof console.log == "undefined") {
+				console = {log: function() {}};
+			}
+			console.log(message);
+		}
+	},
+	
+	// ===== End of Object =====
+	
+	endOfObject: 1
+};
+
 $(document).ready(function($) {
 	sq.log("Document Ready");
 	sq.init();
@@ -907,6 +1138,7 @@ $(document).ready(function($) {
 	
 	irdata.init();
 	stock.init();
+	rc.init();
 	
 	/**
 	 * Temporary Chrome font fix
