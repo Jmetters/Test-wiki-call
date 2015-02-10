@@ -868,9 +868,9 @@ var stock = {
 var rc = {
 	debug: false,
 	
-	container: "#resourcecenter .articles",
-	navItems: "#resourcecenter .nav ul li",
-	loading: "loading blue small",
+	container: ".section-content",
+	navItems: ".section-nav .nav > li",
+	loading: "loading",
 	
 	init: function() {
 		rc.log("rc.init()");
@@ -903,8 +903,8 @@ var rc = {
 	
 	updateUI: function(which) {
 		// mark the proper nav item
-		$(rc.navItems).removeClass("marked")
-			.filter("[data-feed=" + which + "]").addClass("marked");
+		$(rc.navItems).removeClass("active")
+			.filter("[data-feed=" + which + "]").addClass("active");
 		// show loading
 		$(rc.container).addClass(rc.loading);
 	},
@@ -939,12 +939,12 @@ var rc = {
 */
 			
 			// construct common output
-			var date = '<span class="date">' + dateTime.dottedDateMDY + '</span>';
-			var headline = '<span class="headline">';
+			var date = '<h4 class="green-dark">' + dateTime.dottedDateMDY + '</h4>';
+			var headline = '<p>';
 			if (fields.titlePrefix) {
 				headline += fields.titlePrefix;
 			}
-			headline += item[fields.title] + '</span>';
+			headline += item[fields.title] + '</p>';
 
 			
 			// construct time
@@ -964,7 +964,7 @@ var rc = {
 
 			// construct the HTML
 			var theHTML = "";
-			theHTML += '<div class="col' + (i + 1 + col) + '">\n';
+			theHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-xs padding-bottom-small col' + (i + 1 + col) + '">\n';
 			if (typeof fields.link != "object") {
 				var linkParams = {
 					href: item[fields.link],
@@ -1001,9 +1001,9 @@ var rc = {
 			container.append(theHTML);
 		}
 		
-		if (clear) {
-			container.append('<div class="clear">&nbsp;</div>\n');
-		}
+		//if (clear) {
+			//container.append('<div class="clear">&nbsp;</div>\n');
+		//}
 	},
 	
 	constructLink: function(link) {
