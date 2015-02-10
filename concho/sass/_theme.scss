@@ -1931,14 +1931,17 @@ body{
 			}
 			.gallery{
 				a{
-					img{
-						@include border-white-all();
-						@include rem(padding, 2px);
-						&:hover,
-						&:focus{
-							@include border-green-bright-all();
-						}
+					display: block;
+					width: 100%;
+					@include rem(height, 200px);
+					@include border-white-all();
+					@include rem(padding, 2px);
+					background-position: center center;
+					&:hover,
+					&:focus{
+						@include border-green-bright-all();
 					}
+
 				}
 			}
 			//

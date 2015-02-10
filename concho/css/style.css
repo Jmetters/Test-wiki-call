@@ -2637,8 +2637,8 @@ body .container-fluid#content .strategy-steps .item-wrap:last-child:after { cont
 body .container-fluid#content .media ul.sidebar li { padding-bottom: 24px; padding-bottom: 2.4rem; }
 body .container-fluid#content .donation h2 { font-family: "URWEgyptienneW01-Medium_923528" !important; font-size: 120px; font-size: 12rem; line-height: 92px; line-height: 9.2rem; font-weight: normal; color: #68bc49; }
 body .container-fluid#content .donation h3 { font-family: "URW Egyptienne W01 Bold" !important; font-size: 24px; font-size: 2.4rem; line-height: 36px; line-height: 3.6rem; font-weight: normal; padding-left: 84px; padding-left: 8.4rem; }
-body .container-fluid#content .gallery a img { border: 1px solid white; border: 0.1rem solid white; padding: 2px; padding: 0.2rem; }
-body .container-fluid#content .gallery a img:hover, body .container-fluid#content .gallery a img:focus { border: 1px solid #68bc49; border: 0.1rem solid #68bc49; }
+body .container-fluid#content .gallery a { display: block; width: 100%; height: 200px; height: 20rem; border: 1px solid white; border: 0.1rem solid white; padding: 2px; padding: 0.2rem; }
+body .container-fluid#content .gallery a:hover, body .container-fluid#content .gallery a:focus { border: 1px solid #68bc49; border: 0.1rem solid #68bc49; }
 body .container-fluid#content ul.contact-info li { border-top: 1px solid #d9d8d3; border-top: 0.1rem solid #d9d8d3; }
 body .container-fluid#content .search-results .SearchDialog { padding-top: 40px; padding-top: 4rem; padding-left: 14px; padding-left: 1.4rem; padding-right: 14px; padding-right: 1.4rem; }
 body .container-fluid#content .search-results .SearchDialog .editing-form-label-cell .control-label { display: none; }
