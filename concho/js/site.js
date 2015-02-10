@@ -952,13 +952,13 @@ var rc = {
 			if (fields.showtime) {
 				time += '<span class="time">';
 				time += dateTime.timeHMPZ;
-              /*
+				/*
 				if (fields.timezone
 					&& typeof item[fields.timezone] != "undefined"
 					&& item[fields.timezone] != "0") {
 						time += " " + item[fields.timezone];
 				}
-*/
+				*/
 				time += '</span>';
 			}
 
@@ -968,13 +968,14 @@ var rc = {
 			if (typeof fields.link != "object") {
 				var linkParams = {
 					href: item[fields.link],
-					text: date + time + headline
+					//text: date + time + headline
+					text: date + headline
 				};
 				if (fields.target) {
 					linkParams.target = fields.target;
 				}
 				theHTML += rc.constructLink(linkParams);
-			} else {
+			} /*else {
 				theHTML += date + time + headline;
 				theHTML += '<ul>\n';
 				for (var c = 0; c < item[fields.link.items].length; c ++) {
@@ -992,7 +993,7 @@ var rc = {
 					theHTML += '</li>\n';
 				}
 				theHTML += '</ul>\n';
-			}
+			}*/
 			theHTML += '</div>\n';
 
 			rc.log(theHTML);
@@ -1012,7 +1013,7 @@ var rc = {
 		if (href.indexOf("http") != 0) {
 			href = irdata.host + href;
 		}
-		
+		var theContent = link.text;
 		// assemble the HTML
 		var theHTML = '<a href="' + href + '"';
 		if (typeof link.target != "undefined") {
@@ -1021,15 +1022,15 @@ var rc = {
 		if (typeof link.theClass != "undefined") {
 			theHTML += ' class="' + link.theClass + '"';
 		}
-		theHTML += '>';
-		if (typeof link.text != "undefined") {
+		theHTML += '>READ MORE';
+		/*if (typeof link.text != "undefined") {
 			theHTML += link.text;
 		} else {
 			theHTML += link.href;
-		}
+		}*/
 		theHTML += '</a>';
 		
-		return theHTML;
+		return theContent + theHTML;
 	},
 	
 	pressreleases: function(result) {
