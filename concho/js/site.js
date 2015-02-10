@@ -222,9 +222,9 @@ var sq = {
 	textResizer : '.textresizer a',
 	mobileNav : '.sidebar-offcanvas .menu.nav',
 	mobileNavLiWChildren : '.sidebar-offcanvas .menu.nav li.has-children a',
-	timelineNav : '.quick-links.timeline .nav-justified',
-	timelineNavItem : '.quick-links.timeline .nav-justified li a',
-	timelineNavItemParents : '.quick-links.timeline .nav-justified li',
+	timelineNav : '.history.timeline .nav-justified',
+	timelineNavItem : '.history.timeline .nav-justified li a',
+	timelineNavItemParents : '.history.timeline .nav-justified li',
 	timelineMobileNav : '#mobileTimelineNav',
 	timelineItemDetails : '.timeline.details .item',
 	
