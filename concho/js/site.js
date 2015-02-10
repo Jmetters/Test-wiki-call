@@ -870,18 +870,20 @@ var rc = {
 	
 	container: ".section-content",
 	navItems: ".section-nav .nav > li",
+	mobileNav: ".section-nav #select1",
 	loading: "loading",
 	
 	init: function() {
 		rc.log("rc.init()");
 		$(rc.navItems).click(rc.navClicked);
+		$(rc.mobileNav).change(rc.navClicked);
 		rc.updateUI("pressreleases");
 		irdata.getFeed("pressreleases").done(rc.pressreleases);
 	},
 	
 	navClicked: function() {
 		rc.log("rc.navClicked()");
-		var feed = $(this).attr("data-feed");
+		var feed = $(this).attr("data-feed") || $(this).val();
 		
 		// empty container and update UI (nav marking, loading)
 		$(rc.container).html('');
@@ -909,12 +911,8 @@ var rc = {
 		$(rc.container).addClass(rc.loading);
 	},
 	
-	outputHTML: function(items, fields, col, clear) {
+	outputHTML: function(items, fields, col) {
 		var container = $(rc.container);
-		
-		if (typeof clear == "undefined") {
-			clear = true;
-		}
 		
 		if (typeof col == "undefined") {
 			col = 0;
@@ -927,16 +925,6 @@ var rc = {
 
 			// request date object
 			var dateTime = irdata.getDateTime(item[fields.datetime]);
-          /*
-			var dateTime;
-			if (fields.timezone
-				&& typeof item[fields.timezone] != "undefined"
-				&& item[fields.timezone] != "0") {
-					dateTime = irdata.getDateTime(item[fields.datetime], item[fields.timezone]);
-			} else {
-				dateTime = irdata.getDateTime(item[fields.datetime]);
-			}
-*/
 			
 			// construct common output
 			var date = '<h4 class="green-dark">' + dateTime.dottedDateMDY + '</h4>';
@@ -952,13 +940,6 @@ var rc = {
 			if (fields.showtime) {
 				time += '<span class="time">';
 				time += dateTime.timeHMPZ;
-				/*
-				if (fields.timezone
-					&& typeof item[fields.timezone] != "undefined"
-					&& item[fields.timezone] != "0") {
-						time += " " + item[fields.timezone];
-				}
-				*/
 				time += '</span>';
 			}
 
@@ -975,25 +956,7 @@ var rc = {
 					linkParams.target = fields.target;
 				}
 				theHTML += rc.constructLink(linkParams);
-			} /*else {
-				theHTML += date + time + headline;
-				theHTML += '<ul>\n';
-				for (var c = 0; c < item[fields.link.items].length; c ++) {
-					var child      = item[fields.link.items][c];
-					var linkParams = {
-						href: child[fields.link.link],
-						text: child[fields.link.title]
-					};
-					if (fields.link.target) {
-						linkParams.target = fields.link.target;
-					}
-					
-					theHTML += '<li>';
-					theHTML += rc.constructLink(linkParams);
-					theHTML += '</li>\n';
-				}
-				theHTML += '</ul>\n';
-			}*/
+			}
 			theHTML += '</div>\n';
 
 			rc.log(theHTML);
@@ -1001,10 +964,6 @@ var rc = {
 			// append the HTML
 			container.append(theHTML);
 		}
-		
-		//if (clear) {
-			//container.append('<div class="clear">&nbsp;</div>\n');
-		//}
 	},
 	
 	constructLink: function(link) {
@@ -1023,11 +982,6 @@ var rc = {
 			theHTML += ' class="' + link.theClass + '"';
 		}
 		theHTML += '>READ MORE';
-		/*if (typeof link.text != "undefined") {
-			theHTML += link.text;
-		} else {
-			theHTML += link.href;
-		}*/
 		theHTML += '</a>';
 		
 		return theContent + theHTML;
@@ -1113,21 +1067,6 @@ var rc = {
 			link: "DocumentPath",
 			target: "_blank"
 		});
-		
-		/*
-		rc.outputHTML(result.GetFinancialReportListResult, {
-			datetime: "ReportDate",
-			showtime: false,
-			timezone: false,
-			link: {
-				items: "Documents",
-				title: "DocumentTitle",
-				link: "DocumentPath",
-				target: "_blank"
-			},
-			title: "ReportTitle"
-		});
-		*/
 	},
 	
 	localdocs: function(result) {
