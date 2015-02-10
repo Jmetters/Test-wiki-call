@@ -865,6 +865,298 @@ var stock = {
 	endOfObject: 1
 };
 
+var rc = {
+	debug: false,
+	
+	container: "#resourcecenter .articles",
+	navItems: "#resourcecenter .nav ul li",
+	loading: "loading blue small",
+	
+	init: function() {
+		rc.log("rc.init()");
+		$(rc.navItems).click(rc.navClicked);
+		rc.updateUI("pressreleases");
+		irdata.getFeed("pressreleases").done(rc.pressreleases);
+	},
+	
+	navClicked: function() {
+		rc.log("rc.navClicked()");
+		var feed = $(this).attr("data-feed");
+		
+		// empty container and update UI (nav marking, loading)
+		$(rc.container).html('');
+		rc.updateUI(feed);
+		
+		// get data from the feed
+		if (feed == "onecombined") {
+			rc.log("onecombined detected.");
+			$.when(
+				irdata.getFeed("oneevent"),
+				irdata.getFeed("onepresentation")
+			).then(rc[feed], function() {
+				rc.log("onecombined.fail()")
+			});
+		} else {
+			irdata.getFeed(feed).done(rc[feed]);
+		}
+	},
+	
+	updateUI: function(which) {
+		// mark the proper nav item
+		$(rc.navItems).removeClass("marked")
+			.filter("[data-feed=" + which + "]").addClass("marked");
+		// show loading
+		$(rc.container).addClass(rc.loading);
+	},
+	
+	outputHTML: function(items, fields, col, clear) {
+		var container = $(rc.container);
+		
+		if (typeof clear == "undefined") {
+			clear = true;
+		}
+		
+		if (typeof col == "undefined") {
+			col = 0;
+		}
+
+		container.removeClass(rc.loading);
+		
+		for (var i = 0; i < items.length; i++) {
+			var item = items[i];
+
+			// request date object
+			var dateTime = irdata.getDateTime(item[fields.datetime]);
+          /*
+			var dateTime;
+			if (fields.timezone
+				&& typeof item[fields.timezone] != "undefined"
+				&& item[fields.timezone] != "0") {
+					dateTime = irdata.getDateTime(item[fields.datetime], item[fields.timezone]);
+			} else {
+				dateTime = irdata.getDateTime(item[fields.datetime]);
+			}
+*/
+			
+			// construct common output
+			var date = '<span class="date">' + dateTime.dottedDateMDY + '</span>';
+			var headline = '<span class="headline">';
+			if (fields.titlePrefix) {
+				headline += fields.titlePrefix;
+			}
+			headline += item[fields.title] + '</span>';
+
+			
+			// construct time
+			var time = '';
+			if (fields.showtime) {
+				time += '<span class="time">';
+				time += dateTime.timeHMPZ;
+              /*
+				if (fields.timezone
+					&& typeof item[fields.timezone] != "undefined"
+					&& item[fields.timezone] != "0") {
+						time += " " + item[fields.timezone];
+				}
+*/
+				time += '</span>';
+			}
+
+			// construct the HTML
+			var theHTML = "";
+			theHTML += '<div class="col' + (i + 1 + col) + '">\n';
+			if (typeof fields.link != "object") {
+				var linkParams = {
+					href: item[fields.link],
+					text: date + time + headline
+				};
+				if (fields.target) {
+					linkParams.target = fields.target;
+				}
+				theHTML += rc.constructLink(linkParams);
+			} else {
+				theHTML += date + time + headline;
+				theHTML += '<ul>\n';
+				for (var c = 0; c < item[fields.link.items].length; c ++) {
+					var child      = item[fields.link.items][c];
+					var linkParams = {
+						href: child[fields.link.link],
+						text: child[fields.link.title]
+					};
+					if (fields.link.target) {
+						linkParams.target = fields.link.target;
+					}
+					
+					theHTML += '<li>';
+					theHTML += rc.constructLink(linkParams);
+					theHTML += '</li>\n';
+				}
+				theHTML += '</ul>\n';
+			}
+			theHTML += '</div>\n';
+
+			rc.log(theHTML);
+			
+			// append the HTML
+			container.append(theHTML);
+		}
+		
+		if (clear) {
+			container.append('<div class="clear">&nbsp;</div>\n');
+		}
+	},
+	
+	constructLink: function(link) {
+		// massage the href
+		var href = link.href;
+		if (href.indexOf("http") != 0) {
+			href = irdata.host + href;
+		}
+		
+		// assemble the HTML
+		var theHTML = '<a href="' + href + '"';
+		if (typeof link.target != "undefined") {
+			theHTML += ' target="' + link.target + '"';
+		}
+		if (typeof link.theClass != "undefined") {
+			theHTML += ' class="' + link.theClass + '"';
+		}
+		theHTML += '>';
+		if (typeof link.text != "undefined") {
+			theHTML += link.text;
+		} else {
+			theHTML += link.href;
+		}
+		theHTML += '</a>';
+		
+		return theHTML;
+	},
+	
+	pressreleases: function(result) {
+		rc.log("rc.pressreleases()");
+		rc.outputHTML(result.GetPressReleaseListResult, {
+			datetime: "PressReleaseDate",
+			showtime: true,
+			timezone: false,
+			link: "LinkToDetailPage",
+			title: "Headline",
+			target: false
+		});
+	},
+	
+	onecombined: function(event, presentation) {
+		rc.log("rc.onecombined()");
+		rc.outputHTML(event[0].GetEventListResult, {
+			datetime: "StartDate",
+			showtime: true,
+			timezone: "TimeZone",
+			link: "LinkToDetailPage",
+			title: "Title",
+			titlePrefix: "Webcast: ",
+			target: false
+		}, 0, false);
+		rc.outputHTML(presentation[0].GetPresentationListResult, {
+			datetime: "PresentationDate",
+			showtime: true,
+			timezone: false,
+			link: "LinkToDetailPage",
+			title: "Title",
+			titlePrefix: "Presentation: "
+		}, 1);
+	},
+	
+	events: function(result) {
+		rc.log("rc.events()");
+		rc.outputHTML(result.GetEventListResult, {
+			datetime: "StartDate",
+			showtime: true,
+			timezone: "TimeZone",
+			link: "LinkToDetailPage",
+			title: "Title",
+			target: false
+		});
+	},
+	
+	presentations: function(result) {
+		rc.log("rc.presentations()");
+		rc.outputHTML(result.GetPresentationListResult, {
+			datetime: "PresentationDate",
+			showtime: true,
+			timezone: false,
+			link: "LinkToDetailPage",
+			title: "Title"
+		});
+	},
+	
+	documents: function(result) {
+		rc.log("rc.documents()");
+		
+		var docList = [];
+		var desiredListLength = 3;
+		for (var f = 0; f < result.GetFinancialReportListResult.length; f++) {
+			var group = result.GetFinancialReportListResult[f];
+			for (var d = 0; d < group.Documents.length; d++) {
+				var doc = group.Documents[d];
+				doc.ReportDate = group.ReportDate;
+				if (docList.length < desiredListLength) {
+					docList.push(doc);
+				}
+			}
+		}
+		
+		rc.outputHTML(docList, {
+			datetime: "ReportDate",
+			showtime: false,
+			timezone: false,
+			title: "DocumentTitle",
+			link: "DocumentPath",
+			target: "_blank"
+		});
+		
+		/*
+		rc.outputHTML(result.GetFinancialReportListResult, {
+			datetime: "ReportDate",
+			showtime: false,
+			timezone: false,
+			link: {
+				items: "Documents",
+				title: "DocumentTitle",
+				link: "DocumentPath",
+				target: "_blank"
+			},
+			title: "ReportTitle"
+		});
+		*/
+	},
+	
+	localdocs: function(result) {
+		rc.log("rc.localdocs()");
+		rc.outputHTML(result.LocalDocs, {
+			datetime: "DocumentDate",
+			showtime: false,
+			timezone: false,
+			link: "DocumentLink",
+			title: "DocumentTitle",
+			target: "_blank"
+		});
+	},
+	
+	// ===== Utility Methods =====
+	
+	log: function(message) {
+		if (this.debug) {
+			if (typeof console == "undefined" || typeof console.log == "undefined") {
+				console = {log: function() {}};
+			}
+			console.log(message);
+		}
+	},
+	
+	// ===== End of Object =====
+	
+	endOfObject: 1
+};
+
 $(document).ready(function($) {
 	sq.log("Document Ready");
 	sq.init();
