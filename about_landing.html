@@ -252,54 +252,17 @@
 							<div class="row">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding-left nopadding-right">
 									<ul class="nav nav-justified">
-										<li>
-											<a href="#">
-												2013
-											</a>
-										</li>
-										<li class="on">
-											<a href="#">
-												2012
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2011
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2010
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2009
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2008
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2007
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2006
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2005
-											</a>
-										</li>
+										<li ><a href="#panel2013">2013</a></li>
+										<li ><a href="#panel2012">2012</a></li>
+										<li ><a href="#panel2011">2011</a></li>
+										<li ><a href="#panel2010">2010</a></li>
+										<li ><a href="#panel2009">2009</a></li>
+										<li ><a href="#panel2008">2008</a></li>
+										<li ><a href="#panel2007">2007</a></li>
+										<li ><a href="#panel2006">2006</a></li>
+										<li ><a href="#panel2004">2004</a></li>
 									</ul>
 								</div>
-								
 							</div><!-- /.row -->
 						</div><!-- //.container -->
 					</div><!-- //.container-fluid -->
@@ -307,42 +270,110 @@
 						<div class="container visible-sm visible-xs">
 							<div class="row margin-bottom">
 								<div class="form-group">
-									<label for="select1" class="sr-only">Years</label>
-									<select id="select1" class="form-control">
-										<option value="">2013</option>
-										<option value="" selected="selected">2012</option>
-										<option value="">2011</option>
-										<option value="">2010</option>
-										<option value="">2009</option>
-										<option value="">2008</option>
-										<option value="">2007</option>
-										<option value="">2006</option>
-										<option value="">2005</option>
+									<select id="mobileTimelineNav" class="form-control">
+										<option  value="#panel2013">2013</option>
+										<option  value="#panel2012">2012</option>
+										<option  value="#panel2011">2011</option>
+										<option  value="#panel2010">2010</option>
+										<option  value="#panel2009">2009</option>
+										<option  value="#panel2008">2008</option>
+										<option  value="#panel2007">2007</option>
+										<option  value="#panel2006">2006</option>
+										<option  value="#panel2004">2004</option>
 									</select>
+									<!-- script>
+									  $(function(){
+										// bind change event to select
+										$('#select1').bind('change', function () {
+											var url = $(this).val(); // get selected value
+											if (url) { // require a URL
+												window.location = url; // redirect
+											}
+											return false;
+										});
+									  });
+								  </script -->
 								</div>
 							</div><!-- /.row -->
-						</div>
-					</div>
+						</div><!-- //.container -->
+					</div><!-- //.container-fluid -->
 					<div class="container timeline details margin-bottom-2x">
 						<div class="row">
-							<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
-								<h1>2012</h1>
+							<div id="panel2013" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2013</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho delivers year-over-year production growth from continuing operations of 20% and year-over-year crude oil growth of 25%. Concho nearly doubles its drilling locations, identifying approximately 22,000 locations at year-end. Concho produces 33.6 million barrels of oil equivalent with a capital budget of approximately $1.8 billion.
+								</div>
 							</div>
-							<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-								<p>
-									Concho acquires the assets of Three Rivers Operating Company for 
-									approximately $1 billion, significantly adding to the Company’s 
-									positions in the core northern Delaware Basin play, the Midland 
-									Basin Wolfberry play and the emerging southern Midland Basin 
-									horizontal Wolfcamp play. Concho partially funds the acquisition 
-									with a $520 million divestiture of non-core Permian Basin assets. 
-									Concho produces 29.8 million barrels of oil equivalent with a 
-									capital budget of approximately $1.5 billion.
-								</p>
+							<div id="panel2012" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2012</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho acquires the assets of Three Rivers Operating Company for approximately $1 billion, significantly adding to the Company&rsquo;s positions in the core northern Delaware Basin play, the Midland Basin Wolfberry play and the emerging southern Midland Basin horizontal Wolfcamp play. Concho partially funds the acquisition with a $520 million divestiture of non-core Permian Basin assets. Concho produces 29.8 million barrels of oil equivalent with a capital budget of approximately $1.5 billion.
+								</div>
+								</div>
+							<div id="panel2011" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2011</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho divests its North Dakota Bakken assets for approximately $200 million and redeploys this capital in the Permian Basin, making several acquisitions totaling over $500 million in the Midland and Delaware Basins. These acquisitions significantly added to the Company&rsquo;s inventory in the Wolfberry play in the Midland Basin and the Avalon Shale, Bone Spring and Wolfcamp horizontal plays within the Delaware Basin. Concho produces 23.6 million barrels of oil equivalent with a capital budget of approximately $1.4 billion.
+								</div>
 							</div>
-						</div>
-						
-					</div><!-- /.container -->
+							<div id="panel2010" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2010</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho acquires Marbob Energy Corporation and its affiliates for a total purchase price of $1.4 billion, and acquires interests in all of the properties subject to its disputed preferential purchase rights for approximately $285 million. As a result of these transactions, Concho increases its position in the Yeso play on the New Mexico Shelf and adds a new third core area in the Delaware Basin. In addition, Concho divests approximately $103 million in non-core Permian Basin assets. Concho produces 15.6 million barrels of oil equivalent with a capital budget of approximately $ 700 million.
+								</div>
+							</div>
+							<div id="panel2009" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2009</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho purchases interests in the Midland Basin Wolfberry trend for approximately $271 million, enhancing its Texas Permian asset base. Concho produces 10.9 million barrels of oil equivalent with a capital budget of approximately $400 million.
+								</div>
+							</div>
+							<div id="panel2008" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2008</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho acquires Henry Petroleum, LP and its affiliates for approximately $584 million, establishing a second core area for the Company in the Midland Basin Wolfberry play. Concho produces 7.1 million barrels of oil equivalent with a capital budget of approximately $390 million.
+								</div>
+							</div>
+							<div id="panel2007" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2007</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho prices its initial public offering of its common stock at $11.50 per share. The shares are listed on the New York Stock Exchange under the symbol CXO. Concho produces 5.0 million barrels of oil equivalent with a capital budget of approximately $155 million.
+								</div>
+							</div>
+							<div id="panel2006" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2006</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho Resources Inc. is formed as result of the combination of Concho Equity Holdings Corp. and a portion of the oil and natural gas properties owned by Chase Oil Corporation and its affiliates, establishing Concho&rsquo;s New Mexico Shelf core area within the Yeso play.
+								</div>
+							</div>
+							<div id="panel2004" class="item">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
+									<h1>2004</h1>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+									Concho Equity Holdings Corp. is formed, and represents the third of three Permian Basin-focused company formed since 1997 by Tim Leach and certain members of the Company&rsquo;s management. Concho acquires oil and natural gas properties from Lowe Partners, LP for approximately $117 million.
+								</div>
+							</div>
+						</div><!-- /.row -->
+					</div><!-- /.container.timeline -->
+
 				</div><!-- /#content -->
 
 				<footer id="footer" class="padding-top" role="contentinfo">

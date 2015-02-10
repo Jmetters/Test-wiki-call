@@ -222,10 +222,17 @@ var sq = {
 	textResizer : '.textresizer a',
 	mobileNav : '.sidebar-offcanvas .menu.nav',
 	mobileNavLiWChildren : '.sidebar-offcanvas .menu.nav li.has-children a',
+	timelineNav : '.quick-links.timeline .nav-justified',
+	timelineNavItem : '.quick-links.timeline .nav-justified li a',
+	timelineNavItemParents : '.quick-links.timeline .nav-justified li',
+	timelineMobileNav : '#mobileTimelineNav',
+	timelineItemDetails : '.timeline.details .item',
+	
 	
 	init: function() {
 		sq.jsCenterContent.init();
 		sq.mobileNavClick.init();
+		sq.timelineNavClick.init();
 		
 		$('[rel="popover"]').popover({
 			placement: "auto left",
@@ -269,6 +276,27 @@ var sq = {
 					$(this).parent().find('> ul.sub-menu').removeClass('on').addClass('off');
 				}
 			});
+		}
+	},
+	
+	timelineNavClick: {
+		init: function(){
+			sq.log("timelineNavClick.init()");
+			$(sq.timelineNavItem + ':first').parent().addClass("on");
+			$(sq.timelineItemDetails + ':not(:first)').addClass("hidden");
+			$(sq.timelineNavItem).click(sq.timelineNavClick.navClicked);
+			$(sq.timelineMobileNav).change(sq.timelineNavClick.navClicked);
+		},
+		navClicked : function(){
+			var item = $(this).attr("href") || $(this).val();
+			$(sq.timelineItemDetails).addClass("hidden");
+			$(item).removeClass("hidden");
+			sq.timelineNavClick.updateUI(item);
+		},
+		updateUI : function(which){
+			$(sq.timelineNavItemParents).removeClass("on");
+			$(sq.timelineNavItem).filter("[href="+ which +"]").parent().addClass("on");
+			$(sq.timelineMobileNav).val(which);
 		}
 	},
 	
