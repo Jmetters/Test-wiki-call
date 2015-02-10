@@ -898,9 +898,9 @@ var stock = {
 var rc = {
 	debug: false,
 	
-	container: ".section-content:not(.gallery)",
-	navItems: ".section-nav .nav > li",
-	mobileNav: ".section-nav #select1",
+	container: ".ContentBody .section-content:not(.gallery)",
+	navItems: ".ContentBody .section-nav .nav > li",
+	mobileNav: ".ContentBody .section-nav #select1",
 	loading: "loading",
 	
 	init: function() {
