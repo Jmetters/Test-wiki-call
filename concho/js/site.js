@@ -1171,6 +1171,7 @@ $(document).ready(function($) {
 	
 	irdata.init();
 	stock.init();
+	rc.init();
 	
 	/**
 	 * Temporary Chrome font fix
