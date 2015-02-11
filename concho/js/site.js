@@ -5,12 +5,12 @@ Array.prototype.remove = function(v) {
 };
 
 var homeFeaturedCarousel = {
-	pagination : ".slide-slideshow .owl-controls",
-	slideshow : ".slide-slideshow .slideshow",
-	next : ".slide-slideshow .slideshowouter .next",
-	prev : ".slide-slideshow .slideshowouter .prev",
-	item : ".slide-slideshow .item",
-	owlControls : ".slide-slideshow .owl-controls",
+	pagination : ".featured .slide-slideshow .owl-controls",
+	slideshow : ".featured .slide-slideshow .slideshow",
+	next : ".featured .slide-slideshow .slideshowouter .next",
+	prev : ".featured .slide-slideshow .slideshowouter .prev",
+	item : ".featured .slide-slideshow .item",
+	owlControls : ".featured .slide-slideshow .owl-controls",
 	
 	init : function(){
 		if($().owlCarousel){
@@ -32,6 +32,41 @@ var homeFeaturedCarousel = {
 				owl.trigger('owl.next');
 			});
 			$(homeFeaturedCarousel.prev).click(function(){
+				owl.trigger('owl.prev');
+			});
+		}
+	}
+};
+
+var testimonialsCarousel = {
+	pagination : ".testimonial .slide-slideshow .owl-controls",
+	slideshow : ".testimonial .slide-slideshow .slideshow",
+	next : ".testimonial .slide-slideshow .slideshowouter .next",
+	prev : ".testimonial .slide-slideshow .slideshowouter .prev",
+	item : ".testimonial .slide-slideshow .item",
+	owlControls : ".testimonial .slide-slideshow .owl-controls",
+	
+	init : function(){
+		if($().owlCarousel){
+			var owl = $(testimonialsCarousel.slideshow).owlCarousel({
+					"items"	: 1,
+					"singleItem" : true,
+					"autoHeight" : false,
+					"autoPlay" : true,
+					"transitionStyle" : "fade",
+					"stopOnHover": true,
+					"lazyLoad" : true,
+					"dragBeforeAnimFinish" : true,
+					"mouseDrag" : true,
+					"touchDrag" : true,
+					"scrollPerPage" : true,
+					"pagination" : false
+			});
+			// Custom Navigation Events
+			$(testimonialsCarousel.next).click(function(){
+				owl.trigger('owl.next');
+			});
+			$(testimonialsCarousel.prev).click(function(){
 				owl.trigger('owl.prev');
 			});
 		}
@@ -1169,6 +1204,7 @@ $(document).ready(function($) {
 	sq.log("Document Ready");
 	sq.init();
 	homeFeaturedCarousel.init();
+	testimonialsCarousel.init();
 	lazyLoading.init();
 	enquireBreakPoints.init();
 	bootstrapClassHelpers.init();
