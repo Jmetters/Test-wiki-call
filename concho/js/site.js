@@ -510,7 +510,7 @@ var q4 = {
 var irdata = {
 	debug: false,
 	
-	host: "http://productdemo.q4web.com/",
+	host: "http://concho.q4web.com",
 	feeds: {
 		pressreleases: "/feed/PressRelease.svc/GetPressReleaseList",
 		oneevent: "/feed/Event.svc/GetEventList",
@@ -522,7 +522,7 @@ var irdata = {
 	},
 	params: {
 		defaults: {
-			apiKey: "4FFEF45CC2C04E43BE9028FC0483F7FD",
+			apiKey: "6E8B29E93AEC435FA0E5A84CDE0FB1B2",
 			languageId: q4.lang.english
 		},
 		pressreleases: {
@@ -565,7 +565,7 @@ var irdata = {
 			tagList: ""
 		},
 		stockquote: {
-			symbol: "JONE",
+			symbol: "CXO",
 			exchange: "NYSE",
 			pageSize: 1
 		},
@@ -898,9 +898,9 @@ var stock = {
 var rc = {
 	debug: false,
 	
-	container: ".ContentBody .section-content:not(.gallery)",
-	navItems: ".ContentBody .section-nav .nav > li",
-	mobileNav: ".ContentBody .section-nav #select1",
+	container: "#home-feeds .section-content",
+	navItems: "#home-feeds .section-nav .nav > li",
+	mobileNav: "#home-feeds .section-nav #select1",
 	loading: "loading",
 	
 	init: function() {
@@ -935,8 +935,7 @@ var rc = {
 	
 	updateUI: function(which) {
 		// mark the proper nav item
-		$(rc.navItems).removeClass("active")
-			.filter("[data-feed=" + which + "]").addClass("active");
+		$(rc.navItems).removeClass("active").filter("[data-feed=" + which + "]").addClass("active");
 		$(rc.mobileNav).val(which);
 		// show loading
 		$(rc.container).addClass(rc.loading);
@@ -1140,8 +1139,8 @@ $(document).ready(function($) {
 	//countCSS.init();
 	
 	irdata.init();
-	stock.init();
-	rc.init();
+	//stock.init();
+	//rc.init();
 	
 	/**
 	 * Temporary Chrome font fix
