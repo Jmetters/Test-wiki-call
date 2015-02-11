@@ -1139,8 +1139,8 @@ $(document).ready(function($) {
 	//countCSS.init();
 	
 	irdata.init();
-	stock.init();
-	rc.init();
+	//stock.init();
+	//rc.init();
 	
 	/**
 	 * Temporary Chrome font fix
