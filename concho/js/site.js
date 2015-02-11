@@ -935,8 +935,7 @@ var rc = {
 	
 	updateUI: function(which) {
 		// mark the proper nav item
-		$(rc.navItems).removeClass("active")
-			.filter("[data-feed=" + which + "]").addClass("active");
+		$(rc.navItems).removeClass("active").filter("[data-feed=" + which + "]").addClass("active");
 		$(rc.mobileNav).val(which);
 		// show loading
 		$(rc.container).addClass(rc.loading);
