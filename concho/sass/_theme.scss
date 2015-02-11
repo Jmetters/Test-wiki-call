@@ -1674,20 +1674,22 @@ body{
 							.dropdown-menu{
 								@include border-top-radius(0px);
 								@include border-bottom-radius(8px);
-								background-color: $green-mint;
-								color: $white;
+								background-color: $gray-light;
+								color: $gray-medium;
 								min-width: initial;
 								width: 100%;
 								@include rem(padding, $padding-small);
 								text-align: center;
+								font-weight: bold;
 								a{
 									display: block;
-									color: $white;
+									color: $gray-medium;
 									@include rem(line-height, 24px);
+									font-weight: bold;
 									&:hover,
 									&:focus{
 										background: transparent;
-										color: $green-bright;
+										color: $gray-dark;
 									}
 								}
 							}
