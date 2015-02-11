@@ -899,7 +899,7 @@ var rc = {
 	debug: false,
 	
 	container: "#home-feeds .section-content",
-	navItems: "#home-feeds .section-nav .nav > li",
+	navItems: "#home-feeds .section-nav .nav > li > a",
 	mobileNav: "#home-feeds .section-nav #select1",
 	loading: "loading",
 	
