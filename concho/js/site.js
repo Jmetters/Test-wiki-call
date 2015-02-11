@@ -385,7 +385,7 @@ var sq = {
 	communityNavClick: {
 		init: function(){
 			sq.log("communityNavClick.init()");
-			$(sq.communityNavItem + ':first').parent().addClass("on");
+			$(sq.communityNavItem + ':first').parent().addClass("active");
 			$(sq.communityItemDetails + ':not(:first)').addClass("hidden");
 			$(sq.communityNavItem).click(sq.communityNavClick.navClicked);
 			$(sq.communityMobileNav).change(sq.communityNavClick.navClicked);
@@ -399,8 +399,8 @@ var sq = {
 			sq.communityNavClick.updateUI(item);
 		},
 		updateUI : function(which){
-			$(sq.communityNavItemParents).removeClass("on");
-			$(sq.communityNavItem).filter("[href="+ which +"]").parent().addClass("on");
+			$(sq.communityNavItemParents).removeClass("active");
+			$(sq.communityNavItem).filter("[href="+ which +"]").parent().addClass("active");
 			$(sq.communityMobileNav).val(which);
 		}
 	},
