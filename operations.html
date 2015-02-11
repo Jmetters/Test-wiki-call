@@ -32,6 +32,8 @@
 		<script type='text/javascript' src='/concho/js/jquery.jscroll.min.js?ver=2.2.4'></script>
 		<script type='text/javascript' src='/concho/js/swipebox/jquery.swipebox-squires.js?ver=2.2.4'></script>
 		<script type='text/javascript' src='/concho/js/jquery.rwdImageMaps.min.js?ver=1.5'></script>
+		<link rel="stylesheet" href="/concho/js/qtip/jquery.qtip.css?ver=2.2.1" />
+		<script type='text/javascript' src='/concho/js/qtip/jquery.qtip.js?ver=2.2.1'></script>
 		<script type='text/javascript' src='/concho/js/site.js?ver=1.0.0'></script>
 	</head>
 	<body>
@@ -239,13 +241,12 @@
 				</nav><!-- /.navbar -->
 				<div id="content" class="container-fluid nopadding-left nopadding-right">
 					<div class="featured map">
-						<img class="lazy" data-original="/concho/images/operations_map_new_mexico_shelf.jpg" height="540" width="1600" usemap="operations" />
-						<!-- img id="Image-Maps-Com-image-maps-2015-02-11-115913" src="http://www.image-maps.com/m/private/0/jbjrr6ccnebgefaobucrfvs966_operations_map_texas_permian.jpg" border="0" width="1600" height="540" orgWidth="1600" orgHeight="540" usemap="#image-maps-2015-02-11-115913" alt="" /-->
-						<map name="operations" id="opsimagemap">
-							<area id="texaspermian" alt="" title="" href="javascript:void(0);" shape="poly" coords="732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,732,270,729,270" style="outline:none;" target="_self"     />
-							<area id="permianbasin" alt="" title="" href="javascript:void(0);" shape="poly" coords="668,298,670,298,670,298,670,298,670,298,670,298,670,298,670,298,670,298,670,298,670,298" style="outline:none;" target="_self"     />
-							<area id="delawarebasin" alt="" title="" href="javascript:void(0);" shape="poly" coords="608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319,608,319" style="outline:none;" target="_self"     />
-							<area id="newmexicoshelf" alt="" title="" href="javascript:void(0);" shape="poly" coords="585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238,585,238" style="outline:none;" target="_self"     />
+						<img src="/concho/images/operations_map_new_mexico_shelf.jpg" usemap="#opsimagemap" />
+						<map name="opsimagemap">
+							<area id="newmexicoshelf" alt="" title="New Mexico Shelf" href="http://conchoresources.cloudapp.net/operations/new-mexico-shelf/" shape="rect" coords="575,225,603,254" style="outline:none;" target="_self" />
+							<area id="delawarebasin" alt="" title="Delaware Basin" href="http://conchoresources.cloudapp.net/operations/delaware-basin/" shape="rect" coords="598,309,626,338" style="outline:none;" target="_self" />
+							<area id="permianbasin" alt="" title="The Permian Basin" href="http://conchoresources.cloudapp.net/operations/the-permian-basin/" shape="rect" coords="660,283,688,312" style="outline:none;" target="_self" />
+							<area id="texaspermian" alt="" title="Texas Permian" href="http://conchoresources.cloudapp.net/operations/texas-permian/" shape="rect" coords="721,258,749,287" style="outline:none;" target="_self" />
 						</map>
 					</div>
 					<div class="container-fluid background-gray-light quick-links timeline margin-bottom-2x nopadding-left nopadding-right">

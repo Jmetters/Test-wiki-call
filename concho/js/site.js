@@ -227,19 +227,17 @@ var sq = {
 	timelineNavItemParents : '.history.timeline .nav-justified li',
 	timelineMobileNav : '#mobileTimelineNav',
 	timelineItemDetails : '.timeline.details .item',
-	
+	operationsMapImg : '.featured.map img[usemap]',
+	operationsMapImgNewMexicoShelf : '/concho/images/operations_map_new_mexico_shelf.jpg',
+	operationsMapImgDelawareBasin : '/concho/images/operations_map_delaware_basin.jpg',
+	operationsMapImgPermianBasin : '/concho/images/operations_map_permian_basin.jpg',
+	operationsMapImgTexasPermian : '/concho/images/operations_map_texas_permian.jpg',
 	
 	init: function() {
 		sq.jsCenterContent.init();
 		sq.mobileNavClick.init();
 		sq.timelineNavClick.init();
-		
-		$('[rel="popover"]').popover({
-			placement: "auto left",
-			html : true,
-			trigger : "click",
-		});
-		$('[rel="popover"].open').popover('show');
+		sq.operationsMap.init();
 		
 		//Emergency box
 		var showEmergency = $.cookie('emergency');
@@ -263,6 +261,47 @@ var sq = {
 			selectedIndex: 1
 		});
 		
+	},
+	
+	operationsMap: {
+		init: function(){
+			
+			$(sq.operationsMapImg).rwdImageMaps();
+			var origMapImgSrc = $(sq.operationsMapImg).prop('src');
+			$("area").qtip({
+				position: {
+					target: 'mouse', // Use the mouse position as the position origin
+					adjust: {
+						// Don't adjust continuously the mouse, just use initial position
+						mouse: false
+					} 
+				},
+				style: {
+					classes: 'qtip-bootstrap'
+				},
+				hide: {
+					target: $("area")
+				}
+			});
+			$("area").on('mouseover',function(e){
+				var which = $(this).prop('id');
+				var opMapImgSrc = origMapImgSrc;
+				
+				if( which == 'newmexicoshelf' ){
+					opMapImgSrc = sq.operationsMapImgNewMexicoShelf;
+				}
+				if( which == 'delawarebasin' ){
+					opMapImgSrc = sq.operationsMapImgDelawareBasin;
+				}
+				if( which == 'permianbasin' ){
+					opMapImgSrc = sq.operationsMapImgPermianBasin;
+				}
+				if( which == 'texaspermian' ){
+					opMapImgSrc = sq.operationsMapImgTexasPermian;
+				}
+				$(sq.operationsMapImg).prop('src', opMapImgSrc);
+			});
+		}
 	},
 	
 	mobileNavClick: {
@@ -896,7 +935,7 @@ var stock = {
 };
 
 var rc = {
-	debug: false,
+	debug: true,
 	
 	container: "#home-feeds .section-content",
 	navItems: "#home-feeds .section-nav .nav > li",
