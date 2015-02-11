@@ -265,7 +265,7 @@ var sq = {
 	communityNav : '#communitycontent .section-nav .nav',
 	communityNavItem : '#communitycontent .section-nav .nav li a',
 	communityNavItemParents : '#communitycontent .section-nav .nav li',
-	communityMobileNav : '#mobileCommunityNav',
+	communityMobileNav : '#communitycontent #select1',
 	communityItemDetails : '#communitycontent .section-content',
 	operationsMapImg : '.featured.map img[usemap]',
 	operationsMapImgNewMexicoShelf : '/concho/images/operations_map_new_mexico_shelf.jpg',
@@ -277,6 +277,7 @@ var sq = {
 		sq.jsCenterContent.init();
 		sq.mobileNavClick.init();
 		sq.timelineNavClick.init();
+		sq.communityNavClick.init();
 		sq.operationsMap.init();
 		
 		//Emergency box
@@ -393,7 +394,7 @@ var sq = {
 			e.preventDefault();
 			
 			var item = $(this).attr("href") || $(this).val();
-			$(sq.timelineItemDetails).addClass("hidden");
+			$(sq.communityItemDetails).addClass("hidden");
 			$(item).removeClass("hidden");
 			sq.communityNavClick.updateUI(item);
 		},
