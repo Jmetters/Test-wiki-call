@@ -510,7 +510,7 @@ var q4 = {
 var irdata = {
 	debug: false,
 	
-	host: "http://productdemo.q4web.com/",
+	host: "http://concho.q4web.com",
 	feeds: {
 		pressreleases: "/feed/PressRelease.svc/GetPressReleaseList",
 		oneevent: "/feed/Event.svc/GetEventList",
@@ -522,7 +522,7 @@ var irdata = {
 	},
 	params: {
 		defaults: {
-			apiKey: "4FFEF45CC2C04E43BE9028FC0483F7FD",
+			apiKey: "6E8B29E93AEC435FA0E5A84CDE0FB1B2",
 			languageId: q4.lang.english
 		},
 		pressreleases: {
@@ -565,7 +565,7 @@ var irdata = {
 			tagList: ""
 		},
 		stockquote: {
-			symbol: "JONE",
+			symbol: "CXO",
 			exchange: "NYSE",
 			pageSize: 1
 		},
