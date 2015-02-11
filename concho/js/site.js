@@ -262,6 +262,11 @@ var sq = {
 	timelineNavItemParents : '.history.timeline .nav-justified li',
 	timelineMobileNav : '#mobileTimelineNav',
 	timelineItemDetails : '.timeline.details .item',
+	communityNav : '#communitycontent .section-nav .nav',
+	communityNavItem : '#communitycontent .section-nav .nav li a',
+	communityNavItemParents : '#communitycontent .section-nav .nav li',
+	communityMobileNav : '#mobileCommunityNav',
+	communityItemDetails : '#communitycontent .section-content',
 	operationsMapImg : '.featured.map img[usemap]',
 	operationsMapImgNewMexicoShelf : '/concho/images/operations_map_new_mexico_shelf.jpg',
 	operationsMapImgDelawareBasin : '/concho/images/operations_map_delaware_basin.jpg',
@@ -373,6 +378,29 @@ var sq = {
 			$(sq.timelineNavItemParents).removeClass("on");
 			$(sq.timelineNavItem).filter("[href="+ which +"]").parent().addClass("on");
 			$(sq.timelineMobileNav).val(which);
+		}
+	},
+	
+	communityNavClick: {
+		init: function(){
+			sq.log("communityNavClick.init()");
+			$(sq.communityNavItem + ':first').parent().addClass("on");
+			$(sq.communityItemDetails + ':not(:first)').addClass("hidden");
+			$(sq.communityNavItem).click(sq.communityNavClick.navClicked);
+			$(sq.communityMobileNav).change(sq.communityNavClick.navClicked);
+		},
+		navClicked : function(e){
+			e.preventDefault();
+			
+			var item = $(this).attr("href") || $(this).val();
+			$(sq.timelineItemDetails).addClass("hidden");
+			$(item).removeClass("hidden");
+			sq.communityNavClick.updateUI(item);
+		},
+		updateUI : function(which){
+			$(sq.communityNavItemParents).removeClass("on");
+			$(sq.communityNavItem).filter("[href="+ which +"]").parent().addClass("on");
+			$(sq.communityMobileNav).val(which);
 		}
 	},
 	
