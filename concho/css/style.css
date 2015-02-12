@@ -2326,13 +2326,13 @@ input.btn-transparent:hover { background: white; }
 
 body .container-fluid#content .graphs.single h2.page-title, body .container-fluid#content .management.single h2.page-title, body .container-fluid#content .faqs.single h2.page-title, body .container-fluid#content article[role="article"], body .container-fluid#content article[role="article"] h2 { font-family: "Raleway", sans-serif !important; }
 
-table th, .raleway-bold, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .nav-pills, body .container-fluid#content .featured .container .stock-ticker .price ul li.current-price, body .container-fluid#content .stock-ticker.big .price ul li.current-price, body .container-fluid#content .quick-links { font-family: "Raleway", sans-serif !important; font-weight: bold !important; }
+table th, .raleway-bold, h3, .h3, .panel.panel-faqs .panel-heading .panel-title, body .container-fluid#content h1.page-title, h4, .h4, h5, .h5, .nav-pills, body .container-fluid#content .featured .container .stock-ticker .price ul li.current-price, body .container-fluid#content .stock-ticker.big .price ul li.current-price, body .container-fluid#content .quick-links { font-family: "Raleway", sans-serif !important; font-weight: bold; }
 
-.raleway-light, body .container-fluid#content .quick-links h2 { font-family: "Raleway", sans-serif !important; font-weight: 300; }
+.raleway-light, body .container-fluid#content .statement, body .container-fluid#content .quick-links h2 { font-family: "Raleway", sans-serif !important; font-weight: 300; }
 
 .raleway-medium { font-family: "Raleway", sans-serif !important; font-weight: 500; }
 
-.egyptienne-light, body .container-fluid#content .statement { font-family: "URWEgyptienneW01-Light" !important; }
+.egyptienne-light { font-family: "URWEgyptienneW01-Light" !important; }
 
 .weight-300 { font-weight: 300 !important; }
 

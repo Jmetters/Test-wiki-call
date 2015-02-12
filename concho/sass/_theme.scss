@@ -506,7 +506,7 @@ $larger-text-mag: 1.3;
 }
 %raleway-bold{
 	@include font-family($font-family-raleway);
-	font-weight: bold !important;
+	font-weight: bold;
 }
 %raleway-light{
 	@include font-family($font-family-raleway);
@@ -1278,7 +1278,7 @@ body{
 			}
 			
 			.statement{
-				@extend %egyptienne-light;
+				@extend %raleway-light;
 				@include fontMetrics(32px, 40px);
 				color: $green-dark;
 			}
