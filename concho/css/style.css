@@ -2537,7 +2537,7 @@ body .container-fluid#content .quick-news .item .inner-wrap { padding-top: 10px;
 body .container-fluid#content .statement { font-size: 32px; font-size: 3.2rem; line-height: 40px; line-height: 4rem; color: #163d34; }
 body .container-fluid#content h2.statement { margin-top: 0; }
 body .container-fluid#content .section-content a { font-size: 13px; font-size: 1.3rem; }
-body .container-fluid#content .featured { height: 400px; height: 40rem; background-position: center center; background-size: cover; background-repeat: no-repeat; }
+body .container-fluid#content .featured { height: 300px; height: 30rem; background-position: center center; background-size: cover; background-repeat: no-repeat; }
 body .container-fluid#content .featured .container { position: relative; }
 body .container-fluid#content .featured .container .stock-ticker { position: absolute; top: 0; right: 0; }
 body .container-fluid#content .featured .container .stock-ticker .symbol { background-color: #163d34; }

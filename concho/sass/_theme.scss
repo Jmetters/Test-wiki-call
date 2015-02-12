@@ -1292,7 +1292,7 @@ body{
 			}
 			//Feature
 			.featured{
-				@include rem(height, 400px);
+				@include rem(height, 300px);
 				background-position: center center;
 				background-size: cover;
 				background-repeat: no-repeat;
