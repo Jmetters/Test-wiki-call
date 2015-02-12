@@ -2841,7 +2841,8 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   footer#footer[role="contentinfo"] .container ul.list-inline li:after { display: table-cell; vertical-align: middle; padding-left: 10px; font-family: 'FontAwesome'; font-weight: normal; font-size: 19px; font-size: 1.9rem; content: "\f105"; }
   footer#footer[role="contentinfo"] .container ul.list-inline li:hover { background-color: #d9d8d3; }
   footer#footer[role="contentinfo"] .container ul.list-inline li a { display: table-cell; width: 90%; padding-left: 28px; padding-left: 2.8rem; border-right: none !important; text-decoration: none; }
-  footer#footer[role="contentinfo"] .container ul.list-inline li a:hover { color: #163d34; } }
+  footer#footer[role="contentinfo"] .container ul.list-inline li a:hover { color: #163d34; }
+  footer#footer[role="contentinfo"] .container .menu-column { float: right !important; } }
 @media (min-width: 992px) and (max-width: 1199px) { .md-nopadding-left { padding-left: 0 !important; }
   .md-nopadding-right { padding-right: 0 !important; }
   body.short-screen section.parallax { background-attachment: initial; }
