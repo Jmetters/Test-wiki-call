@@ -737,7 +737,8 @@ h6,.h6{
 			line-height: $line-height-computed;
 			@include rem(height, $navbar-height-collapse);
 			@include rem(width, 200px);
-			background: transparent url('../images/logo.png') no-repeat left center;
+			background: transparent url('../images/logo_2x.png') no-repeat left center;
+			background-size: contain;
 			text-indent: -10000em;
 
 			&:hover,
