@@ -1870,6 +1870,22 @@ body{
 			// About > Strategy
 			// --------------------------------------------------
 			.strategy-steps{
+				/*
+				.header{
+					@include rem(padding, $padding-small $padding-small);
+					background-color: $green-bright;
+					h2{
+						@include font-family($font-family-sans-serif);
+						@include fontMetrics(16px, 28px);
+						color: $white;
+						margin: 0;
+					}
+				}
+				.content{
+					@include rem(padding, 0 $padding-small 0 $padding-small);
+				}
+				*/
+				//
 				.item-wrap{
 					&:after{
 						position: absolute;
@@ -1903,6 +1919,7 @@ body{
 						}
 					}
 				}
+				//
 			}
 			//
 			// News & Media Section

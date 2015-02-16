@@ -17,7 +17,7 @@ var homeFeaturedCarousel = {
 			var owl = $(homeFeaturedCarousel.slideshow).owlCarousel({
 					"items"	: 1,
 					"singleItem" : true,
-					"autoHeight" : true,
+					"autoHeight" : false,
 					"autoPlay" : 15000,
 					"transitionStyle" : "fade",
 					"stopOnHover": true,
@@ -483,21 +483,21 @@ var gridToggle = {
 		$( '.quick-news .item .inner-wrap' )
 			.css({transition: ''}).height(highestCol);
 
-		strategyStepsHeader = $('.strategy-steps .item h2');
+		strategyStepsHeader = $('.strategy-steps .header');
 		var highestCol = Math.max.apply( null, $(strategyStepsHeader).map(function(){ return $(this).height(); }).get() );
 		//sq.log(items.length + " items, highest is " + highestCol);
-		$( '.strategy-steps .item h2' )
+		$( '.strategy-steps .header' )
 			.css({transition: ''}).height(highestCol);
 
-		strategyStepsSection = $('.strategy-steps .item section');
+		strategyStepsSection = $('.strategy-steps .content');
 		var highestCol = Math.max.apply( null, $(strategyStepsSection).map(function(){ return $(this).height(); }).get() );
 		//sq.log(items.length + " items, highest is " + highestCol);
-		$( '.strategy-steps .item section' )
+		$( '.strategy-steps .content' )
 			.css({transition: ''}).height(highestCol);
 
 	},
 	reset : function(){
-		$('.grid-post-details .details,.quick-links .item,.quick-news .item .inner-wrap,.strategy-steps .item h2,.strategy-steps .item section').css({height: 'auto', transition: 'none'});
+		$('.grid-post-details .details,.quick-links .item,.quick-news .item .inner-wrap,.strategy-steps .header,.strategy-steps .content').css({height: 'auto', transition: 'none'});
 		enquireBreakPoints.reset();
 	}
 };
