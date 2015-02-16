@@ -1922,13 +1922,13 @@ body{
 			// -----------------------------------------------------------------
 			.donation{
 				h2{
-					@include font-family($font-family-egyptienne-medium);
+					@extend %raleway-medium;
 					@include fontMetrics(120px, 92px);
 					font-weight: normal;
 					color: $green-bright;
 				}
 				h3{
-					@include font-family($font-family-egyptienne-bold);
+					@extend %raleway-bold;
 					@include fontMetrics(24px, 36px);
 					font-weight: normal;
 					@include rem(padding-left, 84px);
