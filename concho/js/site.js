@@ -18,14 +18,14 @@ var homeFeaturedCarousel = {
 					"items"	: 1,
 					"singleItem" : true,
 					"autoHeight" : true,
-					"autoPlay" : true,
+					"autoPlay" : 15000,
 					"transitionStyle" : "fade",
 					"stopOnHover": true,
 					"lazyLoad" : true,
 					"dragBeforeAnimFinish" : true,
 					"mouseDrag" : true,
 					"touchDrag" : true,
-					"scrollPerPage" : true
+					"scrollPerPage" : true,
 			});
 			// Custom Navigation Events
 			$(homeFeaturedCarousel.next).click(function(){
