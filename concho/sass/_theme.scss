@@ -785,6 +785,7 @@ h6,.h6{
 					@include rem(border-left, 1px solid $gray-light);
 				}
 			}
+
 			.sub-menu {
 				display: none;
 				position: absolute;
@@ -825,6 +826,13 @@ h6,.h6{
 			}
 			&:hover .sub-menu {
 				display: block;
+			}
+			&:last-child, 
+			&.last-child {
+				.sub-menu {
+					right: 0;
+					left: auto;
+				}
 			}
 		}
 		&> li > a{

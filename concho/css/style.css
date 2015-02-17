@@ -2433,6 +2433,7 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 .navbar-default .list-inline > li .sub-menu li:first-child { border-top: none; }
 .navbar-default .list-inline > li .sub-menu .on a { background: #11261f; color: white; text-decoration: none; }
 .navbar-default .list-inline > li:hover .sub-menu { display: block; }
+.navbar-default .list-inline > li:last-child .sub-menu, .navbar-default .list-inline > li.last-child .sub-menu { right: 0; left: auto; }
 .navbar-default .list-inline > li > a { padding: 0 26px; padding: 0 2.6rem; text-decoration: none; -webkit-transition: color 0.4s ease; -o-transition: color 0.4s ease; transition: color 0.4s ease; border-right: 1px solid #d9d8d3; border-right: 0.1rem solid #d9d8d3; color: #7f7f73; }
 
 .navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom, .navbar-subnav, .navbar-toggle { border-radius: 0; }
