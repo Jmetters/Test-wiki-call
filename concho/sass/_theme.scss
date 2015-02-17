@@ -1222,6 +1222,13 @@ body{
 			@include animation-direction(alternate);
 		}
 	}
+	
+	#content > .container > .row > div {
+		&> h3 {
+			text-transform: uppercase;
+			color: $green-dark;
+		}
+	}
 	.container-fluid{
 		&#content{
 			position: relative;
