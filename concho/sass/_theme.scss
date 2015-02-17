@@ -964,7 +964,7 @@ h6,.h6{
 		@include rem(width, 32px);
 		@include rem(height, 32px);
 		margin: 0 auto;
-		background: transparent inline-image('../images/logo_mobile.png') no-repeat center center;
+		background: transparent inline-image('../images/logo_mobile_2x.png') no-repeat center center;
 		background-size: contain;
 		text-indent: -10000em;
 		
@@ -2136,7 +2136,8 @@ footer{
 				display:block;
 				@include rem(height, 49px);
 				@include rem(width, 56px);
-				background: transparent inline-image('../images/logo_footer.png') no-repeat left top;
+				background: transparent inline-image('../images/logo_footer_2x.png') no-repeat left top;
+				background-size: contain;
 				text-indent: -10000em;
 				border-right: none;
 				&:hover,
