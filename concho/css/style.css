@@ -2433,10 +2433,13 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 .navbar-default .list-inline > li .sub-menu li:first-child { border-top: none; }
 .navbar-default .list-inline > li .sub-menu .on a { background: #11261f; color: white; text-decoration: none; }
 .navbar-default .list-inline > li .sub-menu .level-3 { top: 0; left: 100%; }
+.navbar-default .list-inline > li .sub-menu .level-3 li { border-top: 1px solid white; }
+.navbar-default .list-inline > li .sub-menu .level-3 li:first-child { border-top: none; }
 .navbar-default .list-inline > li .sub-menu .level-3 a { display: block; color: #7f7f73; white-space: nowrap; padding: 0 20px; background: #d9d8d3; font-size: 13px; font-size: 1.3rem; line-height: 50px; line-height: 5rem; text-transform: uppercase; font-weight: bold; border-left: none; }
 .navbar-default .list-inline > li .sub-menu .level-3 a:hover { background: white; color: #7f7f73; text-decoration: none; }
 .navbar-default .list-inline > li:hover .sub-menu.level-2 { display: block; }
 .navbar-default .list-inline > li:hover .sub-menu.level-2 li:hover .level-3 { display: block; }
+.navbar-default .list-inline > li:last-child .sub-menu, .navbar-default .list-inline > li.last-child .sub-menu { right: 0; left: auto; }
 .navbar-default .list-inline > li > a { padding: 0 26px; padding: 0 2.6rem; text-decoration: none; -webkit-transition: color 0.4s ease; -o-transition: color 0.4s ease; transition: color 0.4s ease; border-right: 1px solid #d9d8d3; border-right: 0.1rem solid #d9d8d3; color: #7f7f73; }
 
 .navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom, .navbar-subnav, .navbar-toggle { border-radius: 0; }
@@ -2527,6 +2530,7 @@ body .values p { font-family: "Raleway", sans-serif !important; }
 body .heading-line-height-reset { line-height: 1.57143; line-height: 1.57143; }
 body .fullscreen { min-height: inherit; height: 100%; width: 100%; background-size: cover; background-repeat: no-repeat; padding-bottom: 0; }
 body section .down-arrow { text-transform: uppercase; position: absolute; bottom: 20px; bottom: 2rem; font-size: 10px !important; font-size: 1rem !important; margin: 0 auto; width: 100%; color: white; -webkit-animation-name: fadeInOut; animation-name: fadeInOut; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-duration: 2s; animation-duration: 2s; -webkit-animation-direction: alternate; animation-direction: alternate; }
+body #content > .container > .row > div > h3 { text-transform: uppercase; color: #163d34; }
 body .container-fluid#content { position: relative; padding-top: 90px; padding-top: 9rem; }
 body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; color: #163d34; }
 body .container-fluid#content .quick-news .item { padding-top: 20px; padding-top: 2rem; padding-right: 14px; padding-right: 1.4rem; padding-bottom: 20px; padding-bottom: 2rem; padding-left: 14px; padding-left: 1.4rem; }
@@ -2593,7 +2597,7 @@ body .container-fluid#content .quick-links h2 { color: white; margin-top: 0; mar
 body .container-fluid#content .quick-links a { color: #7f7f73; }
 body .container-fluid#content .quick-links .row div { border-right: 1px solid white; border-right: 0.1rem solid white; text-align: center; min-height: 100px; min-height: 10rem; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li { border-right: 1px solid white; border-right: 0.1rem solid white; }
-body .container-fluid#content .quick-links .row div ul.nav-justified li a { min-height: 100px; min-height: 10rem; padding: 0; }
+body .container-fluid#content .quick-links .row div ul.nav-justified li a { text-transform: uppercase; min-height: 100px; min-height: 10rem; padding: 0; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li a span { display: block; padding-top: 20px; padding-top: 2rem; padding-bottom: 10px; padding-bottom: 1rem; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li:last-child { border-right: none; }
 body .container-fluid#content .quick-links .row div:first-child { border-left: 1px solid white; border-left: 0.1rem solid white; }

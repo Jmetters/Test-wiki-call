@@ -785,6 +785,7 @@ h6,.h6{
 					@include rem(border-left, 1px solid $gray-light);
 				}
 			}
+
 			.sub-menu {
 				display: none;
 				position: absolute;
@@ -826,6 +827,12 @@ h6,.h6{
 				.level-3{
 					top: 0;
 					left: 100%;
+					li{
+						border-top: 1px solid $white;
+						&:first-child{
+							border-top: none;
+						}
+					}
 					a {
 						display: block;
 						color: $gray;
@@ -854,6 +861,13 @@ h6,.h6{
 							}
 						}
 					}
+				}
+			}
+			&:last-child, 
+			&.last-child {
+				.sub-menu {
+					right: 0;
+					left: auto;
 				}
 			}
 		}
@@ -1252,6 +1266,13 @@ body{
 			@include animation-direction(alternate);
 		}
 	}
+	
+	#content > .container > .row > div {
+		&> h3 {
+			text-transform: uppercase;
+			color: $green-dark;
+		}
+	}
 	.container-fluid{
 		&#content{
 			position: relative;
@@ -1636,6 +1657,7 @@ body{
 								li{
 									@include rem(border-right, 1px solid $white);
 									a{
+										text-transform: uppercase;
 										@include rem(min-height, 100px);
 										padding: 0;
 										span{
