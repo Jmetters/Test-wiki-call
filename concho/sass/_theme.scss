@@ -1621,6 +1621,7 @@ body{
 								li{
 									@include rem(border-right, 1px solid $white);
 									a{
+										text-transform: uppercase;
 										@include rem(min-height, 100px);
 										padding: 0;
 										span{
