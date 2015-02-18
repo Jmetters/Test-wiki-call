@@ -810,6 +810,7 @@ h6,.h6{
 					}
 				}
 				li{
+					position: relative;
 					border-top: 1px solid $navbar-submenu-divider;
 				}
 				li:first-child {
@@ -822,9 +823,38 @@ h6,.h6{
 						text-decoration: none;
 					}
 				}
+				.level-3{
+					top: 0;
+					left: 100%;
+					a {
+						display: block;
+						color: $gray;
+						white-space: nowrap;
+						padding: 0 20px;
+						background: $gray-light;
+						@include fontMetrics(13px, 50px);
+						text-transform: uppercase;
+						font-weight: bold;
+						border-left: none;
+						&:hover {
+							background: $white;
+							color: $gray;
+							text-decoration: none;
+						}
+					}
+				}
 			}
 			&:hover .sub-menu {
-				display: block;
+				&.level-2{
+					display: block;
+					li{
+						&:hover{
+							.level-3{
+								display: block;
+							}
+						}
+					}
+				}
 			}
 		}
 		&> li > a{
