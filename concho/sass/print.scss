@@ -1,3 +1,6 @@
+a[href]:after {
+	content: "";
+}
 .featured{
 	width: auto !important;
 	&.carousel{
@@ -11,6 +14,9 @@
 				width: 100% !important;
 				height: auto !important;
 				overflow: hidden !important;
+				&.hidden-print{
+					display: none;
+				}
 			}
 			.hero-text{
 				display: block !important;
