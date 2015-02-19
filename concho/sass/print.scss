@@ -12,7 +12,7 @@
 				height: auto !important;
 				overflow: hidden !important;
 				&.hidden-print{
-					display: none;
+					display: none !important;
 				}
 			}
 			.hero-text{

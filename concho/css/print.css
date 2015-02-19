@@ -2,7 +2,7 @@
 .featured.carousel { width: auto !important; }
 .featured.carousel .item { display: block !important; float: none !important; width: auto !important; }
 .featured.carousel .item img { display: block !important; width: 100% !important; height: auto !important; overflow: hidden !important; }
-.featured.carousel .item img.hidden-print { display: none; }
+.featured.carousel .item img.hidden-print { display: none !important; }
 .featured.carousel .item .hero-text { display: block !important; width: 50% !important; padding-left: 0 !important; position: relative !important; background-color: #FFF !important; }
 
 #content a[href]:after { content: ""; }
