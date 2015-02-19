@@ -17,11 +17,11 @@ var homeFeaturedCarousel = {
 			var owl = $(homeFeaturedCarousel.slideshow).owlCarousel({
 					"items"	: 1,
 					"singleItem" : true,
-					"autoHeight" : false,
+					"autoHeight" : true,
 					"autoPlay" : 15000,
 					"transitionStyle" : "fade",
 					"stopOnHover": true,
-					"lazyLoad" : true,
+					"lazyLoad" : false,
 					"dragBeforeAnimFinish" : true,
 					"mouseDrag" : true,
 					"touchDrag" : true,
