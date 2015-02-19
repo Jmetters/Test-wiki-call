@@ -1,6 +1,3 @@
-a[href]:after {
-	content: "";
-}
 .featured{
 	width: auto !important;
 	&.carousel{
@@ -26,5 +23,10 @@ a[href]:after {
 				background-color: #FFF !important;
 			}
 		}
+	}
+}
+#content{
+	a[href]:after {
+		content: "";
 	}
 }
