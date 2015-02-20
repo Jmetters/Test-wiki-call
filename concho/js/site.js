@@ -349,11 +349,11 @@ var sq = {
 		init: function(){
 			$(sq.mobileNavLiWChildren).click(function(e){
 				e.preventDefault();
-				if($(this).parent().parent().hasClass('off')){
+				if($(this).parent().parent().hasClass('off') || $(this).parent().parent().is(":hidden")){
 					$(this).parent().parent().removeClass('off').addClass('on');
 					$(this).parent().parent().find('> ul.sub-menu').removeClass('off').addClass('on');
 					$(this).removeClass('fa-angle-up').addClass('fa-angle-down');
-				}else if($(this).parent().parent().hasClass('on')){
+				}else if($(this).parent().parent().hasClass('on') || $(this).parent().parent().is(":visible")){
 					$(this).parent().parent().removeClass('on').addClass('off');
 					$(this).parent().parent().find('> ul.sub-menu').removeClass('on').addClass('off');
 					$(this).removeClass('fa-angle-down').addClass('fa-angle-up');
