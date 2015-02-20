@@ -548,7 +548,7 @@ var lbox = {
 };
 
 var countCSS = {
-	debug : true,
+	debug : false,
 	init : function() {
 		var results = '',
 			log = '';
@@ -1009,7 +1009,7 @@ var stock = {
 };
 
 var rc = {
-	debug: true,
+	debug: false,
 	
 	container: "#home-feeds .section-content",
 	navItems: "#home-feeds .section-nav .nav > li",
