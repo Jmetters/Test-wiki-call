@@ -623,7 +623,7 @@ var q4 = {
 var irdata = {
 	debug: false,
 	
-	host: "http://concho.q4web.com",
+	host: "http://ir.concho.com",
 	feeds: {
 		pressreleases: "/feed/PressRelease.svc/GetPressReleaseList",
 		oneevent: "/feed/Event.svc/GetEventList",
