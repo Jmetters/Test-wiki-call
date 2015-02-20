@@ -2452,7 +2452,7 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 .sidebar-offcanvas .nav li { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; }
 .sidebar-offcanvas .nav li a { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; display: block; position: relative; padding: 10px 50px 10px 15px; padding: 1rem 5rem 1rem 1.5rem; text-decoration: none; width: 100%; }
 .sidebar-offcanvas .nav li a i { display: none; }
-.sidebar-offcanvas .nav li.has-children > a i { display: block; position: absolute; right: 0; top: 0; height: 100%; line-height: 45px; line-height: 4.5rem; padding: 0 15px; padding: 0 1.5rem; }
+.sidebar-offcanvas .nav li.has-children > a i { display: block; position: absolute; right: 0; top: 0; height: 100%; line-height: 45px; line-height: 4.5rem; padding: 0 15px; padding: 0 1.5rem; font-size: 18px; font-size: 1.8rem; }
 .sidebar-offcanvas .nav > li { text-align: right; border-bottom: 1px solid #11261f; border-bottom: 0.1rem solid #11261f; }
 .sidebar-offcanvas .nav > li:hover, .sidebar-offcanvas .nav > li:focus, .sidebar-offcanvas .nav > li:active, .sidebar-offcanvas .nav > li.on { background-color: #11261f; }
 .sidebar-offcanvas .nav > li a { color: white; }

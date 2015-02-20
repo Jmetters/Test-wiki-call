@@ -928,6 +928,7 @@ h6,.h6{
 						height: 100%;
 						@include rem(line-height, 45px);
 						@include rem(padding, 0 15px);
+						@include rem(font-size, 18px);
 					}
 				}
 			}
