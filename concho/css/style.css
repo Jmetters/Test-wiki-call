@@ -2449,18 +2449,20 @@ h6, .h6 { line-height: 24px; line-height: 2.4rem; }
 .navbar { margin-bottom: 0; }
 
 .sidebar-offcanvas { padding-top: 20px; padding-top: 2rem; background-color: #163d34; font-family: "Raleway", sans-serif; font-weight: 300; font-size: 18px; font-size: 1.8rem; -webkit-box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); }
-.sidebar-offcanvas .nav li a { display: block; padding: 10px 50px 10px 15px; padding: 1rem 5rem 1rem 1.5rem; text-decoration: none; width: 100%; }
-.sidebar-offcanvas .nav li.has-children > a { padding: 10px 15px; padding: 1rem 1.5rem; }
-.sidebar-offcanvas .nav li.has-children > a:after { display: inline-block; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: "\f106"; text-align: right; }
-.sidebar-offcanvas .nav li.has-children.on > a:after { content: "\f107"; }
+.sidebar-offcanvas .nav li { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; }
+.sidebar-offcanvas .nav li a { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; display: block; position: relative; padding: 10px 50px 10px 15px; padding: 1rem 5rem 1rem 1.5rem; text-decoration: none; width: 100%; }
+.sidebar-offcanvas .nav li a i { display: none; }
+.sidebar-offcanvas .nav li.has-children > a i { display: block; position: absolute; right: 0; top: 0; height: 100%; line-height: 45px; line-height: 4.5rem; padding: 0 15px; padding: 0 1.5rem; }
 .sidebar-offcanvas .nav > li { text-align: right; border-bottom: 1px solid #11261f; border-bottom: 0.1rem solid #11261f; }
-.sidebar-offcanvas .nav > li:hover, .sidebar-offcanvas .nav > li:focus, .sidebar-offcanvas .nav > li.on { background-color: #11261f; }
+.sidebar-offcanvas .nav > li:hover, .sidebar-offcanvas .nav > li:focus, .sidebar-offcanvas .nav > li:active, .sidebar-offcanvas .nav > li.on { background-color: #11261f; }
 .sidebar-offcanvas .nav > li a { color: white; }
 .sidebar-offcanvas .nav > li a:hover { background-color: transparent; color: white; }
+.sidebar-offcanvas .nav > li a:focus { background-color: transparent; }
 .sidebar-offcanvas .nav > li > .sub-menu.off { display: none; }
 .sidebar-offcanvas .nav > li > .sub-menu > li { background-color: #d9d8d3; font-weight: bold; font-size: 15px; font-size: 1.5rem; line-height: 40px; line-height: 4rem; border-bottom: 1px solid white; border-bottom: 0.1rem solid white; text-transform: uppercase; height: auto; }
 .sidebar-offcanvas .nav > li > .sub-menu > li:hover, .sidebar-offcanvas .nav > li > .sub-menu > li:focus, .sidebar-offcanvas .nav > li > .sub-menu > li.on { background-color: #aba99e; }
 .sidebar-offcanvas .nav > li > .sub-menu > li:hover a, .sidebar-offcanvas .nav > li > .sub-menu > li:focus a, .sidebar-offcanvas .nav > li > .sub-menu > li.on a { color: white; }
+.sidebar-offcanvas .nav > li > .sub-menu > li.has-children > a i { line-height: 60px; line-height: 6rem; }
 .sidebar-offcanvas .nav > li > .sub-menu > li a { color: #aba99e; }
 .sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu.off { display: none; }
 .sidebar-offcanvas .nav > li > .sub-menu > li > .sub-menu > li { background-color: #e7e6e4; border-bottom: 1px solid #d9d8d3; border-bottom: 0.1rem solid #d9d8d3; font-size: 13px; font-size: 1.3rem; }

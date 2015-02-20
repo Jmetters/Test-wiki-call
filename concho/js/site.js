@@ -256,7 +256,7 @@ var sq = {
 	emergencyClose : '.emergency .fa-close',
 	textResizer : '.textresizer a',
 	mobileNav : '.sidebar-offcanvas .menu.nav',
-	mobileNavLiWChildren : '.sidebar-offcanvas .menu.nav li.has-children a',
+	mobileNavLiWChildren : '.sidebar-offcanvas .menu.nav li.has-children a i',
 	timelineNav : '.history.timeline .nav-justified',
 	timelineNavItem : '.history.timeline .nav-justified li a',
 	timelineNavItemParents : '.history.timeline .nav-justified li',
@@ -347,13 +347,16 @@ var sq = {
 	
 	mobileNavClick: {
 		init: function(){
-			$(sq.mobileNavLiWChildren).click(function(){
-				if($(this).parent().hasClass('off')){
-					$(this).parent().removeClass('off').addClass('on');
-					$(this).parent().find('> ul.sub-menu').removeClass('off').addClass('on');
-				}else if($(this).parent().hasClass('on')){
-					$(this).parent().removeClass('on').addClass('off');
-					$(this).parent().find('> ul.sub-menu').removeClass('on').addClass('off');
+			$(sq.mobileNavLiWChildren).click(function(e){
+				e.preventDefault();
+				if($(this).parent().parent().hasClass('off')){
+					$(this).parent().parent().removeClass('off').addClass('on');
+					$(this).parent().parent().find('> ul.sub-menu').removeClass('off').addClass('on');
+					$(this).removeClass('fa-angle-up').addClass('fa-angle-down');
+				}else if($(this).parent().parent().hasClass('on')){
+					$(this).parent().parent().removeClass('on').addClass('off');
+					$(this).parent().parent().find('> ul.sub-menu').removeClass('on').addClass('off');
+					$(this).removeClass('fa-angle-down').addClass('fa-angle-up');
 				}
 			});
 		}

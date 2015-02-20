@@ -906,31 +906,28 @@ h6,.h6{
 	.nav{
 		//All li elements
 		li{
+			@include transition(all .4s ease);
 			a{
+				@include transition(all .4s ease);
 				display: block;
+				position: relative;
 				@include rem(padding, 10px 50px 10px 15px);
 				text-decoration: none;
 				width: 100%;
+				i{
+					display: none;
+				}
 			}
 			&.has-children{
 				&>a{
-					@include rem(padding, 10px 15px);
-					&:after{
-						display: inline-block;
-						vertical-align: middle;
-						@include rem(padding-left, 20px);
-						font-family: 'FontAwesome';
-						font-weight: normal;
-						@include rem(font-size, 21px);
-						content: $fa-var-angle-up;
-						text-align: right;
-					}
-				}
-				&.on{
-					&>a{
-						&:after{
-							content: $fa-var-angle-down;
-						}
+					i{
+						display: block;
+						position: absolute;
+						right: 0;
+						top: 0;
+						height: 100%;
+						@include rem(line-height, 45px);
+						@include rem(padding, 0 15px);
 					}
 				}
 			}
@@ -940,6 +937,7 @@ h6,.h6{
 			@include rem(border-bottom, 1px solid $navbar-submenu-divider);
 			&:hover,
 			&:focus,
+			&:active,
 			&.on{
 				background-color: $navbar-submenu-divider;
 			}
@@ -948,6 +946,9 @@ h6,.h6{
 				&:hover{
 					background-color: transparent;
 					color: $white;
+				}
+				&:focus{
+					background-color: transparent;
 				}
 			}
 			>.sub-menu{
@@ -971,6 +972,13 @@ h6,.h6{
 					@include rem(border-bottom, 1px solid $white);
 					text-transform: uppercase;
 					height: auto;
+					&.has-children{
+						&>a{
+							i{
+								@include rem(line-height, 60px);
+							}
+						}
+					}
 					a{
 						color: $gray-medium;
 					}
