@@ -656,7 +656,7 @@ var irdata = {
 			sortOperator:    q4.sort.descending,	// 1
 			pageSize: 3,
 			includeTags: "true",
-			tagList: ""
+			tagList: "corporate"
 		},
 		onepresentation: {
 			presentationDateFilter: q4.date.all,		// 3
