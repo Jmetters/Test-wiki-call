@@ -1,0 +1,5 @@
+/site/nbproject/private/
+**/*.DS_Store
+**/thumbs.db
+**/.sass-cache
+**/*.scssc
