@@ -1,0 +1,74 @@
+
+//== Padding classes
+.padding-top {
+	@include rem(padding-top, $padding-large);
+}
+.padding-top-2x {
+	@include rem(padding-top, ($padding-large * 2));
+}
+.padding-top-3x {
+	@include rem(padding-top, ($padding-large * 3));
+}
+.padding-top-small {
+	@include rem(padding-top, $padding-small);
+}
+.padding-top-xsmall {
+	@include rem(padding-top, $padding-xsmall);
+}
+.padding-top-xxsmall {
+	@include rem(padding-top, $padding-xxsmall);
+}
+.padding-left {
+	@include rem(padding-left, $grid-gutter-width);
+}
+.padding-left-1_5x {
+	@include rem(padding-left, ($grid-gutter-width * 1.5));
+}
+.padding-left-2x {
+	@include rem(padding-left, ($grid-gutter-width * 2));
+}
+.padding-left-small {
+	@include rem(padding-left, ($grid-gutter-width / 2));
+}
+.padding-right {
+	@include rem(padding-right, $grid-gutter-width);
+}
+.padding-right-1_5x {
+	@include rem(padding-right, ($grid-gutter-width * 1.5));
+}
+.padding-right-small {
+	@include rem(padding-right, ($grid-gutter-width / 2));
+}
+.padding-bottom {
+	@include rem(padding-bottom, $padding-large);
+}
+.padding-bottom-2x {
+	@include rem(padding-bottom, ($padding-large * 2));
+}
+.padding-bottom-3x {
+	@include rem(padding-bottom, ($padding-large * 3));
+}
+.padding-bottom-small {
+	@include rem(padding-bottom, $padding-small);
+}
+.padding-bottom-xsmall {
+	@include rem(padding-bottom, $padding-xsmall);
+}
+.padding-bottom-xxsmall {
+	@include rem(padding-bottom, $padding-xxsmall);
+}
+.nopadding{
+	padding: 0 0 0 0 !important;
+}
+.nopadding-left{
+	padding-left: 0 !important;
+}
+.nopadding-right{
+	padding-right: 0 !important;
+}
+.nopadding-top{
+	@include rem(padding-top, 0 !important);
+}
+.nopadding-bottom{
+	@include rem(padding-bottom, 0 !important);
+}

@@ -1,0 +1,62 @@
+
+//== Margin classes
+.margin-top {
+	@include rem(margin-top, $margin-large);
+}
+.margin-top-small {
+	@include rem(margin-top, $margin-small);
+}
+.margin-left {
+	@include rem(margin-left, $grid-gutter-width);
+}
+.margin-left-2x {
+	@include rem(margin-left, ($grid-gutter-width * 2));
+}
+.margin-left-3x {
+	@include rem(margin-left, ($grid-gutter-width * 3));
+}
+.margin-left-small {
+	@include rem(margin-left, ($grid-gutter-width / 2));
+}
+.margin-right {
+	@include rem(margin-right, $grid-gutter-width );
+}
+.margin-right-2x {
+	@include rem(margin-right, ($grid-gutter-width * 2));
+}
+.margin-right-3x {
+	@include rem(margin-right, ($grid-gutter-width * 3));
+}
+.margin-right-small {
+	@include rem(margin-right, ($grid-gutter-width / 2) );
+}
+.margin-bottom {
+	@include rem(margin-bottom, $margin-large);
+}
+.margin-bottom-2x {
+	@include rem( margin-bottom, ( $margin-large * 2 ) );
+}
+.margin-bottom-small {
+	@include rem(margin-bottom, $margin-small);
+}
+.margin-bottom-xsmall {
+	@include rem(margin-bottom, $margin-xsmall);
+}
+.margin-bottom-xxsmall {
+	@include rem(margin-bottom, $margin-xxsmall);
+}
+.nomargin{
+	margin: 0 0 0 0 !important;
+}
+.nomargin-top{
+	margin-top: 0 !important;
+}
+.nomargin-right{
+	margin-right: 0 !important;
+}
+.nomargin-bottom{
+	margin-bottom: 0 !important;
+}
+.nomargin-left{
+	margin-left: 0 !important;
+}

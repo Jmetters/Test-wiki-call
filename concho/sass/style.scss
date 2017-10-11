@@ -2,7 +2,7 @@
 @import "variables";
 
 //Variables from font awesome
-@import "font-awesome/variables";
+@import "font-awesome/font-awesome";
 
 // Bootstrap
 @import "bootstrap";
@@ -11,7 +11,13 @@
 @import "fonts";
 @import "rem";
 @import "mixins";
-@import "carousel";
-@import "swipebox";
+@import "includes/carousel";
+@import "includes/swipebox";
+
+@import "includes/padding";
+@import "includes/margin";
+@import "includes/borders";
+@import "includes/icons";
+
 @import "theme";
 @import "responsive";

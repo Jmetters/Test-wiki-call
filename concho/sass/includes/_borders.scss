@@ -1,0 +1,59 @@
+
+//== Borders
+.noborder{
+	border: none !important;
+}
+.border-all{
+	@include border-all();
+}
+.border-left {
+	@include border-left();
+}
+.border-right {
+	@include border-right();
+}
+.border-top {
+	@include border-top();
+}
+.border-bottom {
+	@include border-bottom();
+}
+.border-bottom-none{
+	border-bottom: none !important;
+}
+.border-white-all{
+	@include border-white-all();
+}
+.border-white-top{
+	@include border-white-top();
+}
+.border-white-left{
+	@include border-white-left();
+}
+.border-white-right{
+	@include border-white-right();
+}
+.border-white-bottom{
+	@include border-white-bottom();
+}
+.border-green-bright-all{
+	@include border-green-bright-all();
+}
+.border-green-bright-top{
+	@include border-green-bright-top();
+}
+.border-green-bright-left{
+	@include border-green-bright-left();
+}
+.border-green-bright-right{
+	@include border-green-bright-right();
+}
+.border-green-bright-bottom{
+	@include border-green-bright-bottom();
+}
+.border-radius-all-8{
+	@include border-top-radius(8px);
+	@include border-right-radius(8px);
+	@include border-bottom-radius(8px);
+	@include border-left-radius(8px);
+}
