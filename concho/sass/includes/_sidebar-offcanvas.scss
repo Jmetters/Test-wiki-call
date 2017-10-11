@@ -1,0 +1,196 @@
+.sidebar-offcanvas {
+	@include rem( padding-top, 20px );
+	background-color: $green-dark;
+	font-family: $font-family-sans-serif;
+	font-weight: 300;
+	@include rem(font-size, 18px);
+	@include box-shadow(inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5));
+	.nav{
+		//All li elements
+		li{
+			@include transition(all .4s ease);
+			a{
+				@include transition(all .4s ease);
+				display: block;
+				position: relative;
+				@include rem(padding, 10px 50px 10px 15px);
+				text-decoration: none;
+				width: 100%;
+				i{
+					display: none;
+				}
+			}
+			&.has-children{
+				&>a{
+					i{
+						display: block;
+						position: absolute;
+						right: 0;
+						top: 0;
+						height: 100%;
+						@include rem(line-height, 45px);
+						@include rem(padding, 0 15px);
+						@include rem(font-size, 18px);
+					}
+				}
+			}
+		}
+		&>li{
+			text-align: right;
+			@include rem(border-bottom, 1px solid $navbar-submenu-divider);
+			&:hover,
+			&:focus,
+			&:active,
+			&.on{
+				background-color: $navbar-submenu-divider;
+			}
+			a{
+				color: $white;
+				&:hover{
+					background-color: transparent;
+					color: $white;
+				}
+				&:focus{
+					background-color: transparent;
+				}
+			}
+			>.sub-menu{
+				&.off{
+					display: none;
+				}
+				@extend .list-unstyled;
+				&>li{
+					&:hover,
+					&:focus,
+					&.on{
+						background-color: $gray-medium;
+						a{
+							color: $white;
+						}
+					}
+					background-color: $gray-light;
+					font-weight: bold;
+					@include rem(font-size, 15px);
+					@include rem(line-height, 40px);
+					@include rem(border-bottom, 1px solid $white);
+					text-transform: uppercase;
+					height: auto;
+					&.has-children{
+						&>a{
+							i{
+								@include rem(line-height, 60px);
+							}
+						}
+					}
+					a{
+						color: $gray-medium;
+					}
+					>.sub-menu{
+						&.off{
+							display: none;
+						}
+						@extend .list-unstyled;
+						&>li{
+							&:hover,
+							&:focus,
+							&.on{
+								background-color: $white;
+								a{
+									color: $gray-medium;
+								}
+							}
+							background-color: $gray-lightest;
+							@include rem(border-bottom, 1px solid $gray-light);
+							@include rem(font-size, 13px);
+							a{
+								color: $gray-medium;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// Brand/project name
+	.navbar-brand {
+		display: block;
+		float: none;
+		padding: $navbar-padding-vertical $navbar-padding-horizontal;
+		@include rem(width, 32px);
+		@include rem(height, 32px);
+		margin: 0 auto;
+		background: transparent inline-image('../images/logo_mobile_2x.png') no-repeat center center;
+		background-size: contain;
+		text-indent: -10000em;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+
+		@media (min-width: $grid-float-breakpoint) {
+			.navbar > .container &,
+			.navbar > .container-fluid & {
+				margin-left: -$navbar-padding-horizontal;
+			}
+		}
+	}
+
+	.social{
+		@include rem(padding-right, 48px);
+		li{
+			@include transition(all .4s ease);
+			i{
+				@include transition(all .4s ease);
+				color: $green-mint;
+			}
+			a{
+				@include transition(all .4s ease);
+				color: $green-dark;
+				padding-left: 0;
+				padding-right: 0;
+				border-right: none;
+			}
+			&:hover,
+			&:focus{
+				i{
+					color: $white;
+				}
+				a{
+					color: $green-dark;
+				}
+			}
+		}
+	}
+
+	.search-tool{
+		@include padding-left();
+		@include padding-right-small();
+		@include margin-bottom-small();
+			.form-control{
+				border-color: darken($green-dark, 5%);
+				background-color: darken($green-dark, 5%);
+				@include placeholder($white);
+				color: $white;
+			}
+			.form-control-feedback{
+				@include rem(top, 20px);
+				@include transition(all .4s ease);
+				@include rem(right, ($grid-gutter-width / 2) );
+				background-color: darken($green-dark, 5%);
+				color: $white;
+				@include rem(border-left, 1px solid $green-dark);
+			}
+			input[type="submit"]{
+				position: absolute;
+				@include rem(top, 20px);
+				@include rem(right, ($grid-gutter-width / 2) );
+				width: $input-height-base;
+				height: $input-height-base;
+				background-color: transparent;
+				text-indent: -1000em;
+				z-index: 1;
+			}
+	}
+
+}

@@ -1,0 +1,37 @@
+//Import original Bootstrap file
+@import "../bootstrap/navs";
+
+
+// Pills
+// -------------------------
+.nav-pills {
+	background: transparent inline-image('../images/ui/divider_gray.png') repeat-x right center;
+	@extend %raleway-bold;
+	text-transform: uppercase;
+  > li {
+    float: left;
+	@include rem(border-right, 2px solid $white);
+
+    // Links rendered as pills
+    > a {
+		border-radius: $nav-pills-border-radius;
+		color: $gray;
+		background-color: $gray-light;
+		@include rem(font-size, 13px !important);
+    }
+    + li {
+		margin-left: 0;
+		@include rem(border-right, 2px solid $white);
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $nav-pills-active-link-hover-color;
+        background-color: $nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}

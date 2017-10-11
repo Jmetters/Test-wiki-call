@@ -1,0 +1,224 @@
+//Import original Bootstrap file
+@import "../bootstrap/navbar";
+
+
+//
+// Navbar
+// --------------------------------------------------
+
+// Default navbar
+.navbar-default {
+
+	//@include transition(all .4s ease);
+	background: $white;
+	border-radius: $navbar-border-radius;
+	@include rem(border-top, 10px solid $brand-primary);
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+	$shadow: none;
+	@include box-shadow($shadow);
+	font-family: $font-family-sans-serif;
+	@include rem(font-size, 16px);
+
+	.menu-header-container{
+		margin: 0 ($grid-gutter-width / 2);
+	}
+	.navbar-toggle{
+		float: left;
+		@include rem(height, $navbar-height-collapse);
+		border-left: 1px solid $gray-light;
+		border-top: 0;
+		border-right: 0;
+		border-bottom: 0;
+		@include rem(padding, 28px 14px 28px 28px);
+		color: $gray-medium;
+		&:hover {
+			background-color: transparent;
+			color: $brand-primary;
+		}
+		&:before{
+			content: "\f0c9";
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			@include rem(font-size, 21px);
+		}
+		&:focus{
+			background-color: transparent;
+			color: $brand-primary;
+		}
+	}
+
+	// Brand/project name
+	.navbar-header{
+		@include transition(all .4s ease);
+		.navbar-brand {
+			@include transition(all .4s ease);
+
+			float: left;
+			padding: $navbar-padding-vertical $navbar-padding-horizontal;
+
+			font-size: $font-size-large;
+			line-height: $line-height-computed;
+			@include rem(height, $navbar-height-collapse);
+			@include rem(width, 200px);
+			background: transparent url('../images/logo_2x.png') no-repeat left center;
+			background-size: contain;
+			text-indent: -10000em;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				//@include opacity(.8);
+			}
+
+			@media (min-width: $grid-float-breakpoint) {
+				.navbar > .container &,
+				.navbar > .container-fluid & {
+					margin-left: -$navbar-padding-horizontal;
+				}
+			}
+		}
+	}
+	.navbar-collapse{
+	}
+
+	.list-inline{
+		margin-bottom: 0;
+		@include transition(all .4s ease);
+		&> li{
+			position: relative;
+			padding-left: 0;
+			padding-right: 0;
+			@include rem(height, $navbar-height);
+			@include rem(line-height, $navbar-height);
+			&.on,
+			&:hover{
+				border-bottom: none;
+				background-color: transparent;
+				&:before{
+					@include opacity(1);
+				}
+				a{
+					background: none;
+					color: $green-dark;
+					text-decoration: none;
+				}
+			}
+			&:first-child{
+				a{
+					@include rem(border-left, 1px solid $gray-light);
+				}
+			}
+
+			.sub-menu {
+				display: none;
+				position: absolute;
+				@include rem(top, $navbar-height-collapse);
+				left: 0;
+				padding: 0;
+				list-style-type: none;
+				text-align: left;
+				a {
+					display: block;
+					color: $white;
+					white-space: nowrap;
+					padding: 0 20px;
+					background: $green-dark;
+					@include fontMetrics(13px, 50px);
+					text-transform: uppercase;
+					font-weight: bold;
+					border-left: none;
+					&:hover {
+						background: $navbar-submenu-divider;
+						color: $white;
+						text-decoration: none;
+					}
+				}
+				li{
+					position: relative;
+					border-top: 1px solid $navbar-submenu-divider;
+				}
+				li:first-child {
+					border-top: none;
+				}
+				.on {
+					a {
+						background: $navbar-submenu-divider;
+						color: $white;
+						text-decoration: none;
+					}
+				}
+				.level-3{
+					top: 0;
+					left: 100%;
+					li{
+						border-top: 1px solid $white;
+						&:first-child{
+							border-top: none;
+						}
+					}
+					a {
+						display: block;
+						color: $gray;
+						white-space: nowrap;
+						padding: 0 20px;
+						background: $gray-light;
+						@include fontMetrics(13px, 50px);
+						text-transform: uppercase;
+						font-weight: bold;
+						border-left: none;
+						&:hover {
+							background: $white;
+							color: $gray;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			&:hover .sub-menu {
+				&.level-2{
+					display: block;
+					li{
+						&:hover{
+							.level-3{
+								display: block;
+							}
+						}
+					}
+				}
+			}
+			&:last-child,
+			&.last-child {
+				.sub-menu {
+					right: 0;
+					left: auto;
+				}
+			}
+		}
+		&> li > a{
+			@include rem( padding, 0 26px );
+			text-decoration: none;
+			@include transition(color .4s ease);
+			@include rem(border-right, 1px solid $gray-light);
+			color: $gray;
+		}
+	}
+}
+
+// Undo rounded corners in static and fixed navbars
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom,
+.navbar-subnav,
+.navbar-toggle{
+  border-radius: 0;
+}
+.navbar-fixed-top{
+	//@include backface-visibility(hidden);
+	z-index: 1061;
+}
+.navbar{
+	margin-bottom: 0;
+}

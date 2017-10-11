@@ -1,0 +1,75 @@
+//Import original Bootstrap file
+@import "../bootstrap/tables";
+
+//== Tables
+.table-responsive{
+	border: none;
+}
+table{
+	th{
+		background-color: $gray-medium;
+		@extend %raleway-bold;
+		@include rem(font-size, 11px);
+		color: $white;
+		text-transform: uppercase;
+	}
+	tr{
+
+	}
+	td{
+		@include rem(border-bottom, 1px solid $gray-light !important);
+		ul{
+			margin-bottom: 0;
+			&.file-types{
+				li{
+					padding-left: 0;
+					padding-right: 0;
+					a{
+						display: block;
+						text-indent: -1000em;
+						@include rem(width, 20px);
+						@include rem(height, 25px);
+						&.doc{
+							background: transparent inline-image('../images/ui/icon_doc.png') no-repeat center center;
+						}
+						&.xls{
+							background: transparent inline-image('../images/ui/icon_xls.png') no-repeat center center;
+						}
+						&.pdf{
+							background: transparent inline-image('../images/ui/icon_pdf.png') no-repeat center center;
+						}
+						&.listen{
+							background: transparent inline-image('../images/ui/icon_listen.png') no-repeat center center;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.upcoming-events{
+		td{
+			background-color: $gray-light;
+			@include rem(border-bottom, 1px solid $white !important);
+		}
+	}
+
+}
+.table-nav{
+		ul{
+			&.list-inline{
+				li{
+					@extend %weight-700;
+					a{
+						@include rem(font-size, 13px !important);
+						@include rem(border-right, 1px solid $gray);
+						@include rem(padding-right, 15px);
+					}
+					&:last-child{
+						a{
+							border-right: none;
+						}
+					}
+				}
+			}
+		}
+}

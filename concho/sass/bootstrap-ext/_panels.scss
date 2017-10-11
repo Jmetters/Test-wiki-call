@@ -1,0 +1,88 @@
+//Import original Bootstrap file
+@import "../bootstrap/panels";
+
+//
+// Panels
+// --------------------------------------------------
+
+// Common styles
+.panel {
+  @include box-shadow(0 1px 2px rgba(0,0,0,.05));
+}
+
+// Mixin for generating new styles
+@mixin panel-heading-styles($color) {
+  @include gradient-vertical($start-color: $color, $end-color: darken($color, 5%));
+}
+
+// Apply the mixin to the panel headings only
+.panel-default > .panel-heading   { @include panel-heading-styles($panel-default-heading-bg); }
+.panel-primary > .panel-heading   { @include panel-heading-styles($panel-primary-heading-bg); }
+.panel-success > .panel-heading   { @include panel-heading-styles($panel-success-heading-bg); }
+.panel-info > .panel-heading      { @include panel-heading-styles($panel-info-heading-bg); }
+.panel-warning > .panel-heading   { @include panel-heading-styles($panel-warning-heading-bg); }
+.panel-danger > .panel-heading    { @include panel-heading-styles($panel-danger-heading-bg); }
+
+//
+// Panels
+
+//
+.panel{
+	@include border-top();
+	&:first-child{
+		border-top: none;
+	}
+	&:last-child{
+		@include border-bottom();
+	}
+	&.panel-faqs{
+		background: none;
+		$shadow: none;
+		@include box-shadow($shadow);
+		.panel-heading{
+			@include rem(padding, 15px);
+			background-color: transparent;
+			.panel-title{
+				@include h3();
+				@include rem(font-size, 16px);
+				font-weight: normal;
+				@include nomargin-top();
+				@include nomargin-bottom();
+				a{
+					display: block;
+					@include rem(min-height, 25px);
+					@include rem(line-height, 25px);
+					@include rem(padding-right, 60px);
+					color: $green-dark;
+					background: transparent inline-image('../images/ui/toggle_open.png') no-repeat center right;
+					&.collapsed{
+						color: $gray;
+						background: transparent inline-image('../images/ui/toggle_closed.png') no-repeat center right;
+					}
+				}
+			}
+		}
+		.panel-body{
+			@include rem(padding-right, 80px);
+			p,ul,ol,li,blockquote{
+				@include fontMetrics( 15px, 24px );
+			}
+		}
+		.panel-collapse{
+			.panel-body{
+				border: 0;
+			}
+		}
+	}
+}
+
+
+//== Site specific responsive
+// Max: 767
+@media (max-width: $screen-xs-max) {}
+// Min: 768 Max: 991
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {}
+// Min: 992 Max: 1199
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {}
+// 1200
+@media (min-width: $screen-lg-min) {}
