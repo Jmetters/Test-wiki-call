@@ -708,6 +708,23 @@ body{
 							}
 						}
 					}
+					&.reports {
+						li{
+							&.details{
+								@include padding-small();
+								background-color: $gray-light;
+								border: none;
+								p, a {
+									@include rem(font-size, 16px);
+									margin-bottom: 0;
+									color: $gray;
+								}
+								a {
+									color: $gray;
+								}
+							}
+						}
+					}
 					&.officer{
 						p{
 							@include rem(font-size, 12px);
