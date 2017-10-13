@@ -2,11 +2,11 @@
 
 // Max: 767
 @media (max-width: $screen-xs-max) {
-	
+
 	.xs-padding-top-small{
 		@include padding-top-small();
 	}
-	
+
 	.vertical-align-lg{
 		@include vertical-align-reset;
 	}
@@ -61,7 +61,7 @@
 				.responsive-text-center{
 					text-align: center;
 				}
-			
+
 				//Feature
 				.featured{
 					@include rem(height, 300px);
@@ -165,7 +165,7 @@
 						}
 					}
 				}
-				
+
 				.quick-links{
 					background-color: transparent;
 					.row{
@@ -197,13 +197,13 @@
 						}
 					}
 				}
-				
+
 				.graphs,
 				.management{
 					&.single{
 					}
 				}
-				
+
 				.stock-ticker{
 					&.big{
 						.symbol{
@@ -230,7 +230,7 @@
 						}
 					}
 				}
-				
+
 				//
 				// Legend
 				// --------------------------------------------------
@@ -242,8 +242,8 @@
 						bottom: initial;
 					}
 				}
-				
-				
+
+
 				//
 				// News
 				// --------------------------------------------------
@@ -252,7 +252,7 @@
 						border-bottom: none;
 					}
 				}
-				
+
 				//
 				// About > Strategy
 				// --------------------------------------------------
@@ -266,7 +266,7 @@
 			}
 		}
 	}
-	
+
 	// Pills
 	// -------------------------
 	.nav-pills {
@@ -295,7 +295,7 @@
 	  }
 	}
 
-	
+
 	#main-container{
 		.row-offcanvas{
 			.container-outer{
@@ -349,7 +349,7 @@
 			}
 		}
 	}
-	
+
 	img {
 		max-width: 100%;
 	}
@@ -363,9 +363,9 @@
 		white-space: normal;
 		//margin: 0 10px;
 	}
-	
+
 	// Home page
-	
+
 	#main-container{
 		height: auto;
 		min-height: initial;
@@ -374,7 +374,7 @@
 			min-height: initial;
 		}
 	}
-	
+
 	// Off-canvas
 	html,
 	body {
@@ -409,13 +409,13 @@
 		top: 0;
 		width: 80%;
 	}
-	
+
 	article[role="article"]{
 		h2{
 			@include rem(font-size, 24px);
 		}
 	}
-	
+
 	.row{
 		&.padding-left-2x{
 			padding-left: 0 !important;
@@ -427,7 +427,7 @@
 			padding-left: 0 !important;
 		}
 	}
-	
+
 	//== Single articles
 	body.single{
 		article[role="article"]{
@@ -458,11 +458,11 @@
 			width: 100%;
 		}
 	}
-	
+
 	#contact-map {
 		height: 160px;
 	}
-	
+
 	//== Footer
 	footer#footer[role="contentinfo"]{
 		.container{
@@ -486,11 +486,11 @@
 }
 // Min: 768 Max: 991
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-	
+
 	.sm-padding-top-small{
 		@include padding-top-small();
 	}
-	
+
 	.vertical-align-lg{
 		@include vertical-align-reset;
 	}
@@ -538,7 +538,7 @@
 				.responsive-text-center{
 					text-align: center;
 				}
-			
+
 				//Feature
 				.featured{
 					@include rem(height, 300px);
@@ -626,7 +626,7 @@
 						}
 					}
 				}
-				
+
 				//specific UL styling
 				ul{
 					&.list-unstyled{
@@ -639,7 +639,7 @@
 						}
 					}
 				}
-				
+
 				//
 				// Legend
 				// --------------------------------------------------
@@ -651,7 +651,7 @@
 						bottom: initial;
 					}
 				}
-				
+
 				//
 				// News
 				// --------------------------------------------------
@@ -690,7 +690,7 @@
 			@include rem( margin-top, 20px );
 		}
 		.row-offcanvas{
-			
+
 		}
 	}
 	.navbar-default{
@@ -741,13 +741,13 @@
 			}
 		}
 	}
-	
+
 	.sub-pages{
 		ul{
 			width: 100%;
 		}
 	}
-	
+
 	// Off-canvas
 	html,
 	body {
@@ -852,7 +852,7 @@
 	.position-absolute-lg{
 		//position: inherit !important;
 	}
-	
+
 	body{
 		&.short-screen{
 			section{
@@ -879,7 +879,7 @@
 					}
 				}
 			}
-			
+
 			&#content{
 				//Feature
 				.featured{
@@ -898,8 +898,8 @@
 					}
 				}
 			}
-			
-			
+
+
 		}
 		section{
 			&.fullscreen{
@@ -928,7 +928,7 @@
 		}
 		#main-container{
 			.row-offcanvas{
-				
+
 			}
 		}
 		#values .feature h2{

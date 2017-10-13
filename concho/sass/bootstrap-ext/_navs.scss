@@ -26,19 +26,24 @@
 	@include rem(border-right, 2px solid $white);
 
     // Links rendered as pills
-    > a {
+    > a, > span {
 		border-radius: $nav-pills-border-radius;
 		color: $gray;
 		background-color: $gray-light;
 		@include rem(font-size, 13px !important);
     }
+	> span {
+		padding: $nav-link-padding;
+		color: $nav-pills-active-link-hover-color;
+        background-color: $nav-pills-active-link-hover-bg;
+	}
     + li {
 		margin-left: 0;
 		@include rem(border-right, 2px solid $white);
     }
 
     // Active state
-    &.active > a {
+    &.active > a, {
       &,
       &:hover,
       &:focus {
