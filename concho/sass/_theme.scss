@@ -764,6 +764,23 @@ body{
 						@include rem(line-height, 29px);
 					}
 				}
+				.quote {
+					p, .p {
+						color: $green-bright;
+						hanging-punctuation: first;
+					}
+					h4, .h4 {
+						@include rem(font-size, 13px);
+						font-weight: 400;
+						color: $green-bright;
+						text-transform: uppercase;
+						margin-bottom: 0;
+					}
+					.speaker-title {
+						@include rem(font-size, 12px);
+						color: $green-dark;
+					}
+				}
 			}
 
 			.disclaimer{
