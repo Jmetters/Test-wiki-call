@@ -923,6 +923,7 @@ body{
 					@include rem(font-size, 100px);
 				}
 				h3 {
+					color: $green-dark;
 					padding-left: 0;
 					@include rem(margin-bottom, 20px);
 				}
