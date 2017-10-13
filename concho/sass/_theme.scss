@@ -918,6 +918,15 @@ body{
 					@include rem(padding-left, 84px);
 				}
 			}
+			.stat {
+				h2 {
+					@include rem(font-size, 100px);
+				}
+				h3 {
+					padding-left: 0;
+					@include rem(margin-bottom, 20px);
+				}
+			}
 			.gallery{
 				a{
 					display: block;
