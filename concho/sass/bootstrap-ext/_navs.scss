@@ -5,10 +5,6 @@
 	div {
 		min-height: 253px;
 	}
-	img {
-		max-height: 253px;
-		max-width: 270px;
-	}
 	ul {
 		@include rem(padding-left, 20px);
 		@include rem(margin-bottom, 16px);
@@ -20,6 +16,10 @@
 		text-transform: uppercase;
 		margin-bottom: 0;
 	}
+}
+.nav-img {
+	max-height: 253px;
+	max-width: 270px;
 }
 
 // Pills
