@@ -4218,7 +4218,7 @@ body .container-fluid#content .legend-column .legend li .fa { font-size: 16px; f
 body .container-fluid#content .form label { font-size: 13px; font-size: 1.3rem; font-weight: bold; }
 body .container-fluid#content .form p.form-required { color: #163D34; font-size: 12px; font-size: 1.2rem; }
 body .container-fluid#content .form input[type="text"] { -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
-body .container-fluid#content .strategy-steps { /*
+body .container-fluid#content .strategy-steps, body .container-fluid#content .info-block { /*
 .header{
 	@include rem(padding, $padding-small $padding-small);
 	background-color: $green-bright;
@@ -4233,11 +4233,12 @@ body .container-fluid#content .strategy-steps { /*
 	@include rem(padding, 0 $padding-small 0 $padding-small);
 }
 */ }
-body .container-fluid#content .strategy-steps .item-wrap:after { position: absolute; top: 25px; top: 2.5rem; right: 7px; right: 0.7rem; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: ""; text-align: right; color: #68BC49; }
-body .container-fluid#content .strategy-steps .item-wrap .item { background-color: #D9D8D3; }
-body .container-fluid#content .strategy-steps .item-wrap .item h2 { font-family: "Raleway", sans-serif !important; font-size: 16px; font-size: 1.6rem; line-height: 28px; line-height: 2.8rem; color: #ffffff; padding: 40px 20px; padding: 4rem 2rem; background-color: #68BC49; }
-body .container-fluid#content .strategy-steps .item-wrap .item section { padding: 10px 20px 20px 20px; padding: 1rem 2rem 2rem 2rem; }
-body .container-fluid#content .strategy-steps .item-wrap:last-child:after { content: ""; }
+body .container-fluid#content .strategy-steps .item-wrap:after, body .container-fluid#content .info-block .item-wrap:after { position: absolute; top: 25px; top: 2.5rem; right: 7px; right: 0.7rem; vertical-align: middle; padding-left: 20px; padding-left: 2rem; font-family: 'FontAwesome'; font-weight: normal; font-size: 21px; font-size: 2.1rem; content: ""; text-align: right; color: #68BC49; }
+body .container-fluid#content .strategy-steps .item-wrap .item, body .container-fluid#content .info-block .item-wrap .item { background-color: #D9D8D3; }
+body .container-fluid#content .strategy-steps .item-wrap .item h2, body .container-fluid#content .info-block .item-wrap .item h2 { font-family: "Raleway", sans-serif !important; font-size: 16px; font-size: 1.6rem; line-height: 28px; line-height: 2.8rem; color: #ffffff; padding: 40px 20px; padding: 4rem 2rem; background-color: #68BC49; }
+body .container-fluid#content .strategy-steps .item-wrap .item section, body .container-fluid#content .info-block .item-wrap .item section { padding: 10px 20px 20px 20px; padding: 1rem 2rem 2rem 2rem; }
+body .container-fluid#content .strategy-steps .item-wrap:last-child:after, body .container-fluid#content .info-block .item-wrap:last-child:after { content: ""; }
+body .container-fluid#content .strategy-steps .info-block .item-wrap:after, body .container-fluid#content .info-block .info-block .item-wrap:after { content: ""; }
 body .container-fluid#content .media ul.sidebar li { padding-bottom: 24px; padding-bottom: 2.4rem; }
 body .container-fluid#content .donation h2, body .container-fluid#content .stat h2 { font-size: 120px; font-size: 12rem; line-height: 92px; line-height: 9.2rem; font-weight: normal; color: #68BC49; }
 body .container-fluid#content .donation h3, body .container-fluid#content .stat h3 { font-size: 24px; font-size: 2.4rem; line-height: 36px; line-height: 3.6rem; font-weight: normal; padding-left: 84px; padding-left: 8.4rem; }

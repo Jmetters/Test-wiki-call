@@ -836,7 +836,7 @@ body{
 			//
 			// About > Strategy
 			// --------------------------------------------------
-			.strategy-steps{
+			.strategy-steps, .info-block {
 				/*
 				.header{
 					@include rem(padding, $padding-small $padding-small);
@@ -885,6 +885,9 @@ body{
 							content: "";
 						}
 					}
+				}
+				.info-block .item-wrap:after {
+					content: "";
 				}
 				//
 			}
