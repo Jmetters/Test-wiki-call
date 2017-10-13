@@ -751,7 +751,7 @@ body{
 			// -----------------------------------------------------------------
 
 			.sidebar{
-				.fun-fact{
+				.fun-fact, .stat-description {
 					background: transparent inline-image('../images/bg_fun-fact.jpg') no-repeat left top;
 					@include border-top();
 					@include padding-top-xsmall();
@@ -904,7 +904,7 @@ body{
 			//
 			// Community
 			// -----------------------------------------------------------------
-			.donation{
+			.donation, .stat {
 				h2{
 					@extend %raleway-medium;
 					@include fontMetrics(120px, 92px);
