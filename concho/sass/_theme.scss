@@ -672,7 +672,7 @@ body{
 			}
 
 			//specific UL styling
-			ul{
+			ul {
 				&.list-unstyled{
 					&.reports,
 					&.officer,
@@ -758,6 +758,16 @@ body{
 					&.stock-info{
 						li{
 							@include rem(line-height, 32px);
+						}
+					}
+				}
+				li {
+					i {
+						&.fa-chevron-right {
+							height: 12px;
+							font-size: 10px;
+							margin-right: 5px;
+							vertical-align: middle;
 						}
 					}
 				}
