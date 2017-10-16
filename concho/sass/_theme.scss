@@ -890,14 +890,16 @@ body{
 							@include rem(padding, $padding-xsmall $padding-small $padding-small $padding-small);
 						}
 					}
+					&.info-block {
+						&:after {
+							content: "";
+						}
+					}
 					&:last-child{
 						&:after{
 							content: "";
 						}
 					}
-				}
-				.info-block .item-wrap:after {
-					content: "";
 				}
 				//
 			}
