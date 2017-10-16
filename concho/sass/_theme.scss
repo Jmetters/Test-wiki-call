@@ -183,6 +183,28 @@ body{
 			}
 			@extend %body-copy;
 
+			.block-content-container {
+				min-height: 323px;
+				.block-image {
+					min-height: 323px;
+					width: 100%;
+				}
+				.block-text {
+					padding-left: 14px;
+					padding-right: 14px;
+					min-height: 323px;
+					background-color: $green-dark;
+					h3 {
+						color: $green-bright;
+						text-transform: uppercase;
+						margin-top: 0;
+					}
+					p {
+						color: $gray-light;
+					}
+				}
+			}
+
 			.quick-news{
 				.item{
 					@include padding-top-small();
@@ -779,7 +801,6 @@ body{
 
 			.sidebar{
 				.fun-fact, .stat-description {
-					background: transparent inline-image('../images/bg_fun-fact.jpg') no-repeat left top;
 					@include border-top();
 					@include padding-top-xsmall();
 					@include rem(padding-left, 47px);
@@ -791,8 +812,13 @@ body{
 						@include rem(line-height, 29px);
 					}
 				}
+				.fun-fact {
+					background: transparent inline-image('../images/bg_fun-fact.jpg') no-repeat left top;
+				}
+				.stat-description {
+					background-repeat: no-repeat;
+				}
 			}
-
 			.disclaimer{
 				p{
 					font-weight: 500;
