@@ -207,16 +207,24 @@
 	}
 }
 
-.sustainable-development-menu {
-	li {
+.inline-nav {
+	.inline-nav-item {
+		background-position: center;
+		background-repeat: no-repeat;
+		overflow: hidden;
 		a {
-			color: $gray-light!important;
-			background-position: center;
-			background-repeat: no-repeat;
+			display: block;
+			text-indent: -999px;
+			line-height: 100px!important;
+			text-transform: uppercase;
 			&:hover {
 				color: $white!important;
-				background-image: none!important;
+				text-indent: 0;
 			}
+		}
+		&:hover {
+			background-image: none!important;
+			background-color: $green-dark;
 		}
 	}
 }
