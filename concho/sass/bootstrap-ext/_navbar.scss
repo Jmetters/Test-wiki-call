@@ -207,6 +207,20 @@
 	}
 }
 
+.sustainable-development-menu {
+	li {
+		a {
+			color: $gray-light!important;
+			background-position: center;
+			background-repeat: no-repeat;
+			&:hover {
+				color: $white!important;
+				background-image: none!important;
+			}
+		}
+	}
+}
+
 // Undo rounded corners in static and fixed navbars
 .navbar-static-top,
 .navbar-fixed-top,
