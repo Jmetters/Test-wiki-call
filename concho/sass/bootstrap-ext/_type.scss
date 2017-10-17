@@ -123,6 +123,10 @@ $larger-text-mag: 1.3;
 	@include font-size(72px);
 }
 
+.line-height-24 {
+	@include line-height(24px);
+}
+
 
 
 // Default heading styles

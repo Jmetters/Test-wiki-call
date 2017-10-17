@@ -55,6 +55,11 @@
 	@include rem(font-size, $size !important, true);
 }
 
+//Line Height mixins
+@mixin line-height($size){
+	@include rem(line-height, $size !important, true);
+}
+
 @mixin background-white(){
 	background-color: $white;
 	h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
@@ -90,6 +95,9 @@
 
 @mixin border-gray-right(){
 	@include rem(border-right, 1px solid $gray);
+}
+@mixin border-gray-light-top(){
+	@include rem(border-top, 1px solid $gray-light);
 }
 @mixin border-white-all(){
 	@include rem(border, 1px solid $white)

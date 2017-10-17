@@ -2142,6 +2142,8 @@ body .container-fluid#content .graphs.single h2.page-title, body .container-flui
 
 .font-size-72 { font-size: 72px !important; font-size: 7.2rem !important; }
 
+.line-height-24 { line-height: 24px !important; line-height: 2.4rem !important; }
+
 h1, .h1, h1, body .feature h2 { line-height: 44px; line-height: 4.4rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
 
 h2, .h2, h2 { line-height: 34px; line-height: 3.4rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; }
@@ -3113,8 +3115,8 @@ tbody.collapse.in { display: table-row-group; }
 
 .inline-nav .inline-nav-item { background-position: center; background-repeat: no-repeat; overflow: hidden; }
 .inline-nav .inline-nav-item a { display: block; text-indent: -999px; line-height: 100px !important; text-transform: uppercase; }
-.inline-nav .inline-nav-item a:hover { color: #ffffff !important; text-indent: 0; }
-.inline-nav .inline-nav-item:hover { background-image: none !important; background-color: #163D34; }
+.inline-nav .inline-nav-item:hover, .inline-nav .inline-nav-item.active { background-image: none !important; background-color: #163D34; }
+.inline-nav .inline-nav-item:hover a, .inline-nav .inline-nav-item.active a { color: #ffffff !important; text-indent: 0; }
 
 .navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom, .navbar-subnav, .navbar-toggle { border-radius: 0; }
 
@@ -4008,6 +4010,8 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .border-green-bright-right { border-right: 1px solid #68BC49; border-right: 0.1rem solid #68BC49; }
 
 .border-green-bright-bottom { border-bottom: 1px solid #68BC49; border-bottom: 0.1rem solid #68BC49; }
+
+.border-gray-light-top { border-top: 1px solid #D9D8D3; border-top: 0.1rem solid #D9D8D3; }
 
 .border-radius-all-8 { border-top-right-radius: 8px; border-top-left-radius: 8px; border-bottom-right-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; border-bottom-left-radius: 8px; border-top-left-radius: 8px; }
 

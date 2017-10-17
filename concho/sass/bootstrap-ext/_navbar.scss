@@ -217,14 +217,14 @@
 			text-indent: -999px;
 			line-height: 100px!important;
 			text-transform: uppercase;
-			&:hover {
+		}
+		&:hover, &.active {
+			background-image: none!important;
+			background-color: $green-dark;
+			a {
 				color: $white!important;
 				text-indent: 0;
 			}
-		}
-		&:hover {
-			background-image: none!important;
-			background-color: $green-dark;
 		}
 	}
 }
