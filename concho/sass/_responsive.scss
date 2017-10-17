@@ -2,6 +2,24 @@
 
 // Max: 767
 @media (max-width: $screen-xs-max) {
+	.menu-item-container {
+		.padding-top {
+			padding-top: 0;
+		}
+		div {
+			min-height: 0;
+		}
+	}
+
+	.center-block {
+		&.nav-image {
+			margin-left: inherit;
+			margin-right: inherit;
+			max-height: 100%;
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
 
 	.xs-padding-top-small{
 		@include padding-top-small();
@@ -60,6 +78,13 @@
 				}
 				.responsive-text-center{
 					text-align: center;
+				}
+
+				.stat {
+					h2 {
+						@include rem(font-size, 60px);
+						@include rem(line-height, 52px);
+					}
 				}
 
 				//Feature
@@ -486,6 +511,21 @@
 }
 // Min: 768 Max: 991
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.menu-item-container {
+		.padding-top {
+			padding-top: 0;
+		}
+		div {
+			min-height: 0;
+		}
+	}
+
+	.center-block {
+		&.nav-image {
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
 
 	.sm-padding-top-small{
 		@include padding-top-small();
