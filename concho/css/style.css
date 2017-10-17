@@ -4129,6 +4129,8 @@ body section .down-arrow { text-transform: uppercase; position: absolute; bottom
 body #content > .container > .row > div > h3 { text-transform: uppercase; }
 body .container-fluid#content { position: relative; padding-top: 90px; padding-top: 9rem; }
 body .container-fluid#content h1.page-title { line-height: 18px; line-height: 1.8rem; -webkit-font-feature-settings: 'lnum'; -moz-font-feature-settings: 'lnum'; -ms-font-feature-settings: 'lnum'; color: #163D34; }
+body .container-fluid#content .editor-content h2, body .container-fluid#content .editor-content .h2, body .container-fluid#content .editor-content h2 { font-size: 32px; font-size: 3.2rem; line-height: 40px; line-height: 4rem; font-weight: 300; margin-top: 0 !important; }
+body .container-fluid#content .editor-content h3, body .container-fluid#content .editor-content .h3, body .container-fluid#content .editor-content h3, body .container-fluid#content .editor-content .panel.panel-faqs .panel-heading .panel-title, .panel.panel-faqs .panel-heading body .container-fluid#content .editor-content .panel-title, body .container-fluid#content .editor-content h1.page-title, body .container-fluid#content .editor-content h4, body .container-fluid#content .editor-content .h4, body .container-fluid#content .editor-content h4 { text-transform: uppercase; }
 body .container-fluid#content .block-content-container { min-height: 323px; }
 body .container-fluid#content .block-content-container .block-image { min-height: 323px; width: 100%; }
 body .container-fluid#content .block-content-container .block-text { padding-left: 14px; padding-right: 14px; min-height: 323px; background-color: #163D34; }
