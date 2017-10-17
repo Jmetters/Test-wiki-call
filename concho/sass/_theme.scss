@@ -119,6 +119,7 @@ a{
 //
 // Templates
 // --------------------------------------------------
+
 body{
 	.feature{
 		@include font-family($font-family-serif);
@@ -165,7 +166,7 @@ body{
 	#content > .container > .row > div {
 		&> h3 {
 			text-transform: uppercase;
-			color: $green-dark;
+			// color: $green-dark;
 		}
 	}
 	.container-fluid{
@@ -200,6 +201,14 @@ body{
 					p {
 						color: $gray-light;
 					}
+				}
+			}
+
+			.block-callout-container {
+				.block-callout-image {
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
 				}
 			}
 

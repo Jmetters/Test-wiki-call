@@ -21,6 +21,12 @@
 		}
 	}
 
+	.block-callout-container {
+		.block-callout-image {
+			min-height: 320px;
+		}
+	}
+
 	.xs-padding-top-small{
 		@include padding-top-small();
 	}

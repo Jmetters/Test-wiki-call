@@ -65,6 +65,20 @@
 	overflow: visible;
 }
 
+.row.is-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.is-flex .box {
+  background: none;
+  position: static;
+}
+
 // Vertical align styles
 // USAGE
 //<div class="row">
