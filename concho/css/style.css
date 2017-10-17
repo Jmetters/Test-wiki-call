@@ -4330,6 +4330,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
 
 @media (max-width: 767px) { .menu-item-container .padding-top { padding-top: 0; }
   .menu-item-container div { min-height: 0; }
+  .reports { max-width: 320px; }
   .center-block.nav-image { margin-left: inherit; margin-right: inherit; max-height: 100%; max-width: 100%; margin-bottom: 20px; }
   .block-callout-container { margin-left: 14px; }
   .block-callout-container .block-callout-image { min-height: 320px; }
