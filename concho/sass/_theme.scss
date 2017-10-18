@@ -987,6 +987,7 @@ body{
 					color: $green-dark;
 					padding-left: 0;
 					@include rem(margin-bottom, 20px);
+					text-transform: none!important;
 				}
 			}
 			.gallery{
