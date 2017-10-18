@@ -64,19 +64,10 @@
 .overflow-visible {
 	overflow: visible;
 }
-
 .row.is-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-.row.is-flex > [class*='col-'] {
-  display: flex;
-  flex-direction: column;
-}
-
-.is-flex .box {
-  background: none;
-  position: static;
+	display: flex;
+	display: -webkit-box;
+	flex-wrap: wrap;
 }
 
 // Vertical align styles
@@ -138,6 +129,9 @@
 
 @media (max-width: $screen-xs-max) {
 	.row-height {
+		display: block;
+	}
+	.row.is-flex {
 		display: block;
 	}
 }
