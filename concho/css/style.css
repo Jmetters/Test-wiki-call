@@ -3114,7 +3114,7 @@ tbody.collapse.in { display: table-row-group; }
 .navbar-default .list-inline > li > a { padding: 0 26px; padding: 0 2.6rem; text-decoration: none; -webkit-transition: color 0.4s ease; -o-transition: color 0.4s ease; transition: color 0.4s ease; border-right: 1px solid #D9D8D3; border-right: 0.1rem solid #D9D8D3; color: #7F7F73; }
 
 .inline-nav .inline-nav-item { background-position: center; background-repeat: no-repeat; overflow: hidden; }
-.inline-nav .inline-nav-item a { display: block; text-indent: -999px; line-height: 100px !important; text-transform: uppercase; }
+.inline-nav .inline-nav-item a { display: block; text-indent: -999px; padding-top: 35px; text-transform: uppercase; }
 .inline-nav .inline-nav-item:hover, .inline-nav .inline-nav-item.active { background-image: none !important; background-color: #163D34; }
 .inline-nav .inline-nav-item:hover a, .inline-nav .inline-nav-item.active a { color: #ffffff !important; text-indent: 0; }
 
