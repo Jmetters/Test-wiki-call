@@ -4201,11 +4201,10 @@ body .container-fluid#content .quick-links h2 { color: #ffffff; margin-top: 0; m
 body .container-fluid#content .quick-links a { color: #7F7F73; }
 body .container-fluid#content .quick-links .row div { border-right: 1px solid #ffffff; border-right: 0.1rem solid #ffffff; text-align: center; min-height: 100px; min-height: 10rem; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li { border-right: 1px solid #ffffff; border-right: 0.1rem solid #ffffff; }
-body .container-fluid#content .quick-links .row div ul.nav-justified li a { text-transform: uppercase; min-height: 100px; min-height: 10rem; padding: 0; }
+body .container-fluid#content .quick-links .row div ul.nav-justified li a { text-transform: uppercase; min-height: 100px; min-height: 10rem; padding: 35px 0 0 0; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li a span { display: block; padding-top: 20px; padding-top: 2rem; padding-bottom: 10px; padding-bottom: 1rem; }
 body .container-fluid#content .quick-links .row div ul.nav-justified li:last-child { border-right: none; }
 body .container-fluid#content .quick-links .row div:first-child { border-left: 1px solid #ffffff; border-left: 0.1rem solid #ffffff; }
-body .container-fluid#content .quick-links.timeline li a { line-height: 100px; line-height: 10rem; }
 body .container-fluid#content .quick-links.timeline li a:hover, body .container-fluid#content .quick-links.timeline li a:focus { background-color: #163D34; color: #ffffff; }
 body .container-fluid#content .quick-links.timeline li.on a { background-color: #163D34; color: #ffffff; }
 body .container-fluid#content .quick-links.timeline .phone-timeline div { border-right: none; text-align: left; min-height: initial; }

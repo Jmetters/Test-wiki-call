@@ -603,7 +603,7 @@ body{
 									a{
 										text-transform: uppercase;
 										@include rem(min-height, 100px);
-										padding: 0;
+										padding: 35px 0 0 0;
 										span{
 											display: block;
 											@include padding-top-small();
@@ -624,7 +624,7 @@ body{
 				&.timeline{
 					li{
 						a{
-							@include rem(line-height, 100px);
+							// @include rem(line-height, 100px);
 							&:hover,
 							&:focus{
 								background-color: $green-dark;
