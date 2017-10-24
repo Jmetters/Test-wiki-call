@@ -13,8 +13,8 @@
 	}
 	.featured{
 		width: auto !important;
-		padding-bottom: $padding-small!important;
 		&.carousel{
+			padding-bottom: $padding-small!important;
 			width: auto !important;
 			.item{
 				display: block !important;
@@ -55,6 +55,7 @@
 	}
 	article {
 		&.item {
+			border: 1px solid $gray-light;
 			h2 {
 				padding-top: $padding-xsmall!important;
 				padding-bottom: 0!important;
