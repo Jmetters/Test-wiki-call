@@ -13,6 +13,7 @@
 	}
 	.featured{
 		width: auto !important;
+		padding-bottom: $padding-small!important;
 		&.carousel{
 			width: auto !important;
 			.item{
@@ -20,6 +21,7 @@
 				float: none !important;
 				width: auto !important;
 				img{
+					max-height: 450px!important;
 					display: block !important;
 					width: 100% !important;
 					height: auto !important;
@@ -33,16 +35,12 @@
 					width: 50% !important;
 					padding-left: $padding-medium!important;
 					position: relative !important;
-					background-color: #FFF !important;
+					background-color: $white !important;
 					background-image: none!important;
 				}
 			}
 			.stock-ticker {
-				border: 1px solid $gray-light;
-				top: 0!important;
-				.symbol {
-					border-bottom: 1px solid $gray-light;
-				}
+				display: none!important;
 			}
 			.owl-controls {
 				display: none!important;
