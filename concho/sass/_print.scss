@@ -8,12 +8,8 @@
 	.phone-timeline, #mobileTimelineNav, .table-nav, .section-nav {
 		display: none!important;
 	}
-	.menu-item-container {
-		.nav-image {
-			max-width: 340px!important;
-			margin-left: auto;
-			margin-right: auto;
-		}
+	.nav-image, .sidebar img {
+		max-width: 340px!important;
 	}
 	.featured{
 		width: auto !important;
@@ -65,9 +61,6 @@
 				padding-top: $padding-xsmall!important;
 				padding-bottom: 0!important;
 				border-bottom: 1px solid $gray-light;
-			}
-			section {
-				padding-left: 0!important;
 			}
 		}
 	}
