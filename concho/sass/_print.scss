@@ -26,6 +26,12 @@
 			}
 		}
 	}
+	.item {
+		border: 1px solid $gray-light;
+		h2 {
+			border-bottom: 1px solid $gray-light;
+		}
+	}
 	a[href]:after {
 		content: ""!important;
 	}

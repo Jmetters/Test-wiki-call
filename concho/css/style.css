@@ -4519,5 +4519,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .featured.carousel .item img { display: block !important; width: 100% !important; height: auto !important; overflow: hidden !important; }
   .featured.carousel .item img.hidden-print { display: none; }
   .featured.carousel .item .hero-text { display: block !important; width: 50% !important; padding-left: 0 !important; position: relative !important; background-color: #FFF !important; }
+  .item { border: 1px solid #D9D8D3; }
+  .item h2 { border-bottom: 1px solid #D9D8D3; }
   a[href]:after { content: "" !important; }
   footer#footer .social a:before { color: #ffffff !important; } }
