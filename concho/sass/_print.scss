@@ -26,10 +26,12 @@
 			}
 		}
 	}
-	.item {
-		border: 1px solid $gray-light;
-		h2 {
-			border-bottom: 1px solid $gray-light;
+	article {
+		&.item {
+			border: 1px solid $gray-light;
+			h2 {
+				border-bottom: 1px solid $gray-light;
+			}
 		}
 	}
 	ul {
@@ -41,7 +43,15 @@
 		  }
 		}
 	}
-
+	.inline-nav {
+		.inline-nav-item {
+			&:hover, &.active {
+				a {
+					color: $black!important;
+				}
+			}
+		}
+	}
 	a[href]:after {
 		content: ""!important;
 	}
