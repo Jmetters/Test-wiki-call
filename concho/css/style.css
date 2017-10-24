@@ -4515,6 +4515,8 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .big-slides .owl-controls.short-screen { bottom: auto !important; top: 100px; top: 10rem; } }
 @media print { a[href]:after { content: "" !important; }
   #content { padding-top: 10px !important; }
+  .phone-timeline, .table-nav, .section-nav { display: none !important; }
+  .menu-item-container .nav-image { max-width: 340px !important; margin-left: auto; margin-right: auto; }
   .featured { width: auto !important; }
   .featured.carousel { width: auto !important; }
   .featured.carousel .item { display: block !important; float: none !important; width: auto !important; }
