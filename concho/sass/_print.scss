@@ -57,17 +57,15 @@
 			}
 		}
 	}
-	ul {
-		&.nav-pills {
-		  > li {
-		    > a, > span {
-				background-color: $white!important;
-				&:first-child {
-					padding-left: 0!important;
-				}
-		    }
-		  }
+	.nav-pills {
+	  > li {
+		> a, > span {
+			background-color: $white!important;
+			&:first-child {
+				padding-left: 0!important;
+			}
 		}
+	  }
 	}
 	.inline-nav {
 		.inline-nav-item {
@@ -77,6 +75,7 @@
 	}
 	footer {
 		&#footer {
+			@include rem(border-top, 2px solid $black!important);
 			.social {
 				a {
 					&:before {
