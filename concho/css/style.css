@@ -4513,18 +4513,21 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .lg-nopadding-right { padding-right: 0 !important; }
   #contact-map { height: 400px; }
   .big-slides .owl-controls.short-screen { bottom: auto !important; top: 100px; top: 10rem; } }
-@media print { .featured { width: auto !important; }
+@media print { a[href]:after { content: "" !important; }
+  #content { padding-top: 10px !important; }
+  .featured { width: auto !important; }
   .featured.carousel { width: auto !important; }
   .featured.carousel .item { display: block !important; float: none !important; width: auto !important; }
   .featured.carousel .item img { display: block !important; width: 100% !important; height: auto !important; overflow: hidden !important; }
   .featured.carousel .item img.hidden-print { display: none !important; }
-  .featured.carousel .item .hero-text { display: block !important; width: 50% !important; position: relative !important; background-color: #FFF !important; background-image: none !important; }
-  .featured.carousel .stock-ticker { border: 1px solid #D9D8D3; }
+  .featured.carousel .item .hero-text { display: block !important; width: 50% !important; padding-left: 30px !important; position: relative !important; background-color: #FFF !important; background-image: none !important; }
+  .featured.carousel .stock-ticker { border: 1px solid #D9D8D3; top: 0 !important; }
   .featured.carousel .stock-ticker .symbol { border-bottom: 1px solid #D9D8D3; }
   .featured.carousel .owl-controls { display: none !important; }
+  .visible-print-block img { margin-top: 30px; margin-left: 30px; }
   article.item { border: 1px solid #D9D8D3; }
   article.item h2 { border-bottom: 1px solid #D9D8D3; }
   ul.nav-pills > li > a, ul.nav-pills > li > span { background-color: #ffffff !important; }
-  .inline-nav .inline-nav-item:hover a, .inline-nav .inline-nav-item.active a { color: #000000 !important; }
-  a[href]:after { content: "" !important; }
+  ul.nav-pills > li > a:first-child, ul.nav-pills > li > span:first-child { padding-left: 0 !important; }
+  .inline-nav .inline-nav-item { background-image: none !important; color: #000000 !important; }
   footer#footer .social a:before { color: #ffffff !important; } }

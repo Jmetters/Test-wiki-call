@@ -1,4 +1,10 @@
 @media print {
+	a[href]:after {
+		content: ""!important;
+	}
+	#content {
+		padding-top: $padding-xsmall!important;
+	}
 	.featured{
 		width: auto !important;
 		&.carousel{
@@ -19,6 +25,7 @@
 				.hero-text{
 					display: block !important;
 					width: 50% !important;
+					padding-left: $padding-medium!important;
 					position: relative !important;
 					background-color: #FFF !important;
 					background-image: none!important;
@@ -26,6 +33,7 @@
 			}
 			.stock-ticker {
 				border: 1px solid $gray-light;
+				top: 0!important;
 				.symbol {
 					border-bottom: 1px solid $gray-light;
 				}
@@ -33,6 +41,12 @@
 			.owl-controls {
 				display: none!important;
 			}
+		}
+	}
+	.visible-print-block {
+		img {
+			margin-top: $padding-medium;
+			margin-left: $padding-medium;
 		}
 	}
 	article {
@@ -48,21 +62,18 @@
 		  > li {
 		    > a, > span {
 				background-color: $white!important;
+				&:first-child {
+					padding-left: 0!important;
+				}
 		    }
 		  }
 		}
 	}
 	.inline-nav {
 		.inline-nav-item {
-			&:hover, &.active {
-				a {
-					color: $black!important;
-				}
-			}
+			background-image: none!important;
+			color: $black!important;
 		}
-	}
-	a[href]:after {
-		content: ""!important;
 	}
 	footer {
 		&#footer {
