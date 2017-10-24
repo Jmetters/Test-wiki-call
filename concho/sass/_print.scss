@@ -13,16 +13,25 @@
 					height: auto !important;
 					overflow: hidden !important;
 					&.hidden-print{
-						display: none;
+						display: none!important;
 					}
 				}
 				.hero-text{
 					display: block !important;
 					width: 50% !important;
-					padding-left: 0 !important;
 					position: relative !important;
 					background-color: #FFF !important;
+					background-image: none!important;
 				}
+			}
+			.stock-ticker {
+				border: 1px solid $gray-light;
+				.symbol {
+					border-bottom: 1px solid $gray-light;
+				}
+			}
+			.owl-controls {
+				display: none!important;
 			}
 		}
 	}
