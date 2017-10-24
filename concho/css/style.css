@@ -4521,6 +4521,6 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .featured.carousel .item .hero-text { display: block !important; width: 50% !important; padding-left: 0 !important; position: relative !important; background-color: #FFF !important; }
   .item { border: 1px solid #D9D8D3; }
   .item h2 { border-bottom: 1px solid #D9D8D3; }
-  .nav-pills > li > a, .nav-pills > li > span { background-color: #ffffff !important; }
+  ul.nav-pills > li > a, ul.nav-pills > li > span { background-color: #ffffff !important; }
   a[href]:after { content: "" !important; }
   footer#footer .social a:before { color: #ffffff !important; } }
