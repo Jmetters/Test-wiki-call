@@ -1516,7 +1516,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
-@media print { *, *:before, *:after { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+@media print { *, *:before, *:after { background-color: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
@@ -4519,4 +4519,5 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .featured.carousel .item img { display: block !important; width: 100% !important; height: auto !important; overflow: hidden !important; }
   .featured.carousel .item img.hidden-print { display: none; }
   .featured.carousel .item .hero-text { display: block !important; width: 50% !important; padding-left: 0 !important; position: relative !important; background-color: #FFF !important; }
-  #content a[href]:after { content: ""; } }
+  a[href]:after { content: "" !important; }
+  footer#footer .social a:before { color: #ffffff !important; } }

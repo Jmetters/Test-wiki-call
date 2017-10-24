@@ -26,9 +26,18 @@
 			}
 		}
 	}
-	#content{
-		a[href]:after {
-			content: "";
+	a[href]:after {
+		content: ""!important;
+	}
+	footer {
+		&#footer {
+			.social {
+				a {
+					&:before {
+						color: $white!important;
+					}
+				}
+			}
 		}
 	}
 }
