@@ -4515,7 +4515,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .big-slides .owl-controls.short-screen { bottom: auto !important; top: 100px; top: 10rem; } }
 @media print { a[href]:after { content: "" !important; }
   #content { padding-top: 10px !important; }
-  .phone-timeline, #mobileTimelineNav, .table-nav, .section-nav { display: none !important; }
+  .container.details { padding-top: 20px !important; }
   .nav-image, .sidebar img { max-width: 340px !important; }
   .featured { width: auto !important; }
   .featured.carousel { padding-bottom: 20px !important; width: auto !important; }
@@ -4523,13 +4523,9 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .featured.carousel .item img { max-height: 450px !important; display: block !important; width: 100% !important; height: auto !important; overflow: hidden !important; }
   .featured.carousel .item img.hidden-print { display: none !important; }
   .featured.carousel .item .hero-text { display: block !important; width: 50% !important; padding-left: 30px !important; position: relative !important; background-color: #ffffff !important; background-image: none !important; }
-  .featured.carousel .stock-ticker { display: none !important; }
   .featured.carousel .owl-controls { display: none !important; }
   .visible-print-block img { margin-top: 30px; margin-left: 30px; }
-  article.item { border: 1px solid #D9D8D3; }
-  article.item h2 { padding-top: 10px !important; padding-bottom: 0 !important; border-bottom: 1px solid #D9D8D3; }
-  .nav-pills > li > a, .nav-pills > li > span { background-color: #ffffff !important; }
-  .nav-pills > li > a:first-child, .nav-pills > li > span:first-child { padding-left: 0 !important; }
-  .inline-nav .inline-nav-item { background-image: none !important; color: #000000 !important; }
-  footer#footer { border-top: 2px solid #000000 !important; border-top: 0.2rem solid #000000 !important; }
-  footer#footer .social a:before { color: #ffffff !important; } }
+  article.item h2 { height: auto !important; padding-top: 10px !important; padding-bottom: 0 !important; border-bottom: 1px solid #D9D8D3 !important; }
+  article.item section { height: auto !important; }
+  article.item:after { display: none !important; }
+  footer#footer { padding-top: 0 !important; border: none !important; } }

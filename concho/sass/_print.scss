@@ -5,8 +5,10 @@
 	#content {
 		padding-top: $padding-xsmall!important;
 	}
-	.phone-timeline, #mobileTimelineNav, .table-nav, .section-nav {
-		display: none!important;
+	.container {
+		&.details {
+			padding-top: $padding-small!important;
+		}
 	}
 	.nav-image, .sidebar img {
 		max-width: 340px!important;
@@ -39,9 +41,6 @@
 					background-image: none!important;
 				}
 			}
-			.stock-ticker {
-				display: none!important;
-			}
 			.owl-controls {
 				display: none!important;
 			}
@@ -55,40 +54,24 @@
 	}
 	article {
 		&.item {
-			border: 1px solid $gray-light;
 			h2 {
+				height: auto!important;
 				padding-top: $padding-xsmall!important;
 				padding-bottom: 0!important;
-				border-bottom: 1px solid $gray-light;
+				border-bottom: 1px solid $gray-light!important;
 			}
-		}
-	}
-	.nav-pills {
-	  > li {
-		> a, > span {
-			background-color: $white!important;
-			&:first-child {
-				padding-left: 0!important;
+			section {
+				height: auto!important;
 			}
-		}
-	  }
-	}
-	.inline-nav {
-		.inline-nav-item {
-			background-image: none!important;
-			color: $black!important;
+			&:after {
+				display: none!important;
+			}
 		}
 	}
 	footer {
 		&#footer {
-			@include rem(border-top, 2px solid $black!important);
-			.social {
-				a {
-					&:before {
-						color: $white!important;
-					}
-				}
-			}
+			padding-top: 0!important;
+			border: none!important;
 		}
 	}
 }
