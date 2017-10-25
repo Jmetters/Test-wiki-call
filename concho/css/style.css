@@ -4515,6 +4515,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .big-slides .owl-controls.short-screen { bottom: auto !important; top: 100px; top: 10rem; } }
 @media print { a[href]:after { content: "" !important; }
   #content { padding-top: 10px !important; }
+  .container.margin-bottom-2x { margin-bottom: 40px !important; }
   .container.details { padding-top: 20px !important; }
   .nav-image, .sidebar img { max-width: 340px !important; }
   .featured { width: auto !important; }

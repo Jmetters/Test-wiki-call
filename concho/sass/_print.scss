@@ -6,6 +6,9 @@
 		padding-top: $padding-xsmall!important;
 	}
 	.container {
+		&.margin-bottom-2x {
+			margin-bottom: $margin-large!important;
+		}
 		&.details {
 			padding-top: $padding-small!important;
 		}
@@ -13,26 +16,26 @@
 	.nav-image, .sidebar img {
 		max-width: 340px!important;
 	}
-	.featured{
+	.featured {
 		width: auto !important;
-		&.carousel{
+		&.carousel {
 			padding-bottom: $padding-small!important;
 			width: auto !important;
-			.item{
+			.item {
 				display: block !important;
 				float: none !important;
 				width: auto !important;
-				img{
+				img {
 					max-height: 450px!important;
 					display: block !important;
 					width: 100% !important;
 					height: auto !important;
 					overflow: hidden !important;
-					&.hidden-print{
+					&.hidden-print {
 						display: none!important;
 					}
 				}
-				.hero-text{
+				.hero-text {
 					display: block !important;
 					width: 50% !important;
 					padding-left: $padding-medium!important;
