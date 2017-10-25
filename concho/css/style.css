@@ -4526,7 +4526,7 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   .featured.carousel .item .hero-text { display: block !important; width: 50% !important; padding-left: 30px !important; position: relative !important; background-color: #ffffff !important; background-image: none !important; }
   .featured.carousel .owl-controls { display: none !important; }
   .visible-print-block img { margin-top: 30px; margin-left: 30px; }
+  .item-wrap:after { display: none !important; }
   article.item h2 { height: auto !important; padding-top: 10px !important; padding-bottom: 0 !important; border-bottom: 1px solid #D9D8D3 !important; }
   article.item section { height: auto !important; }
-  article.item:after { display: none !important; }
   footer#footer { padding-top: 0 !important; border: none !important; } }

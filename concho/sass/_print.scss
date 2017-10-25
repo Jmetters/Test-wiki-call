@@ -55,6 +55,11 @@
 			margin-left: $padding-medium;
 		}
 	}
+	.item-wrap {
+		&:after {
+			display: none!important;
+		}
+	}
 	article {
 		&.item {
 			h2 {
@@ -65,9 +70,6 @@
 			}
 			section {
 				height: auto!important;
-			}
-			&:after {
-				display: none!important;
 			}
 		}
 	}
