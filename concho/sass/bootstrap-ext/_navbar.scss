@@ -198,7 +198,7 @@
 			}
 		}
 		&> li > a{
-			@include rem( padding, 0 26px );
+			@include rem( padding, 0 15px );
 			text-decoration: none;
 			@include transition(color .4s ease);
 			@include rem(border-right, 1px solid $gray-light);
