@@ -1150,7 +1150,8 @@ footer{
 					display: block;
 					padding-left: 0;
 					padding-right: 0;
-					@include rem(line-height, 26px);
+					@include rem(padding-bottom, 9px);
+					// @include rem(line-height, 26px);
 					&.on{
 						a{
 							color: $white;
