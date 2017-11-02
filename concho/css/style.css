@@ -4517,7 +4517,8 @@ footer#footer .copyright ul.list-inline li:last-child a { border-right: none; }
   #content { padding-top: 10px !important; }
   .container.margin-bottom-2x { margin-bottom: 40px !important; }
   .container.details { padding-top: 20px !important; }
-  .nav-image, .sidebar img { max-width: 340px !important; }
+  .nav-image, .sidebar img { max-width: 340px !important; width: 100% !important; }
+  .nav-pills > li { background-color: #ffffff !important; }
   .featured { width: auto !important; }
   .featured.carousel { padding-bottom: 20px !important; width: auto !important; }
   .featured.carousel .item { display: block !important; float: none !important; width: auto !important; }

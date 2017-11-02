@@ -15,6 +15,12 @@
 	}
 	.nav-image, .sidebar img {
 		max-width: 340px!important;
+		width: 100%!important;
+	}
+	.nav-pills {
+		&> li {
+			background-color: $white!important;
+		}
 	}
 	.featured {
 		width: auto !important;
