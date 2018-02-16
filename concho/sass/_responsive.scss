@@ -596,6 +596,9 @@
 				//Feature
 				.featured{
 					@include rem(height, 300px);
+					&.small {
+						@include rem(height, 120px);
+					}
 					&.carousel{
 						position: relative;
 						height: auto;
@@ -937,6 +940,9 @@
 			&#content{
 				//Feature
 				.featured{
+					&.small {
+						@include rem(height, 200px);
+					}
 					&.carousel{
 						position: relative;
 						height: auto;
