@@ -101,6 +101,9 @@
 				//Feature
 				.featured{
 					@include rem(height, 300px);
+					&.small {
+						@include rem(height, 80px);
+					}
 					&.carousel{
 						position: relative;
 						height: auto;
