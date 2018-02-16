@@ -597,7 +597,7 @@
 				.featured{
 					@include rem(height, 300px);
 					&.small {
-						@include rem(height, 120px);
+						@include rem(height, 150px);
 					}
 					&.carousel{
 						position: relative;
@@ -1053,6 +1053,18 @@
 			&.short-screen{
 				bottom: auto !important;
 				@include rem(top, ( $navbar-height + 20px ));
+			}
+		}
+	}
+	body{
+		.container-fluid{
+			&#content{
+				//Feature
+				.featured{
+					&.small {
+						@include rem(height, 280px);
+					}
+				}
 			}
 		}
 	}
