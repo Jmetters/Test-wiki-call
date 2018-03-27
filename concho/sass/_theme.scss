@@ -236,6 +236,11 @@ body{
 					@include padding-right-small();
 					@include padding-bottom-small();
 					@include padding-left-small();
+					&.press-release{
+						.inner-wrap{
+							background: $green-dark inline-image('../images/ui/icon-pressrelease-white.png') no-repeat right bottom;
+						}
+					}
 					&.upcoming-events{
 						.inner-wrap{
 							background: $green-dark inline-image('../images/ui/icon_calendar.png') no-repeat right bottom;
@@ -244,6 +249,16 @@ body{
 					&.current-presentation{
 						.inner-wrap{
 							background: $green-dark inline-image('../images/ui/icon_presentation.png') no-repeat right bottom;
+						}
+					}
+					&.infographic{
+						.inner-wrap{
+							background: $green-dark inline-image('../images/ui/icon-infographic-white.png') no-repeat right bottom;
+						}
+					}
+					&.webcast{
+						.inner-wrap{
+							background: $green-dark inline-image('../images/ui/icon-webcast-white.png') no-repeat right bottom;
 						}
 					}
 					&.email-alerts{
@@ -265,6 +280,7 @@ body{
 						}
 					}
 					.inner-wrap{
+						@include rem(min-height, 215px);
 						@include padding-top-xsmall();
 						@include padding-right-small();
 						@include padding-bottom();
