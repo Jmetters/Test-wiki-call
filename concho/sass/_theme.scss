@@ -397,6 +397,23 @@ body{
 								color: $green-mint;
 							}
 						}
+						&.dark {
+							@include rem(width, 660px);
+							@include rem(padding-left, 78.5px);
+							@include rem(padding-bottom, 40px);
+							background: rgba($green-dark,0.8);
+							background-image: none;
+							h2 {
+								@include rem(font-size, 39px);
+								@include rem(line-height, 47px);
+								@include rem(margin-top, 30px);
+								@include rem(margin-bottom, 30px);
+								font-weight: 700;
+							}
+							p {
+
+							}
+						}
 					}
 					.container{
 						.stock-ticker{

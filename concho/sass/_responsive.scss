@@ -111,11 +111,14 @@
 							width: 100%;
 							height: auto;
 						}
-						.hero-text{
+						.hero-text, .hero-text.dark {
 							position: relative;
 							top: initial;
 							width: 100%;
 							@include rem(padding, 7px $padding-small 37px $padding-small);
+						}
+						.hero-text.dark {
+							background-color: rgba($green-dark, 1);
 						}
 						.container{
 							.stock-ticker{
@@ -606,11 +609,14 @@
 							width: 100%;
 							height: auto;
 						}
-						.hero-text{
+						.hero-text, .hero-text.dark{
 							position: relative;
 							top: initial;
 							width: 100%;
 							@include rem(padding, 7px $padding-small 37px $padding-small);
+						}
+						.hero-text.dark {
+							background-color: rgba($green-dark, 1);
 						}
 						.container{
 							.stock-ticker{
@@ -950,7 +956,7 @@
 							width: 100%;
 							height: auto;
 						}
-						.hero-text{
+						.hero-text, .hero-text.dark{
 							position: absolute;
 							top: 0;
 							height: 100%;
