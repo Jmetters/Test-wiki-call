@@ -3424,7 +3424,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .modal-open { overflow: hidden; }
 
-.modal { display: none; overflow: hidden; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; -webkit-overflow-scrolling: touch; outline: 0; }
+.modal { display: none; overflow: hidden; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1070; -webkit-overflow-scrolling: touch; outline: 0; }
 .modal.fade .modal-dialog { -webkit-transform: translate(0, -25%); -ms-transform: translate(0, -25%); -o-transform: translate(0, -25%); transform: translate(0, -25%); -webkit-transition: -webkit-transform 0.3s ease-out; -moz-transition: -moz-transform 0.3s ease-out; -o-transition: -o-transform 0.3s ease-out; transition: transform 0.3s ease-out; }
 .modal.in .modal-dialog { -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); transform: translate(0, 0); }
 
@@ -3432,13 +3432,13 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .modal-dialog { position: relative; width: auto; margin: 10px; }
 
-.modal-content { position: relative; background-color: #fff; border: 1px solid #999; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); background-clip: padding-box; outline: 0; }
+.modal-content { position: relative; background-color: #005daa; border: 1px solid transparent; border: 1px solid transparent; border-radius: 10px; -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); background-clip: padding-box; outline: 0; }
 
 .modal-backdrop { position: absolute; top: 0; right: 0; left: 0; background-color: #000; }
 .modal-backdrop.fade { opacity: 0; filter: alpha(opacity=0); }
 .modal-backdrop.in { opacity: 0.5; filter: alpha(opacity=50); }
 
-.modal-header { padding: 15px; border-bottom: 1px solid #e5e5e5; min-height: 16.42857px; }
+.modal-header { padding: 15px; border-bottom: 1px solid transparent; min-height: 16.42857px; }
 
 .modal-header .close { margin-top: -2px; }
 
@@ -3446,7 +3446,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .modal-body { position: relative; padding: 15px; }
 
-.modal-footer { padding: 15px; text-align: right; border-top: 1px solid #e5e5e5; }
+.modal-footer { padding: 15px; text-align: right; border-top: 1px solid transparent; }
 .modal-footer:before, .modal-footer:after { content: " "; display: table; }
 .modal-footer:after { clear: both; }
 .modal-footer .btn + .btn { margin-left: 5px; margin-bottom: 0; }
@@ -3459,6 +3459,19 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
   .modal-content { -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
   .modal-sm { width: 300px; } }
 @media (min-width: 992px) { .modal-lg { width: 900px; } }
+.modal { text-align: center; padding: 0 !important; }
+
+.modal:before { content: ''; display: inline-block; height: 100%; vertical-align: middle; margin-right: -4px; /* Adjusts for spacing */ }
+
+.modal-dialog { display: inline-block; text-align: left; vertical-align: middle; }
+
+.modal-content { border-radius: 0; -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); }
+.modal-content.blue h1, .modal-content.blue h2, .modal-content.blue h3, .modal-content.blue h4, .modal-content.blue h5 { color: white; margin-top: 0; margin-bottom: 20px; }
+.modal-content.blue p { color: white; }
+.modal-content.blue a { color: white; font-weight: bold; text-decoration: underline; }
+.modal-content.blue .modal-header { background-size: cover; padding-bottom: 43.7%; }
+.modal-content.blue .modal-header .close { color: white; text-shadow: none; opacity: 1; }
+
 .tooltip { position: absolute; z-index: 1070; display: block; visibility: visible; font-family: "Raleway", sans-serif; font-size: 12px; font-weight: normal; line-height: 1.4; opacity: 0; filter: alpha(opacity=0); }
 .tooltip.in { opacity: 0.9; filter: alpha(opacity=90); }
 .tooltip.top { margin-top: -3px; padding: 5px 0; }
@@ -3632,6 +3645,10 @@ img.size-full, img.size-large, .wp-post-image, .post-thumbnail img { height: aut
 .brand-primary { color: #163D34; }
 
 .gray { color: #7F7F73; }
+
+.background-size-cover { background-size: cover; background-repeat: no-repeat; }
+
+.background-size-contain { background-size: cover; background-repeat: no-repeat; }
 
 @-ms-viewport { width: device-width; }
 .visible-xs, .visible-sm, .visible-md, .visible-lg { display: none !important; }

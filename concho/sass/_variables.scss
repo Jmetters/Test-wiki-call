@@ -6,6 +6,7 @@ $black:					#000000 !default;
 
 $red:					#D40043 !default;
 $red-light:				#E44B75 !default;
+$blue:                  #005daa !default;
 
 // Concho Colors
 $green-dark:			#163D34 !default;
@@ -404,3 +405,38 @@ $thumbnail-caption-color:     $text-color !default;
 $thumbnail-caption-padding:   9px !default;
 
 $thumbnail-margin-bottom:	  0;
+
+
+
+$zindex-modal:             1070 !default;
+//== Modals
+//
+//##
+
+//** Padding applied to the modal body
+$modal-inner-padding:         15px !default;
+
+//** Padding applied to the modal title
+$modal-title-padding:         15px !default;
+//** Modal title line-height
+$modal-title-line-height:     $line-height-base !default;
+
+//** Background color of modal content area
+$modal-content-bg:                             $blue !default;
+//** Modal content border color
+$modal-content-border-color:                   rgba(0,0,0,0) !default;
+//** Modal content border color **for IE8**
+$modal-content-fallback-border-color:          transparent !default;
+
+//** Modal backdrop background color
+$modal-backdrop-bg:           #000 !default;
+//** Modal backdrop opacity
+$modal-backdrop-opacity:      .5 !default;
+//** Modal header border color
+$modal-header-border-color:   transparent !default;
+//** Modal footer border color
+$modal-footer-border-color:   transparent !default;
+
+$modal-lg:                    900px !default;
+$modal-md:                    600px !default;
+$modal-sm:                    300px !default;

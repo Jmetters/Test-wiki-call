@@ -1,2 +1,51 @@
 //Import original Bootstrap file
 @import "../bootstrap/modals";
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjusts for spacing */
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+// Actual modal
+.modal-content {
+  border-radius: 0;
+  @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+  &.blue {
+      h1, h2, h3, h4, h5 {
+          color: white;
+          margin-top: 0;
+          margin-bottom: 20px;
+      }
+      p {
+          color: white;
+      }
+      a {
+          color: white;
+          font-weight: bold;
+          text-decoration: underline;
+      }
+      .modal-header {
+          background-size: cover;
+          padding-bottom: 43.7%;
+          .close {
+              color: white;
+              text-shadow: none;
+              opacity: 1;
+          }
+      }
+  }
+}

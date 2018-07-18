@@ -223,3 +223,13 @@ img.size-large,
 .gray{
 	@extend %gray;
 }
+
+.background-size-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.background-size-contain {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
