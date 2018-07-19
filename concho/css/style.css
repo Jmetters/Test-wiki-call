@@ -4095,6 +4095,9 @@ a:hover, a:focus { text-decoration: none; }
 .background-gray-lightest { background-color: #E7E6E4; }
 
 .background-blue { background-color: #005daa; }
+.background-blue h1, .background-blue h2, .background-blue h3, .background-blue h4, .background-blue h5, .background-blue h6, .background-blue p, .background-blue ul li { color: white; }
+.background-blue a { color: white; }
+.background-blue a:hover { color: white !important; }
 
 .sidebar-offcanvas { padding-top: 20px; padding-top: 2rem; background-color: #163D34; font-family: "Raleway", sans-serif; font-weight: 300; font-size: 18px; font-size: 1.8rem; -webkit-box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); }
 .sidebar-offcanvas .nav li { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; }
