@@ -115,6 +115,15 @@ a{
 }
 .background-blue{
 	background-color: $blue;
+	h1, h2, h3, h4, h5, h6, p, ul li {
+		color: white;
+	}
+	a {
+		color: white;
+		&:hover {
+			color: white !important;
+		}
+	}
 }
 
 @import "includes/sidebar-offcanvas";
