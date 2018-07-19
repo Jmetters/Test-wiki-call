@@ -4094,6 +4094,8 @@ a:hover, a:focus { text-decoration: none; }
 
 .background-gray-lightest { background-color: #E7E6E4; }
 
+.background-blue { background-color: #005daa; }
+
 .sidebar-offcanvas { padding-top: 20px; padding-top: 2rem; background-color: #163D34; font-family: "Raleway", sans-serif; font-weight: 300; font-size: 18px; font-size: 1.8rem; -webkit-box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); box-shadow: inset 10px 0px 25px 0px rgba(15, 42, 36, 0.5); }
 .sidebar-offcanvas .nav li { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; }
 .sidebar-offcanvas .nav li a { -webkit-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; display: block; position: relative; padding: 10px 50px 10px 15px; padding: 1rem 5rem 1rem 1.5rem; text-decoration: none; width: 100%; }

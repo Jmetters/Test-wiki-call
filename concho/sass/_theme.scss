@@ -113,6 +113,9 @@ a{
 .background-gray-lightest{
 	background-color: $gray-lightest;
 }
+.background-blue{
+	background-color: $blue;
+}
 
 @import "includes/sidebar-offcanvas";
 
