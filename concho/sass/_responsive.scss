@@ -959,6 +959,7 @@
 						.hero-text, .hero-text.dark{
 							position: absolute;
 							top: 0;
+							@include rem(width, 458px);
 							height: 100%;
 						}
 					}
