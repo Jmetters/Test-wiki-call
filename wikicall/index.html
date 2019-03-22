@@ -1,0 +1,63 @@
+<!doctype html>
+<head>
+	<title></title>
+<style >
+	body{background:#fff;}
+</style>
+
+</head>
+<body>
+<div class="container">
+	<div id="output">
+		
+	</div>
+	<button id ="btn">Click me</button>
+</div>
+
+
+	<script>
+
+		document.getElementById('btn').addEventListener('click', getText);
+
+		function getText(){
+			fetch(`https://cors-anywhere.herokuapp.com/http://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Craig%20Noone&format=jsonfm`)
+			//.then((res) => res.text())
+			.then((text) => {
+				console.log(text);
+				document.getElementById('output').innerHTML = text;
+			})
+			.catch((err) => {
+				console.log(err);
+
+
+			});
+
+
+		}
+		
+	</script>
+</body>
+</html>
+
+<!-- hrsff --
+
+https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow';)
+
+const getPosts = () => {
+		fetch(`https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow`)
+.then(res => res.json())
+.then(posts => console.log(posts))
+}
+
+const newPost = post => {
+	const options = {
+method: 'POST',
+body: JSON.stringify(post),
+headers: new Headers({
+'Content-Type': 'application/json'
+
+})
+	}
+return fetch(`https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow`)
+}
+>
